@@ -27,7 +27,6 @@ class LinkedList {
     Integer j = queue.poll();
     assert j == null;
 
-    assert queue.contents() == seq<int>{};
     boolean b = queue.offer(3);
     Integer k = queue.peek();
     assert k.val == 3;
@@ -41,13 +40,15 @@ class LinkedList {
 
     Integer n = queue.poll();
     assert n.val == 5; 
+
+    Integer o = queue.poll();
+    assert o == null;
   }
 
-  requires Perm(first, 1) ** first->state();
-  ensures Perm(first, 1) ** first != null ** first.state(); 
-
-  ensures \old(first) != null ==> first.contents() == \old(first.contents()) + seq<int>{val};
-  ensures \old(first) == null ==> first.contents() == seq<int>{val};
+  requires state();
+  ensures  state() ** first != null;
+  ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
+  ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
   void linkLast(int val) {
     if (first == null) {
       first = new Node(val, null);
@@ -56,11 +57,10 @@ class LinkedList {
     }
   }
 
-  requires Perm(first, 1) ** first != null ** first.state();
-  ensures  Perm(first, 1) ** first->state();
-  ensures  \result == \old(unfolding first.state() in first.val);
-  ensures  first == \old(unfolding first.state() in first.next);
-  ensures contents() == \old(tail(contents()));
+  requires state() ** first != null;
+  ensures  state();
+  ensures  \result == \old(head(contents()));
+  ensures  contents() == \old(tail(contents()));
   int unlinkFirst() {
     unfold first.state();
     int value = first.val; 
@@ -69,17 +69,13 @@ class LinkedList {
   }
   
   requires state();
-  ensures state();    
-  ensures first == (\old(first));
-  ensures contents() == \old(contents());
-  ensures \result != null ==> Perm(\result.val, 1);
-  ensures \result != null ==> \result.val == head(contents());
-  ensures \old(first) == null ==> \result == null;
-  ensures \old(first) != null ==> \result != null && \result.val == \old(unfolding first.state() in first.val);
+  ensures  state();    
+  ensures  contents() == \old(contents());
+  ensures  |contents()| == 0 ==> \result == null;
+  ensures  |contents()| != 0 ==> \result != null ** Perm(\result.val, 1) ** \result.val == head(contents());
   Integer peek() {
     Integer res;
 
-    unfold state();
     if (first == null) {
       res = null;
     } else {
@@ -87,40 +83,33 @@ class LinkedList {
       res = new Integer(first.val);
       fold first.state();
     }
-    fold state();
 
     return res;
   }
 
   requires state();
-  ensures state();
-  ensures \result != null ==> Perm(\result.val, 1);
-  ensures \old(first) == null ==> \result == null;
-  ensures \old(first) != null ==> \result != null && \result.val == \old((unfolding first.state() in first.val));
-  ensures \old(first) != null ==> (first) == (\old(unfolding first.state() in first.next));
-  ensures \result != null ==> \result.val == head(\old(contents()));
-  ensures \result == null ==> contents() == \old(contents());
-  ensures \result != null ==> contents() == \old(tail(contents()));
+  ensures  state();
+  ensures  \old(|contents()|) == 0 ==> \result == null;
+  ensures  \old(|contents()|) != 0 ==> \result != null ** Perm(\result.val, 1) ** \result.val == \old(head(contents()));
+  ensures  \result == null ==> contents() == \old(contents());
+  ensures  \result != null ==> contents() == \old(tail(contents()));
   Integer poll() {
     Integer res;
 
-    unfold state();
     if (first == null) {
       res = null;
     } else {
       res = new Integer(unlinkFirst());
     }
-    fold state();
 
     return res;
   }
 
   requires state();
-  ensures state();  
-  ensures contents() == \old(contents()) + seq<int>{\old(i)}; 
-  ensures \result == true;
+  ensures  state();  
+  ensures  contents() == \old(contents()) + seq<int>{\old(i)}; 
+  ensures  \result == true;
   boolean offer(int i) {
-    unfold state();
     linkLast(i);
     return true;
   }
@@ -151,9 +140,9 @@ class Node {
     );
 
   requires next->state();
-  ensures state();
-  ensures unfolding state() in (this.val == val && this.next == next);
-  ensures contents() == (seq<int>{val} + (next == null ? seq<int>{} : \old(next.contents()))); 
+  ensures  state();
+  ensures  unfolding state() in (this.val == val && this.next == next);
+  ensures  contents() == (seq<int>{val} + (next == null ? seq<int>{} : \old(next.contents()))); 
   Node(int val, Node next) {
     this.val = val;
     this.next = next;
@@ -161,7 +150,7 @@ class Node {
   }
 
   requires state() ** n != null ** n.state();
-  ensures state();
+  ensures  state();
   ensures contents() == (\old(contents()) + \old(n.contents()));
   void append(Node n) {
     unfold state();
