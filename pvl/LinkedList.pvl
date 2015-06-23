@@ -3,10 +3,10 @@ class LinkedList {
 	Node last;
 
 	LinkedList() {
-		
+	
 	}
 
-	void linkLast(int val) {
+	void linkLast(Integer val) {
 		Node l = last;
 		Node newNode = new Node(l, val, null);
 		last = newNode;
@@ -17,11 +17,11 @@ class LinkedList {
 		}
 	}
 
-	int unlinkFirst(Node f) {
+	Integer unlinkFirst(Node f) {
 		// assert f == first && f != null;
-		int element = f.item;
+		Integer element = f.item;
 		Node next = f.next;
-		f.item = null; // <-- assign null to int?
+		f.item = null;
 		f.next = null;
 		first = next;
 		if (next == null) {
@@ -32,32 +32,48 @@ class LinkedList {
 		return element;
 	}
 	   
-		int peek() {
-			Node f = first;
-			return (f == null) ? null : f.item;
-		}
-
-		   int poll() {
-			Node f = first;
-			return (f == null) ? null : unlinkFirst(f);
-		   }
-
-		boolean offer(int val) {
-			linkLast(val);
-			return true;
+	Integer peek() {
+		Node f = first;
+		if (f == null) {
+			return null;
+		} else {
+			return f.item;
 		}
 	}
 
-	class Node {
-		Node next;
-		Node 
-		int item;
-
-		Node(Node prev, int item, Node next)
-		{
-			this.item = item;
-			this.next = next;
-			this.prev = prev;
+	Integer poll() {
+		Node f = first;
+		if (f == null) {
+			return null;
+		} else {
+			return unlinkFirst(f);
 		}
+	}
+
+	boolean offer(Integer val) {
+		linkLast(val);
+		return true;
 	}
 }
+
+class Integer {
+ 	int val;
+
+	Integer(int val) {
+		this.val = val;
+	}
+}
+
+class Node {
+	Node next;
+	Node prev;
+	Integer item;
+
+	Node(Node prev, Integer item, Node next)
+	{
+		this.item = item;
+		this.next = next;
+		this.prev = prev;
+	}
+}
+
