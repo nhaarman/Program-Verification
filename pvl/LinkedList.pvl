@@ -2,8 +2,10 @@ class LinkedList {
 	Node first;
 	Node last;
 
+	Integer nullInt;
+
 	LinkedList() {
-	
+		nullInt = null;
 	}
 
 	void linkLast(Integer val) {
@@ -35,7 +37,7 @@ class LinkedList {
 	Integer peek() {
 		Node f = first;
 		if (f == null) {
-			return null;
+			return nullInt;
 		} else {
 			return f.item;
 		}
@@ -44,7 +46,7 @@ class LinkedList {
 	Integer poll() {
 		Node f = first;
 		if (f == null) {
-			return null;
+			return nullInt;
 		} else {
 			return unlinkFirst(f);
 		}
