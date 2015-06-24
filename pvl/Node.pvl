@@ -5,7 +5,7 @@ class Node {
   Node next;
   int val;
 
-  resource state() = Perm(val, 1) ** Perm(next, 1) ** next->state();
+  resource state() = Value(val) ** Perm(next, 1) ** next->state();
 
   requires state();
   seq<int> contents() =
