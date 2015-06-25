@@ -1,0 +1,61 @@
+class Test {
+
+  void testEmpty() {
+    Queue queue = new Queue();
+    assert queue.contents() == seq<int>{};
+    
+    Integer i = queue.peek();
+    assert i == null;
+    assert queue.contents() == seq<int>{};
+
+    Integer j = queue.poll();
+    assert j == null;
+    assert queue.contents() == seq<int>{};
+  }
+
+  void testFillAndEmpty() {
+    Queue queue = new Queue();
+    boolean b;
+
+    b = queue.offer(3);
+    assert queue.contents() == seq<int>{3};
+
+    b = queue.offer(5);
+    assert queue.contents() == seq<int>{3, 5};
+    
+    Integer m = queue.poll();
+    assert m.val == 3;
+    assert queue.contents() == seq<int>{5};
+
+    b = queue.offer(7);
+    assert queue.contents() == seq<int>{5, 7};
+    
+    Integer n = queue.poll();
+    assert n.val == 5;
+    assert queue.contents() == seq<int>{7};
+
+    Integer o = queue.poll();
+    assert o.val == 7;
+    assert queue.contents() == seq<int>{};
+
+    Integer p = queue.poll();
+    assert p == null;
+  }
+
+  void testFillAndPeek() {
+    Queue queue = new Queue();
+    boolean b;
+
+    b = queue.offer(3);
+    assert queue.contents() == seq<int>{3};
+
+    b = queue.offer(5);
+    assert queue.contents() == seq<int>{3,5};
+
+    Integer i = queue.peek();
+    assert i.val == 3;
+
+    Integer j = queue.peek();
+    assert j.val == 3;
+  }
+}

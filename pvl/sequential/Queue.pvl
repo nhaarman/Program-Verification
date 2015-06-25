@@ -17,34 +17,6 @@ class Queue {
     fold state();
   }
 
-  void test() {
-    Queue queue = new Queue();
-    assert queue.contents() == seq<int>{};
-
-    Integer i = queue.peek();
-    assert i == null;
-
-    Integer j = queue.poll();
-    assert j == null;
-
-    boolean b = queue.offer(3);
-    Integer k = queue.peek();
-    assert k.val == 3;
-   
-    b = queue.offer(5);
-    Integer l = queue.peek();
-    assert l.val == 3;
-
-    Integer m = queue.poll();
-    assert m.val == 3;
-
-    Integer n = queue.poll();
-    assert n.val == 5; 
-
-    Integer o = queue.poll();
-    assert o == null;
-  }
-
   requires state();
   ensures  state() ** first != null;
   ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
