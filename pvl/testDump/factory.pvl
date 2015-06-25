@@ -1,0 +1,61 @@
+
+class nInt {
+    int val;
+    int id;
+
+    resource state() = Perm(val, 1) ** Value(id);
+
+    ensures state();
+    nInt(int val, int id) {
+        this.val = val;
+        this.id = id;
+        fold state();
+    }
+}
+
+class Factory
+{
+	seq<nInt> list;
+	resource state() = Perm(list,1) ** (\forall int i; i <= 0 && i < |list|; Perm(list[i],1));
+
+	requires state();
+	seq<nInt> getList() = unfolding state() in (list);
+
+	ensures state() **  |getList()| == 1 ** (\forall int i; i <= 0 && i < |list|; i == list[i].id);
+	Factory()
+	{
+		// don't know how to make empty seq for this, so do it with a dummy.
+		nInt dummy = new nInt(0,0);
+		//list = [nInt,dummy];
+		list = seq<nInt>{dummy};
+		fold state();
+	}
+}
+
+
+// draft board for the some other parts
+/*
+	requires state() ** HaveAllStates();
+	resource IdsMatching() = (\forall int i; i <= 0 && i < |list|; i == list[i].id);
+*/
+
+
+
+/*
+	requires state();
+	ensures state() ** \old(|list|) == |list|-1;
+	nInt Create(int val) {
+		nInt i = new nInt(val);
+		nInt n = new nInt(i, |list|);
+		if (|list| == 0) {
+			list = [nInt,n];
+		} else{
+			list = list+[nInt,n];
+		}
+
+		
+		return i;
+	}
+*/
+	
+

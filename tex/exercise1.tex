@@ -1,0 +1,12 @@
+%!TEX root=PVH2QueueGroup.tex
+
+Problems encountered,
+cannot return null.
+
+Problem with permissions at two sides:
+Holding the steak with two bbq clamps, both can't release at same time afraid that the steak may val, but cannot put the steak at the bbq this way.
+
+
+Try to create a factory so that the factory could run pseudo run for debugging as back-end and keep track of the permissions and the Queue is not managing the permissions itself. The array structure that would keep track seems to the be not supported by pvl jet. To simulate this array you would have use a list with a node next. This is missing some elegance and it cost time to discover that this is the way to implement it. Also to write such a thing makes the chosen approach questionable. Especially due the fragile nice of vercors and it's verdict to give a pass.
+
+It still would be allowed to implement the array this way.The factory is only existing to help verify the soundness of a normal implementation of the Queue. The factory would give the prover some overhead, but it could be seen as another approach that vercors would grand permissions to objects. It is not sad that this approach would work. But if it would work then permissions managed by a factory should be sound, because a implementation of it with the current ways of granting permissions would not deny it. And if the current way does not prove it to be flowed and it would be flowed to manage permissions that way then that would indicate a flow or leak in the current way of managing permissions. But assuming it wouldn't and assuming that a factory can be used to divide permissions else the construction of it will fail, suggests that this way of granting permissions would be questionable if implemented in vercors it self. It still could be given as for proving things with the BBQ problem.

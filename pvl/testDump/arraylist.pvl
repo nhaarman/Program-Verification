@@ -1,0 +1,31 @@
+
+class ArrayList {
+	int size;
+	int max;
+
+	int[] array;
+
+	resource state() = Perm(max,1) ** Perm(size,1) 
+		** size >= 0 ** size < max ** Perm(array,1) ** array.length == max
+		** (\forall* int i; 0<= i && i < max ; Perm(array[i],1) )
+		** (\forall int i; 0<= i && i < size ; array[i] != 0)
+		** (\forall int i; size <= i && i < max ; array[i] == 0);
+
+	ArrayList() {}
+	/*
+	ensures state();
+	ArrayList()
+	{
+		size = 0;
+		max = 10;
+		array = new int[max];
+		fold state();
+	}
+	*/
+}
+
+class Program {
+	void main() {
+
+	}
+}

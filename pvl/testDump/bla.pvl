@@ -1,0 +1,110 @@
+class LinkedList {
+    Node first;
+    Node last;
+
+    resource state() = Perm(ghost,1) ** Perm(first, 1) ** Perm(last, 1) **  first->state() ** ((first != last) ==> last->state());
+
+    Integer nullInt;
+
+    ensures state();
+    LinkedList() {
+        nullInt = null;
+        first = null;
+        last = null;
+        fold state();
+    }
+
+      requires state() ** val != null;
+    ensures state() ** ghost.next == last;
+    void linkLast(Integer val) {
+      ghost = last;
+      unfold state();
+    
+      last = new Node(val, null); 
+    
+      if (ghost == null) {
+        first = last;
+      } else {
+          unfold ghost.state();
+          ghost.next = last;
+          fold ghost.state();
+        }
+
+        fold state();
+    }
+    
+
+    
+/*
+    requires f != null;
+    ensures \result == f.item;
+    Integer unlinkFirst(Node f) {
+        // assert f == first && f != null;
+        Integer element = f.item;
+        Node next = f.next;
+        f.item = null;
+        f.next = null;
+        first = next;
+        if (next == null) {
+            last = null;
+        }
+        return element;
+    }
+       
+    Integer peek() {
+        Node f = first;
+        if (f == null) {
+            return nullInt;
+        } else {
+            return f.item;
+        }
+    }
+
+    Integer poll() {
+        Node f = first;
+        if (f == null) {
+            return nullInt;
+        } else {
+            return unlinkFirst(f);
+        }
+    }
+
+    boolean offer(Integer val) {
+        linkLast(val);
+        return true;
+    }
+
+*/
+}
+
+class Integer {
+     int val;
+
+    resource state() = Perm(val, 1);
+
+    ensures state();
+    Integer(int val) {
+        this.val = val;
+        fold state();
+    }
+}
+
+class Node {
+    Node next;
+    Integer item;
+
+    resource state() = Perm(item, 1) ** item != null ** item.state() ** Perm(next, 1);
+
+    requires item != null ** item.state() ** next->state();
+      ensures state();
+    Node(Integer item, Node next)
+    {
+        this.item = item;
+        this.next = next;
+        fold state();
+    }
+}
+
+
+
+

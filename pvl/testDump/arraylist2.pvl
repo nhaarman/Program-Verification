@@ -1,0 +1,30 @@
+class nInt {
+    int val;
+    int id;
+
+    resource state() = Perm(val, 1) ** Value(id);
+
+    ensures state();
+    nInt(int val, int id) {
+        this.val = val;
+        this.id = id;
+        fold state();
+    }
+}
+
+class ArrayList {
+	nInt[] array2;
+
+	ArrayList()
+	{
+		array2 = new nInt[10];
+	}
+	
+	
+}
+
+class Program {
+	void main() {
+
+	}
+}
