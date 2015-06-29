@@ -2,9 +2,11 @@ class Queue {
   
   int capacity;
   Node first;
-  AtomicInteger count;
+  LockableInteger count;
+  LockSymbol putLock; // lock that can guard not going over max capacity
+  LockSymbol takeLock; // lock that can guard not taking empty elements.
 
-  resource state() = Perm(first, 1) ** first->state() ** Value(capacity) ** Perm(count, 1);
+  resource state() = Perm(first, 1) ** first->state() ** Value(capacity) ** Perm(count, 1) ** Perm(putLock,1) ** Perm(takeLock,1);
 
   requires state();
   seq<int> contents() = 
@@ -12,18 +14,28 @@ class Queue {
       ? seq<int>{}
       : first.contents(); 
 
+
+  resource lock_invariant()= true;
+
   ensures state();
   ensures first == null;
   ensures this.capacity == capacity;
-  ensures count != null ** count.state() ** count.getVal() == 0;
+  ensures count != null ** count.state() ** count.val == 0;
   Queue(int capacity) {
     first = null;
     this.capacity = capacity;
-    this.count = new AtomicInteger(0);
+    this.count = new LockableInteger(0);
+    putLock = new LockSymbol();
+    takeLock = new LockSymbol();
     fold state();
   }
 
   // private void insert(E x) { ... } in java
+  // just adds element to the end with:
+  //    last = last.next = new Node<E>(x);
+  // this was our variant in previous version to do that.
+  // this method did not look at the size of items.
+  // that should be handled by the caller of this method.
   requires state();
   ensures  state() ** first != null;
   ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
@@ -35,6 +47,23 @@ class Queue {
       first.append(new Node(val, null));
     }
   }
+
+
+  /*
+  void put(int e)
+  {
+    int c =-1;
+    if (held())
+
+    while(isFull())
+    {
+
+    }
+  }
+  */
+  // With atomic int you do count.get() == capacity.
+
+  
   /*
 
   requires state() ** first != null;

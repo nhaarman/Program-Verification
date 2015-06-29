@@ -1,16 +1,15 @@
 /**
  * A class to box int values.
  */
-class AtomicInteger {
+class LockableInteger {
   int val;
 
   resource state() = Perm(val,1);
 
-  requires state();
-  int getVal() = unfolding state() in (val);
+  //resource lock_invariant() = Perm(val,1);
 
   ensures state() ** this.val == val;
-  AtomicInteger(int val) {
+  LockableInteger(int val) {
     this.val = val;
     fold state();
   }

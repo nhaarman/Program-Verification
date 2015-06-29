@@ -3,5 +3,5 @@
 Use the following command to verify:
 
 ```
-vct --silver=silicon --inline Integer.pvl Node.pvl Queue.pvl
+vct --silver=silicon LockableInteger.pvl Node.pvl Queue.pvl LockSymbol.pvl --inline
 ```
