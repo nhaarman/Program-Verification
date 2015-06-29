@@ -1,0 +1,17 @@
+/**
+ * A class to box int values.
+ */
+class AtomicInteger {
+  int val;
+
+  resource state() = Perm(val,1);
+
+  requires state();
+  int getVal() = unfolding state() in (val);
+
+  ensures state() ** this.val == val;
+  AtomicInteger(int val) {
+    this.val = val;
+    fold state();
+  }
+}
