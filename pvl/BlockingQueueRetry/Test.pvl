@@ -81,6 +81,71 @@ class LBQThread3b {
 
 class Test {
 
+    void testEmpty() {
+        LinkedBlockingQueue queue = new Queue(10);
+        
+        Integer i = queue.peek();
+        assert i == null;
+
+        Integer j = queue.poll();
+        assert j == null;
+  }
+
+  void testFillAndEmpty() {
+    LinkedBlockingQueue queue = new Queue(10);
+    boolean b;
+
+    b = queue.offer(3);
+    assert b == true;
+
+    b = queue.offer(5);
+    assert b == true;
+    
+    Integer m = queue.poll();
+    assert m.val == 3;
+
+    b = queue.offer(7);
+    assert b == true;
+    
+    Integer n = queue.poll();
+    assert n.val == 5;
+
+    Integer o = queue.poll();
+    assert o.val == 7;
+
+    Integer p = queue.poll();
+    assert p == null;
+  }
+
+  void testFillAndPeek() {
+    LinkedBlockingQueue queue = new Queue(10);
+    boolean b;
+
+    b = queue.offer(3);
+    assert b == true;
+
+    b = queue.offer(5);
+    assert b == true;
+
+    Integer i = queue.peek();
+    assert i.val == 3;
+
+    Integer j = queue.peek();
+    assert j.val == 3;
+  }
+
+  void testFullAndFill() {
+    LinkedBlockingQueue queue = new Queue(3);
+    boolean b;
+
+    queue.put(1);
+    queue.put(2);
+    queue.put(3);
+    b = queue.offer(4);
+    assert b == false;
+
+  }
+
   void test1() 
     LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
 
