@@ -128,5 +128,37 @@ class BlockingQueue {
 		}
   	}
 
+  	requires state();
+  	ensures state();
+  	boolean offer(int val)
+  	{
+  		int currentCount = count.get();
+  		if (currentCount == capacity)
+  		{
+  			return false;
+  		}
+
+  		lock putLock;
+  		int c = -1;
+  		currentCount = count.get();
+  		if (currentCount < capacity)
+  		{	
+  			linkLast(val);
+  			c = count.getAndIncrement();
+  			if (c+1 < capacity)
+  			{
+  				notify putLock;
+  			}
+  		}
+  		unlock putLock;
+
+  		if (c == 0) {
+			lock takeLock;
+			notify takeLock;
+			unlock takeLock;
+	    }
+	    return c >= 0;
+  	}
+
 
 }
