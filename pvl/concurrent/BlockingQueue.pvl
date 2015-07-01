@@ -1,0 +1,144 @@
+class Lock {
+  resource lock_invariant() = true;
+  Lock(){}
+}
+
+class BlockingQueue {
+  
+  int capacity;
+  AtomicInteger count;
+  Node first;
+
+  Lock putLock;
+  Lock takeLock;
+
+  resource state() = Value(capacity) ** capacity > 0 
+                   ** Value(count) ** count != null 
+                   ** Perm(first, 1) ** first->state()
+                   ** Value(putLock) ** putLock != null
+                   ** Value(takeLock) ** takeLock != null;
+
+  requires state();
+  seq<int> contents() = first == null ? seq<int>{} : first.contents();
+
+  requires state();
+  ensures  state();
+  void put(int val) {
+    int c = -1;
+    lock putLock;
+
+    int currentCount = count.get();
+    loop_invariant Value(putLock) ** held(putLock);
+    loop_invariant Value(capacity) ** Value(count) ** count != null;
+    while(currentCount == capacity) {
+      wait putLock;
+      currentCount = count.get();
+    }   
+
+    linkLast(val); 
+
+    c = count.getAndIncrement();
+    if (c + 1 < capacity) {
+      notify putLock;
+    }
+    unlock putLock;
+
+    if (c == 0) {
+      lock takeLock;
+      notify takeLock;
+      unlock takeLock;
+    }
+  }
+  
+  requires state();
+  ensures  state() ** first != null;
+  ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
+  ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
+  void linkLast(int val) {
+    if (first == null) {
+      first = new Node(val, null);
+    } else {
+      first.append(new Node(val, null));
+    }
+  }
+}      
+/*
+  requires capacity > 0;
+  ensures state();
+  ensures first == null;
+  ensures this.capacity == capacity;
+  ensures count.val == 0;
+  BlockingQueue(int capacity) {
+    this.capacity = capacity;
+    first = null;
+    count = new AtomicInteger(0);
+    fold state();
+  }
+  
+  requires state();
+  ensures state();
+  boolean put(int val) {
+  
+  }
+*/
+/*
+  
+  requires state();
+  ensures  state();    
+  ensures  contents() == \old(contents());
+  ensures  |contents()| == 0 ==> \result == null;
+  ensures  |contents()| != 0 ==> \result != null ** Value(\result.val) ** \result.val == head(contents());
+  AtomicInteger peek() {
+    AtomicInteger res;
+
+    if (first == null) {
+      res = null;
+    } else {
+      unfold first.state();
+      res = new AtomicInteger(first.val);
+      fold first.state();
+    }
+
+    return res;
+  }
+
+  requires state();
+  ensures  state();
+  ensures  \old(|contents()|) == 0 ==> \result == null;
+  ensures  \old(|contents()|) != 0 ==> \result != null ** Value(\result.val) ** \result.val == \old(head(contents()));
+  ensures  \result == null ==> contents() == \old(contents());
+  ensures  \result != null ==> contents() == \old(tail(contents()));
+  AtomicInteger poll() {
+    AtomicInteger res;
+
+    if (first == null) {
+      res = null;
+    } else {
+      res = new AtomicInteger(unlinkFirst());
+    }
+
+    return res;
+  }
+
+  requires state();
+  ensures  state();  
+  ensures  \result ==> contents() == \old(contents()) + seq<int>{\old(i)}; 
+  ensures !\result ==> contents() == \old(contents());
+  boolean offer(int i) {
+    linkLast(i);
+    return true;
+  }
+  
+
+
+  requires state() ** first != null;
+  ensures  state();
+  ensures  \result == \old(head(contents()));
+  ensures  contents() == \old(tail(contents()));
+  int unlinkFirst() {
+    unfold first.state();
+    int value = first.val; 
+    first = first.next;
+    return value;
+  }
+*/
