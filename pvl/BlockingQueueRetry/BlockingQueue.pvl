@@ -39,6 +39,50 @@ class BlockingQueue {
 		fold state();
 	}
 
+	requires state() ** first != null;
+	ensures  state();
+	ensures  \result == \old(head(contents()));
+	ensures  contents() == \old(tail(contents()));
+	int unlinkFirst() {
+		unfold first.state();
+		int value = first.val; 
+		first = first.next;
+		return value;
+	}
+
+
+  	requires state();
+  	ensures state();
+	int take() {
+		int c = -1;
+		lock takeLock;
+		
+		int currentCount = count.get();
+		loop_invariant Value(takeLock) ** held(takeLock);
+	    loop_invariant Value(capacity) ** Value(count) ** count != null ** count.state();
+	    while(currentCount == 0) {
+			wait takeLock;
+			currentCount = count.get();
+	    }
+
+	    assume first != null;
+	    int x = unlinkFirst();
+	    c = count.getAndDecrement();
+	    if (c > 1) 
+	    {
+	    	notify takeLock;
+	    }
+	    unlock takeLock;
+
+	    if (c == capacity)
+	    {
+	    	lock putLock;
+			notify putLock;
+			unlock putLock;
+	    }
+	    return x;
+	}  
+
 
 	requires state();
 	ensures  state();
@@ -83,5 +127,6 @@ class BlockingQueue {
 			first.append(new Node(val, null));
 		}
   	}
+
 
 }
