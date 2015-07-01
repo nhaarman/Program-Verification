@@ -25,7 +25,7 @@ class LBQThread1b {
 
     requires queue.state();
     ensures state();
-    LBQThread1a(BlockingQueue queue) {
+    LBQThread1b(BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -45,7 +45,7 @@ class LBQThread2a {
 
     requires queue.state();
     ensures state();
-    LBQThread1a(BlockingQueue queue) {
+    LBQThread2a(BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -64,7 +64,8 @@ class LBQThread2b {
 
     requires queue.state();
     ensures state();
-    LBQThread1a(BlockingQueue queue) {
+    LBQThread2b
+    (BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -114,42 +115,27 @@ class LBQThread3b {
     }
 }
 
+
 class Test {
 
-    void testEmpty() {
-        BlockingQueue queue = new BlockingQueue(10);
-        
-        Integer i = queue.peek();
-        assert i == null;
-
-        Integer j = queue.poll();
-        assert j == null;
+  void testEmpty() {
+    BlockingQueue queue = new BlockingQueue(10);
+  
+    Integer i = queue.peek();
+    Integer j = queue.poll();
   }
-/*
+
   void testFillAndEmpty() {
     BlockingQueue queue = new BlockingQueue(10);
     boolean b;
 
     b = queue.offer(3);
-    assert b == true;
-
     b = queue.offer(5);
-    assert b == true;
-    
     Integer m = queue.poll();
-    assert m.val == 3;
-
     b = queue.offer(7);
-    assert b == true;
-    
     Integer n = queue.poll();
-    assert n.val == 5;
-
     Integer o = queue.poll();
-    assert o.val == 7;
-
     Integer p = queue.poll();
-    assert p == null;
   }
 
   void testFillAndPeek() {
@@ -157,16 +143,10 @@ class Test {
     boolean b;
 
     b = queue.offer(3);
-    assert b == true;
-
     b = queue.offer(5);
-    assert b == true;
 
     Integer i = queue.peek();
-    assert i.val == 3;
-
     Integer j = queue.peek();
-    assert j.val == 3;
   }
 
   void testFullAndFill() {
@@ -177,46 +157,43 @@ class Test {
     queue.put(2);
     queue.put(3);
     b = queue.offer(4);
-    assert b == false;
-
   }
 
-  void test1() 
-  {
-    BlockingQueue queue = new BlockingQueue(2);
+  void test1() {
+//    BlockingQueue queue = new BlockingQueue(2);
 
-    LBQThread1a t1 = new LBQThread1a(queue);
-    LBQThread1b t2 = new LBQThread1b(queue);
+//    LBQThread1a t1 = new LBQThread1a(queue);
+//    LBQThread1b t2 = new LBQThread1b(queue);
 
-    fork t1;
-    fork t2;
-    join t1;
-    join t2;
-
+//    fork t1;
+//    fork t2;
+//    join t1;
+//    join t2;
   }
 
-  void test2() {
-     BlockingQueue queue = new BlockingQueue(2);
+//  void test2() {
+//     BlockingQueue queue = new BlockingQueue(2);
 
-    LBQThread2a t1 = new LBQThread2a(queue);
-    LBQThread2b t2 = new LBQThread2b(queue);
+//    LBQThread2a t1 = new LBQThread2a(queue);
+//    LBQThread2b t2 = new LBQThread2b(queue);
 
-    fork t1;
-    fork t2;
-    join t1;
-    join t2;
-  }
+//    fork t1;
+//    fork t2;
+//    join t1;
+//    join t2;
+//  }
 
-  void test3() {
-    BlockingQueue queue = new BlockingQueue(2);
+//  void test3() {
+//    BlockingQueue queue = new BlockingQueue(2);
 
-    LBQThread3a t1 = new LBQThread3a(queue);
-    LBQThread3b t2 = new LBQThread3b(queue);
+//    LBQThread3a t1 = new LBQThread3a(queue);
+//    LBQThread3b t2 = new LBQThread3b(queue);
 
-    fork t1;
-    fork t2;
-    join t1;
-    join t2;
-  }
-*/
+//    fork t1;
+//    fork t2;
+//    join t1;
+//    join t2;
+//  }
+
 }
+

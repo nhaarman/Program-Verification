@@ -1,216 +1,203 @@
 class Lock {
-	resource lock_invariant() = true;
-	Lock(){}
+  resource lock_invariant() = true;
+  Lock(){}
 }
-
 
 class BlockingQueue {
 
-	int capacity;
-	AtomicInteger count;
-	Node first;
+  int capacity;
+  AtomicInteger count;
+  Node first;
 
-	Lock putLock;
-	Lock takeLock;
+  Lock putLock;
+  Lock takeLock;
 
-	resource state() = 
-		Value(capacity) ** capacity > 0
-		** Value(count) ** count.state()
-		** Perm(first, 1) ** first->state()
-		** Value(putLock) ** Value(takeLock)
-	;
+  resource state() = 
+    Value(capacity) ** capacity > 0
+    ** Value(count) ** count != null
+    ** Perm(first, 1) ** first->state()
+    ** Value(putLock) ** Value(takeLock)
+  ;
 
-	requires state();
-	seq<int> contents() = first == null ? seq<int>{} : first.contents();
+  requires state();
+  seq<int> contents() = first == null ? seq<int>{} : first.contents();
 
+  requires capacity > 0;
+  ensures state() 
+    ** this.capacity == capacity 
+    ** first == null;
+  BlockingQueue(int capacity) {
+    this.putLock = new Lock();
+    this.takeLock = new Lock();
+    this.capacity = capacity;
+    first = null;
+    count = new AtomicInteger(0);
+    fold state();
+  }
+  
+  requires state();
+  ensures  state();
+  void put(int val) {
+    lock putLock;
 
-	requires capacity > 0;
-	ensures state() 
-		** this.capacity == capacity 
-		** first == null 
-		** count.ghostVal == 0;
-	BlockingQueue(int capacity)
-	{
-		this.putLock = new Lock();
-		this.takeLock = new Lock();
-		this.capacity = capacity;
-		first = null;
-		count = new AtomicInteger(0);
-		fold state();
-	}
+    int currentCount = count.get();
+    loop_invariant Value(putLock) ** held(putLock);
+    loop_invariant Value(capacity) ** Value(count) ** count != null;
+    while(currentCount == capacity) {
+      wait putLock;
+      currentCount = count.get();
+    }   
 
-	requires state() ** first != null;
-	ensures  state();
-	ensures  \result == \old(head(contents()));
-	ensures  contents() == \old(tail(contents()));
-	int unlinkFirst() {
-		unfold first.state();
-		int value = first.val; 
-		first = first.next;
-		return value;
-	}
+    linkLast(val); 
 
+    int c = count.getAndIncrement();
+    if (c + 1 < capacity) {
+      notify putLock;
+    }
+    unlock putLock;
 
-  	requires state();
-  	ensures state();
-	int take() {
-		int c = -1;
-		lock takeLock;
-		
-		int currentCount = count.get();
-		loop_invariant Value(takeLock) ** held(takeLock);
-	    loop_invariant Value(capacity) ** Value(count) ** count != null ** count.state();
-	    while(currentCount == 0) {
-			wait takeLock;
-			currentCount = count.get();
-	    }
+    if (c == 0) {
+      lock takeLock;
+      notify takeLock;
+      unlock takeLock;
+    }
+  }
 
-	    assume first != null;
-	    int x = unlinkFirst();
-	    c = count.getAndDecrement();
-	    if (c > 1) 
-	    {
-	    	notify takeLock;
-	    }
-	    unlock takeLock;
+  requires state();
+  ensures state();
+  int take() {
+    lock takeLock;
+    
+    int currentCount = count.get();
+    loop_invariant Value(takeLock) ** held(takeLock);
+    loop_invariant Value(count) ** count != null;
+    while(currentCount == 0) {
+      wait takeLock;
+      currentCount = count.get();
+    }
 
-	    if (c == capacity)
-	    {
-	    	lock putLock;
-			notify putLock;
-			unlock putLock;
-	    }
-	    return x;
-	}  
+    assume first != null;
+    int x = unlinkFirst();
+    int c = count.getAndDecrement();
+    if (c > 1) {
+      notify takeLock;
+    }
+    unlock takeLock;
 
+    if (c == capacity) {
+      lock putLock;
+      notify putLock;
+      unlock putLock;
+    }
+    
+    return x;
+  }
 
-	requires state();
-	ensures  state();
-	void put(int val) 
-	{
-	    int c = -1;
-	    lock putLock;
+  requires state();
+  ensures state();
+  boolean offer(int val)
+  {
+    int currentCount = count.get();
+    if (currentCount == capacity) {
+      return false;
+    }
 
-	    int currentCount = count.get();
-	    loop_invariant Value(putLock) ** held(putLock);
-	    loop_invariant Value(capacity) ** Value(count) ** count != null ** count.state();
-	    while(currentCount == capacity) {
-			wait putLock;
-			currentCount = count.get();
-	    }   
+    lock putLock;
+    int c = -1;
+    currentCount = count.get();
+    if (currentCount < capacity) {	
+      linkLast(val);
+      c = count.getAndIncrement();
+      if (c+1 < capacity) {
+        notify putLock;
+      }
+    }
+    unlock putLock;
 
-	    linkLast(val); 
+    if (c == 0) {
+      lock takeLock;
+      notify takeLock;
+      unlock takeLock;
+    }
+    
+    return c >= 0;
+  }
 
-	    c = count.getAndIncrement();
-	    if (c + 1 < capacity) {
-			notify putLock;
-	    }
-	    unlock putLock;
+  requires state();
+  ensures state();
+  Integer poll() {
+    Integer x = null;
+    
+    int currentCount = count.get();
+    if (currentCount == 0) {
+      return x;
+    }
+    
+    int c = -1;
+    lock takeLock;
+    currentCount = count.get();
+    if (currentCount > 0) {
+      assume first != null;
+      x = new Integer(unlinkFirst());
+      c = count.getAndDecrement();
+      if (c > 1) {
+        notify takeLock;
+      }
+    }
+    unlock takeLock;
+    
+    if (c == capacity) {
+      lock putLock;
+      notify putLock;
+      unlock putLock;
+    }
+    
+    return x;
+  }
 
-	    if (c == 0) {
-			lock takeLock;
-			notify takeLock;
-			unlock takeLock;
-	    }
-	}
+  requires state();
+  ensures  state();
+  Integer peek() {
+    Integer x = null;
+    
+    int currentCount = count.get();
+    if (currentCount == 0) {
+      assume first == null;
+      return x;
+    }
+    
+    lock takeLock;
+    
+    if (first != null) {
+      unfold first.state();
+      x = new Integer(first.val);
+      fold first.state();
+    }
+    unlock takeLock;
+    
+    return x;
+  }
 
-	requires state();
-	ensures  state() ** first != null;
-	ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
-  	ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
-  	void linkLast(int val) 
-  	{
-		if (first == null) 
-		{
-			first = new Node(val, null);
-		} else {
-			first.append(new Node(val, null));
-		}
-  	}
+  requires state();
+  ensures  state() ** first != null;
+  ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
+  ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
+  void linkLast(int val) {
+    if (first == null) {
+      first = new Node(val, null);
+    } else {
+      first.append(new Node(val, null));
+    }
+  }
 
-  	requires state();
-  	ensures state();
-  	boolean offer(int val)
-  	{
-  		int currentCount = count.get();
-  		if (currentCount == capacity)
-  		{
-  			return false;
-  		}
-
-  		lock putLock;
-  		int c = -1;
-  		currentCount = count.get();
-  		if (currentCount < capacity)
-  		{	
-  			linkLast(val);
-  			c = count.getAndIncrement();
-  			if (c+1 < capacity)
-  			{
-  				notify putLock;
-  			}
-  		}
-  		unlock putLock;
-
-  		if (c == 0) {
-			lock takeLock;
-			notify takeLock;
-			unlock takeLock;
-	    }
-	    return c >= 0;
-  	}
-
-  	requires state();
-  	ensures state();
-  	Integer poll()
-  	{
-  		Integer x = null;
-  		int currentCount = count.get();
-  		if (currentCount == 0)
-  		{
-  			return x;
-  		}
-  		int c = -1;
-  		lock takeLock;
-  		currentCount = count.get();
-  		if (currentCount > 0)
-  		{
-  			assume first != null;
-  			x = new Integer(unlinkFirst());
-  			c = count.getAndDecrement();
-  			if (c > 1)
-  			{
-  				notify takeLock;
-  			}
-  		}
-  		unlock takeLock;
-  		if (c == capacity)
-  		{
-  			lock putLock;
-			notify putLock;
-			unlock putLock;
-  		}
-  		return x;
-  	}
-
-  	requires state();
-  	ensures state();
-  	Integer peek()
-  	{
-  		Integer x = null;
-  		int currentCount = count.get();
-  		if (currentCount == 0)
-  		{
-  			return x;
-  		}
-  		lock takeLock;
-  		assume first != null;
-  		unfold first.state();
-  		x = new Integer(first.val);
-  		fold first.state();
-  		unlock takeLock;
-  		return x;
-  	}
-
-
+  requires state() ** first != null;
+  ensures  state();
+  ensures  \result == \old(head(contents()));
+  ensures  contents() == \old(tail(contents()));
+  int unlinkFirst() {
+    unfold first.state();
+    int value = first.val; 
+    first = first.next;
+    return value;
+  }
 }

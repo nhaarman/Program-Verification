@@ -1,55 +1,32 @@
-class AtomicInteger
-{
-	int val;
-	int ghostVal;
+class AtomicInteger {
+  int val;
 
-	resource lock_invariant() = Perm(val, 1) ** val == ghostVal;
+  resource lock_invariant() = Perm(val, 1);
 
-	resource state() = Perm(ghostVal,1);
+  AtomicInteger(int val) {
+    this.val = val;
+  }
 
-	ensures state() ** this.ghostVal == val;
-	AtomicInteger(int val)
-	{	
-		this.val = val;
-		this.ghostVal = this.val;
-		fold state();
-	}
+  int getAndIncrement() {
+    lock this;
+    int res = val;
+    val = val + 1;
+    unlock this;
+    return res;
+  }
 
-	requires state();
-	ensures state() ** unfolding state() in (\result == ghostVal);
-	int get() {
-		lock this;
-		int res = this.val;
-		unlock this;
-		return res;
-	}
+  int getAndDecrement() {
+    lock this;
+    int res = val;
+    val = val-1;
+    unlock this;
+    return res;
+  }
 
-	requires state();
-	ensures state() ** \result == ghostVal-1;
-	int getAndIncrement() {
-		lock this;
-		int res = val;
-		val = val+1;
-		ghostVal = val;
-		unlock this;
-		return res;
-	}	
-
-	requires state();
-	ensures state() ** \result == ghostVal+1;
-	int getAndDecrement() {
-		lock this;
-		int res = val;
-		val = val-1;
-		ghostVal = val;
-		unlock this;
-		return res;
-	}	
+  int get() {
+    lock this;
+    int res = val;
+    unlock this;
+    return res;
+  }
 }
-
-	/*
-	
-		get()
-		getAndIncrement();
-		getAndDecrement();
-	*/
