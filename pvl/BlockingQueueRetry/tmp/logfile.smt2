@@ -1,7 +1,7 @@
 (get-info :version)
 ; (:version "4.3.2")
 ; Input file is <unknown>
-; Started: 2015-07-01 14:56:24
+; Started: 2015-07-01 15:06:04
 ; Silicon.buildVersion: 0.1-SNAPSHOT 407b787e33ff+ default 2015/06/10 17:01:19
 ; ------------------------------------------------------------
 ; Preamble start
@@ -829,8 +829,8 @@
 (declare-const diz@36 $Ref)
 (declare-const __flatten_1@37 Int)
 (declare-const __flatten_2@38 Int)
-(declare-const __flatten_52@39 Int)
-(declare-const __flatten_53@40 Int)
+(declare-const __flatten_57@39 Int)
+(declare-const __flatten_58@40 Int)
 (push) ; 2
 (push) ; 3
 ; [eval] sys__result != null
@@ -850,15 +850,15 @@
 ; [exec]
 ; __flatten_1 := val
 ; [exec]
-; __flatten_52 := __flatten_1
+; __flatten_57 := __flatten_1
 ; [exec]
-; diz.AtomicInteger__val := __flatten_52
+; diz.AtomicInteger__val := __flatten_57
 ; [exec]
 ; __flatten_2 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_53 := __flatten_2
+; __flatten_58 := __flatten_2
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_53
+; diz.AtomicInteger__ghostVal := __flatten_58
 ; [exec]
 ; exhale acc(diz.AtomicInteger__val, write) && (diz.AtomicInteger__val == diz.AtomicInteger__ghostVal)
 ; [eval] diz.AtomicInteger__val == diz.AtomicInteger__ghostVal
@@ -922,8 +922,8 @@
 (declare-const __flatten_4@57 Int)
 (declare-const __flatten_5@58 Int)
 (declare-const __flatten_6@59 Int)
-(declare-const __flatten_54@60 Int)
-(declare-const __flatten_55@61 Int)
+(declare-const __flatten_59@60 Int)
+(declare-const __flatten_60@61 Int)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@54 $Ref.null)))
@@ -951,15 +951,15 @@
 ; __flatten_4 := diz.AtomicInteger__val + 1
 ; [eval] diz.AtomicInteger__val + 1
 ; [exec]
-; __flatten_54 := __flatten_4
+; __flatten_59 := __flatten_4
 ; [exec]
-; diz.AtomicInteger__val := __flatten_54
+; diz.AtomicInteger__val := __flatten_59
 ; [exec]
 ; __flatten_5 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_55 := __flatten_5
+; __flatten_60 := __flatten_5
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_55
+; diz.AtomicInteger__ghostVal := __flatten_60
 ; [exec]
 ; exhale acc(AtomicInteger__lock_held(diz), write)
 ; [exec]
@@ -991,8 +991,8 @@
 (declare-const __flatten_7@70 Int)
 (declare-const __flatten_8@71 Int)
 (declare-const __flatten_9@72 Int)
-(declare-const __flatten_56@73 Int)
-(declare-const __flatten_57@74 Int)
+(declare-const __flatten_61@73 Int)
+(declare-const __flatten_62@74 Int)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@67 $Ref.null)))
@@ -1020,15 +1020,15 @@
 ; __flatten_7 := diz.AtomicInteger__val - 1
 ; [eval] diz.AtomicInteger__val - 1
 ; [exec]
-; __flatten_56 := __flatten_7
+; __flatten_61 := __flatten_7
 ; [exec]
-; diz.AtomicInteger__val := __flatten_56
+; diz.AtomicInteger__val := __flatten_61
 ; [exec]
 ; __flatten_8 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_57 := __flatten_8
+; __flatten_62 := __flatten_8
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_57
+; diz.AtomicInteger__ghostVal := __flatten_62
 ; [exec]
 ; exhale acc(AtomicInteger__lock_held(diz), write)
 ; [exec]
@@ -1060,8 +1060,8 @@
 (declare-const diz@83 $Ref)
 (declare-const __flatten_10@84 Int)
 (declare-const __flatten_11@85 $Ref)
-(declare-const __flatten_58@86 Int)
-(declare-const __flatten_59@87 $Ref)
+(declare-const __flatten_63@86 Int)
+(declare-const __flatten_64@87 $Ref)
 (push) ; 2
 ; [eval] next != null
 (push) ; 3
@@ -1260,20 +1260,20 @@
   (not (= next@81 diz@97))
   (not (= sys__result@82 diz@97))
   (not (= __flatten_11@85 diz@97))
-  (not (= __flatten_59@87 diz@97))
+  (not (= __flatten_64@87 diz@97))
   (not (= Node__next@98 diz@97))))
 ; [exec]
 ; __flatten_10 := val
 ; [exec]
-; __flatten_58 := __flatten_10
+; __flatten_63 := __flatten_10
 ; [exec]
-; diz.Node__val := __flatten_58
+; diz.Node__val := __flatten_63
 ; [exec]
 ; __flatten_11 := next
 ; [exec]
-; __flatten_59 := __flatten_11
+; __flatten_64 := __flatten_11
 ; [exec]
-; diz.Node__next := __flatten_59
+; diz.Node__next := __flatten_64
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@100 $Perm)
@@ -1616,20 +1616,20 @@
   (not (= next@81 diz@115))
   (not (= sys__result@82 diz@115))
   (not (= __flatten_11@85 diz@115))
-  (not (= __flatten_59@87 diz@115))
+  (not (= __flatten_64@87 diz@115))
   (not (= Node__next@116 diz@115))))
 ; [exec]
 ; __flatten_10 := val
 ; [exec]
-; __flatten_58 := __flatten_10
+; __flatten_63 := __flatten_10
 ; [exec]
-; diz.Node__val := __flatten_58
+; diz.Node__val := __flatten_63
 ; [exec]
 ; __flatten_11 := next
 ; [exec]
-; __flatten_59 := __flatten_11
+; __flatten_64 := __flatten_11
 ; [exec]
-; diz.Node__next := __flatten_59
+; diz.Node__next := __flatten_64
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@118 $Perm)
@@ -1791,7 +1791,7 @@
 (declare-const diz@125 $Ref)
 (declare-const n@126 $Ref)
 (declare-const __flatten_12@127 $Ref)
-(declare-const __flatten_60@128 $Ref)
+(declare-const __flatten_65@128 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@125 $Ref.null)))
@@ -1989,9 +1989,9 @@
 ; [exec]
 ; __flatten_12 := n
 ; [exec]
-; __flatten_60 := __flatten_12
+; __flatten_65 := __flatten_12
 ; [exec]
-; diz.Node__next := __flatten_60
+; diz.Node__next := __flatten_65
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@140 $Perm)
@@ -2112,10 +2112,10 @@
 (declare-const __flatten_18@151 Int)
 (declare-const __flatten_19@152 $Ref)
 (declare-const __flatten_20@153 $Ref)
-(declare-const __flatten_63@154 $Ref)
-(declare-const __flatten_65@155 $Ref)
-(declare-const __flatten_66@156 Int)
-(declare-const __flatten_68@157 $Ref)
+(declare-const __flatten_68@154 $Ref)
+(declare-const __flatten_70@155 $Ref)
+(declare-const __flatten_71@156 Int)
+(declare-const __flatten_73@157 $Ref)
 (push) ; 2
 ; [eval] capacity > 0
 (assert (> capacity@144 0))
@@ -2217,9 +2217,9 @@
   (not (= __flatten_17@150 diz@173))
   (not (= __flatten_19@152 diz@173))
   (not (= __flatten_20@153 diz@173))
-  (not (= __flatten_63@154 diz@173))
-  (not (= __flatten_65@155 diz@173))
-  (not (= __flatten_68@157 diz@173))
+  (not (= __flatten_68@154 diz@173))
+  (not (= __flatten_70@155 diz@173))
+  (not (= __flatten_73@157 diz@173))
   (not (= BlockingQueue__count@175 diz@173))
   (not (= BlockingQueue__first@176 diz@173))
   (not (= BlockingQueue__putLock@177 diz@173))
@@ -2232,9 +2232,9 @@
 ; [exec]
 ; __flatten_14 := __flatten_15
 ; [exec]
-; __flatten_63 := __flatten_14
+; __flatten_68 := __flatten_14
 ; [exec]
-; diz.BlockingQueue__putLock := __flatten_63
+; diz.BlockingQueue__putLock := __flatten_68
 ; [exec]
 ; __flatten_17 := Lock__Lock()
 (declare-const sys__result@180 $Ref)
@@ -2243,15 +2243,15 @@
 ; [exec]
 ; __flatten_16 := __flatten_17
 ; [exec]
-; __flatten_65 := __flatten_16
+; __flatten_70 := __flatten_16
 ; [exec]
-; diz.BlockingQueue__takeLock := __flatten_65
+; diz.BlockingQueue__takeLock := __flatten_70
 ; [exec]
 ; __flatten_18 := capacity
 ; [exec]
-; __flatten_66 := __flatten_18
+; __flatten_71 := __flatten_18
 ; [exec]
-; diz.BlockingQueue__capacity := __flatten_66
+; diz.BlockingQueue__capacity := __flatten_71
 ; [exec]
 ; diz.BlockingQueue__first := null
 ; [exec]
@@ -2271,9 +2271,9 @@
 ; [exec]
 ; __flatten_19 := __flatten_20
 ; [exec]
-; __flatten_68 := __flatten_19
+; __flatten_73 := __flatten_19
 ; [exec]
-; diz.BlockingQueue__count := __flatten_68
+; diz.BlockingQueue__count := __flatten_73
 ; [exec]
 ; sys__result := diz
 ; [exec]
@@ -2346,7 +2346,7 @@
 (declare-const __flatten_22@193 $Ref)
 (declare-const __flatten_23@194 $Ref)
 (declare-const __flatten_24@195 Int)
-(declare-const __flatten_69@196 $Ref)
+(declare-const __flatten_74@196 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@189 $Ref.null)))
@@ -3058,9 +3058,9 @@
 ; [exec]
 ; __flatten_22 := __flatten_23.Node__next
 ; [exec]
-; __flatten_69 := __flatten_22
+; __flatten_74 := __flatten_22
 ; [exec]
-; diz.BlockingQueue__first := __flatten_69
+; diz.BlockingQueue__first := __flatten_74
 ; [exec]
 ; __flatten_24 := value
 ; [exec]
@@ -3455,9 +3455,9 @@
 ; [exec]
 ; __flatten_22 := __flatten_23.Node__next
 ; [exec]
-; __flatten_69 := __flatten_22
+; __flatten_74 := __flatten_22
 ; [exec]
-; diz.BlockingQueue__first := __flatten_69
+; diz.BlockingQueue__first := __flatten_74
 ; [exec]
 ; __flatten_24 := value
 ; [exec]
@@ -7199,7 +7199,7 @@
 (assert (not (not (= sys__result@647 0))))
 (check-sat)
 ; unknown
-; 0.01s
+; 0.00s
 (pop) ; 9
 (push) ; 9
 (assert (not (= sys__result@647 0)))
@@ -8921,7 +8921,7 @@
 (declare-const __flatten_34@798 $Ref)
 (declare-const __flatten_35@799 $Ref)
 (declare-const __flatten_36@800 $Ref)
-(declare-const __flatten_79@801 $Ref)
+(declare-const __flatten_84@801 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@796 $Ref.null)))
@@ -11161,9 +11161,9 @@
 ; [exec]
 ; __flatten_34 := __flatten_35
 ; [exec]
-; __flatten_79 := __flatten_34
+; __flatten_84 := __flatten_34
 ; [exec]
-; diz.BlockingQueue__first := __flatten_79
+; diz.BlockingQueue__first := __flatten_84
 (declare-const $k@925 $Perm)
 (assert ($Perm.isValidVar $k@925))
 (assert ($Perm.isReadVar $k@925 $Perm.Write))
@@ -12631,7 +12631,7 @@
 (assert (not (< (+ sys__result@1029 1) $t@1008)))
 (check-sat)
 ; unknown
-; 0.00s
+; 0.01s
 (pop) ; 9
 (push) ; 9
 ; [then-branch 182] sys__result@1029 + 1 < $t@1008
@@ -17108,58 +17108,864 @@
 (pop) ; 4
 (pop) ; 3
 (pop) ; 2
-; ---------- Integer__Integer ----------
-(declare-const val@1346 Int)
+; ---------- BlockingQueue__peek ----------
+(declare-const diz@1346 $Ref)
 (declare-const sys__result@1347 $Ref)
-(declare-const diz@1348 $Ref)
-(declare-const __flatten_51@1349 Int)
-(declare-const __flatten_91@1350 Int)
+(declare-const x@1348 $Ref)
+(declare-const currentCount@1349 Int)
+(declare-const __flatten_51@1350 Int)
+(declare-const __flatten_52@1351 $Ref)
+(declare-const __flatten_53@1352 $Ref)
+(declare-const __flatten_54@1353 $Ref)
+(declare-const __flatten_55@1354 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@1346 $Ref.null)))
+(declare-const $k@1355 $Perm)
+(assert ($Perm.isValidVar $k@1355))
+(assert ($Perm.isReadVar $k@1355 $Perm.Write))
+(declare-const $t@1356 Int)
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@1355 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1355 $Perm.No)))
+(assert (> $t@1356 0))
+(declare-const $k@1357 $Perm)
+(assert ($Perm.isValidVar $k@1357))
+(assert ($Perm.isReadVar $k@1357 $Perm.Write))
+(declare-const $t@1358 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1357 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1357 $Perm.No)))
+(assert (not (= $t@1358 $Ref.null)))
+(declare-const $t@1359 Int)
+(declare-const $t@1360 $Ref)
+; [eval] diz.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@1360 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@1360 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 272] $t@1360 != Null
+(assert (not (= $t@1360 $Ref.null)))
+(declare-const $t@1361 $Snap)
+(declare-const $k@1362 $Perm)
+(assert ($Perm.isValidVar $k@1362))
+(assert ($Perm.isReadVar $k@1362 $Perm.Write))
+(declare-const $t@1363 $Ref)
+(declare-const $k@1364 $Perm)
+(assert ($Perm.isValidVar $k@1364))
+(assert ($Perm.isReadVar $k@1364 $Perm.Write))
+(declare-const $t@1365 $Ref)
+(push) ; 4
+(declare-const $k@1366 $Perm)
+(assert ($Perm.isValidVar $k@1366))
+(assert ($Perm.isReadVar $k@1366 $Perm.Write))
+(declare-const $t@1367 Int)
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1366 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1366 $Perm.No)))
+(assert (> $t@1367 0))
+(declare-const $k@1368 $Perm)
+(assert ($Perm.isValidVar $k@1368))
+(assert ($Perm.isReadVar $k@1368 $Perm.Write))
+(declare-const $t@1369 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1368 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1368 $Perm.No)))
+(assert (not (= $t@1369 $Ref.null)))
+(declare-const $t@1370 Int)
+(declare-const $t@1371 $Ref)
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1371 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1371 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 273] $t@1371 != Null
+(assert (not (= $t@1371 $Ref.null)))
+(declare-const $t@1372 $Snap)
+(declare-const $k@1373 $Perm)
+(assert ($Perm.isValidVar $k@1373))
+(assert ($Perm.isReadVar $k@1373 $Perm.Write))
+(declare-const $t@1374 $Ref)
+(declare-const $k@1375 $Perm)
+(assert ($Perm.isValidVar $k@1375))
+(assert ($Perm.isReadVar $k@1375 $Perm.Write))
+(declare-const $t@1376 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 273] $t@1371 == Null
+(assert (= $t@1371 $Ref.null))
+(declare-const $k@1377 $Perm)
+(assert ($Perm.isValidVar $k@1377))
+(assert ($Perm.isReadVar $k@1377 $Perm.Write))
+(declare-const $t@1378 $Ref)
+(declare-const $k@1379 $Perm)
+(assert ($Perm.isValidVar $k@1379))
+(assert ($Perm.isReadVar $k@1379 $Perm.Write))
+(declare-const $t@1380 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; x := null
+; [exec]
+; __flatten_51 := AtomicInteger__get(diz.BlockingQueue__count)
+; [eval] diz != null
+(declare-const sys__result@1381 Int)
+(declare-const $t@1382 $Snap)
+(declare-const $t@1383 Int)
+(assert (= $t@1382 ($Snap.combine ($SortWrappers.IntTo$Snap $t@1383) $Snap.unit)))
+; [eval] sys__result == diz.AtomicInteger__ghostVal
+(assert (= sys__result@1381 $t@1383))
+; [exec]
+; currentCount := __flatten_51
+; [eval] currentCount == 0
+(push) ; 5
+(assert (not (not (= sys__result@1381 0))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (= sys__result@1381 0)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 274] sys__result@1381 == 0
+(assert (= sys__result@1381 0))
+; [exec]
+; __flatten_52 := x
+; [exec]
+; sys__result := __flatten_52
+; [exec]
+; assert acc(diz.BlockingQueue__capacity, wildcard) && (diz.BlockingQueue__capacity > 0) && acc(diz.BlockingQueue__count, wildcard) && acc(diz.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(diz.BlockingQueue__first, write) && ((diz.BlockingQueue__first != null) ==> acc(Node__state(diz.BlockingQueue__first), write)) && acc(diz.BlockingQueue__putLock, wildcard) && acc(diz.BlockingQueue__takeLock, wildcard)
+(declare-const $k@1384 $Perm)
+(assert ($Perm.isValidVar $k@1384))
+(assert ($Perm.isReadVar $k@1384 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1384 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (< $k@1384 $k@1355))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1385 $Perm)
+(assert ($Perm.isValidVar $k@1385))
+(assert ($Perm.isReadVar $k@1385 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1385 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (< $k@1385 $k@1357))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@1360 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 275] $t@1360 != Null
+(declare-const $k@1386 $Perm)
+(assert ($Perm.isValidVar $k@1386))
+(assert ($Perm.isReadVar $k@1386 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1386 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(push) ; 7
+(assert (not (not (= $k@1362 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1362 $Perm.No)))
+(assert (< $k@1386 $k@1362))
+(declare-const $k@1387 $Perm)
+(assert ($Perm.isValidVar $k@1387))
+(assert ($Perm.isReadVar $k@1387 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1387 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(push) ; 7
+(assert (not (not (= $k@1364 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1364 $Perm.No)))
+(assert (< $k@1387 $k@1364))
+; [exec]
+; inhale false
+(pop) ; 6
+; [dead else-branch 275] $t@1360 == Null
+(pop) ; 5
+(push) ; 5
+; [else-branch 274] sys__result@1381 != 0
+(assert (not (= sys__result@1381 0)))
+(pop) ; 5
+; [eval] !(currentCount == 0)
+; [eval] currentCount == 0
+(push) ; 5
+(assert (not (= sys__result@1381 0)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= sys__result@1381 0))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 276] sys__result@1381 != 0
+(assert (not (= sys__result@1381 0)))
+; [exec]
+; inhale true
+; [exec]
+; inhale acc(Lock__lock_held(diz.BlockingQueue__takeLock), write)
+(push) ; 6
+(assert (not (not (= $k@1364 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1364 $Perm.No)))
+(declare-const $t@1388 $Snap)
+; [exec]
+; inhale diz.BlockingQueue__first != null
+; [eval] diz.BlockingQueue__first != null
+; [exec]
+; unfold acc(Node__state(diz.BlockingQueue__first), write)
+(declare-const $t@1389 $Snap)
+(declare-const $t@1390 $Snap)
+(assert (= $t@1361 ($Snap.combine $t@1389 $t@1390)))
+(declare-const $t@1391 Int)
+(declare-const $t@1392 $Ref)
+(assert (=
+  $t@1389
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1391)
+    ($SortWrappers.$RefTo$Snap $t@1392))))
+(declare-const $k@1393 $Perm)
+(assert ($Perm.isValidVar $k@1393))
+(assert ($Perm.isReadVar $k@1393 $Perm.Write))
+; [eval] diz.BlockingQueue__first.Node__next != null
+(push) ; 6
+(assert (not (= $t@1392 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@1392 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 277] $t@1392 != Null
+(assert (not (= $t@1392 $Ref.null)))
+; [exec]
+; __flatten_53 := diz.BlockingQueue__first
+; [exec]
+; __flatten_54 := Integer__Integer(__flatten_53.Node__val)
+(push) ; 7
+(assert (not (not (= $k@1393 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1393 $Perm.No)))
+(declare-const sys__result@1394 $Ref)
+(declare-const $t@1395 $Snap)
+(declare-const $t@1396 Int)
+(assert (= $t@1395 ($Snap.combine ($SortWrappers.IntTo$Snap $t@1396) $Snap.unit)))
+(declare-const $t@1397 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1396)
+  ($Snap.combine $Snap.unit ($SortWrappers.IntTo$Snap $t@1397))))
+; [eval] sys__result != null
+(assert (not (= sys__result@1394 $Ref.null)))
+(declare-const $k@1398 $Perm)
+(assert ($Perm.isValidVar $k@1398))
+(assert ($Perm.isReadVar $k@1398 $Perm.Write))
+; [eval] sys__result.Integer__val == val
+(push) ; 7
+(assert (not (not (= $k@1398 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1398 $Perm.No)))
+(assert (= $t@1397 $t@1391))
+; [exec]
+; x := __flatten_54
+; [exec]
+; fold acc(Node__state(diz.BlockingQueue__first), write)
+(declare-const $k@1399 $Perm)
+(assert ($Perm.isValidVar $k@1399))
+(assert ($Perm.isReadVar $k@1399 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1399 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1399 $k@1393))
+; [eval] diz.Node__next != null
+(push) ; 7
+(assert (not (= $t@1392 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 278] $t@1392 != Null
+; [exec]
+; exhale acc(Lock__lock_held(diz.BlockingQueue__takeLock), write)
+; [exec]
+; exhale true
+; [exec]
+; __flatten_55 := x
+; [exec]
+; sys__result := __flatten_55
+; [exec]
+; assert acc(diz.BlockingQueue__capacity, wildcard) && (diz.BlockingQueue__capacity > 0) && acc(diz.BlockingQueue__count, wildcard) && acc(diz.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(diz.BlockingQueue__first, write) && ((diz.BlockingQueue__first != null) ==> acc(Node__state(diz.BlockingQueue__first), write)) && acc(diz.BlockingQueue__putLock, wildcard) && acc(diz.BlockingQueue__takeLock, wildcard)
+(declare-const $k@1400 $Perm)
+(assert ($Perm.isValidVar $k@1400))
+(assert ($Perm.isReadVar $k@1400 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1400 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (< $k@1400 $k@1355))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1401 $Perm)
+(assert ($Perm.isValidVar $k@1401))
+(assert ($Perm.isReadVar $k@1401 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1401 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (< $k@1401 $k@1357))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1360 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 279] $t@1360 != Null
+(declare-const $k@1402 $Perm)
+(assert ($Perm.isValidVar $k@1402))
+(assert ($Perm.isReadVar $k@1402 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1402 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(push) ; 9
+(assert (not (not (= $k@1362 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (not (= $k@1362 $Perm.No)))
+(assert (< $k@1402 $k@1362))
+(declare-const $k@1403 $Perm)
+(assert ($Perm.isValidVar $k@1403))
+(assert ($Perm.isReadVar $k@1403 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1403 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1403 $k@1364))
+; [exec]
+; inhale false
+(pop) ; 8
+; [dead else-branch 279] $t@1360 == Null
+(pop) ; 7
+; [dead else-branch 278] $t@1392 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 277] $t@1392 == Null
+(assert (= $t@1392 $Ref.null))
+; [exec]
+; __flatten_53 := diz.BlockingQueue__first
+; [exec]
+; __flatten_54 := Integer__Integer(__flatten_53.Node__val)
+(push) ; 7
+(assert (not (not (= $k@1393 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1393 $Perm.No)))
+(declare-const sys__result@1404 $Ref)
+(declare-const $t@1405 $Snap)
+(declare-const $t@1406 Int)
+(assert (= $t@1405 ($Snap.combine ($SortWrappers.IntTo$Snap $t@1406) $Snap.unit)))
+(declare-const $t@1407 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1406)
+  ($Snap.combine $Snap.unit ($SortWrappers.IntTo$Snap $t@1407))))
+; [eval] sys__result != null
+(assert (not (= sys__result@1404 $Ref.null)))
+(declare-const $k@1408 $Perm)
+(assert ($Perm.isValidVar $k@1408))
+(assert ($Perm.isReadVar $k@1408 $Perm.Write))
+; [eval] sys__result.Integer__val == val
+(push) ; 7
+(assert (not (not (= $k@1408 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1408 $Perm.No)))
+(assert (= $t@1407 $t@1391))
+; [exec]
+; x := __flatten_54
+; [exec]
+; fold acc(Node__state(diz.BlockingQueue__first), write)
+(declare-const $k@1409 $Perm)
+(assert ($Perm.isValidVar $k@1409))
+(assert ($Perm.isReadVar $k@1409 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1409 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1409 $k@1393))
+; [eval] diz.Node__next != null
+(push) ; 7
+(assert (not (not (= $t@1392 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 280] $t@1392 != Null
+(push) ; 7
+; [else-branch 280] $t@1392 == Null
+; [exec]
+; exhale acc(Lock__lock_held(diz.BlockingQueue__takeLock), write)
+; [exec]
+; exhale true
+; [exec]
+; __flatten_55 := x
+; [exec]
+; sys__result := __flatten_55
+; [exec]
+; assert acc(diz.BlockingQueue__capacity, wildcard) && (diz.BlockingQueue__capacity > 0) && acc(diz.BlockingQueue__count, wildcard) && acc(diz.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(diz.BlockingQueue__first, write) && ((diz.BlockingQueue__first != null) ==> acc(Node__state(diz.BlockingQueue__first), write)) && acc(diz.BlockingQueue__putLock, wildcard) && acc(diz.BlockingQueue__takeLock, wildcard)
+(declare-const $k@1410 $Perm)
+(assert ($Perm.isValidVar $k@1410))
+(assert ($Perm.isReadVar $k@1410 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1410 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (< $k@1410 $k@1355))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1411 $Perm)
+(assert ($Perm.isValidVar $k@1411))
+(assert ($Perm.isReadVar $k@1411 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1411 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (< $k@1411 $k@1357))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1360 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 281] $t@1360 != Null
+(declare-const $k@1412 $Perm)
+(assert ($Perm.isValidVar $k@1412))
+(assert ($Perm.isReadVar $k@1412 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1412 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(push) ; 9
+(assert (not (not (= $k@1362 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (not (= $k@1362 $Perm.No)))
+(assert (< $k@1412 $k@1362))
+(declare-const $k@1413 $Perm)
+(assert ($Perm.isValidVar $k@1413))
+(assert ($Perm.isReadVar $k@1413 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1413 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1413 $k@1364))
+; [exec]
+; inhale false
+(pop) ; 8
+; [dead else-branch 281] $t@1360 == Null
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(push) ; 5
+; [else-branch 276] sys__result@1381 == 0
+(assert (= sys__result@1381 0))
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 272] $t@1360 == Null
+(assert (= $t@1360 $Ref.null))
+(declare-const $k@1414 $Perm)
+(assert ($Perm.isValidVar $k@1414))
+(assert ($Perm.isReadVar $k@1414 $Perm.Write))
+(declare-const $t@1415 $Ref)
+(declare-const $k@1416 $Perm)
+(assert ($Perm.isValidVar $k@1416))
+(assert ($Perm.isReadVar $k@1416 $Perm.Write))
+(declare-const $t@1417 $Ref)
+(push) ; 4
+(declare-const $k@1418 $Perm)
+(assert ($Perm.isValidVar $k@1418))
+(assert ($Perm.isReadVar $k@1418 $Perm.Write))
+(declare-const $t@1419 Int)
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1418 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1418 $Perm.No)))
+(assert (> $t@1419 0))
+(declare-const $k@1420 $Perm)
+(assert ($Perm.isValidVar $k@1420))
+(assert ($Perm.isReadVar $k@1420 $Perm.Write))
+(declare-const $t@1421 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1420 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1420 $Perm.No)))
+(assert (not (= $t@1421 $Ref.null)))
+(declare-const $t@1422 Int)
+(declare-const $t@1423 $Ref)
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1423 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1423 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 282] $t@1423 != Null
+(assert (not (= $t@1423 $Ref.null)))
+(declare-const $t@1424 $Snap)
+(declare-const $k@1425 $Perm)
+(assert ($Perm.isValidVar $k@1425))
+(assert ($Perm.isReadVar $k@1425 $Perm.Write))
+(declare-const $t@1426 $Ref)
+(declare-const $k@1427 $Perm)
+(assert ($Perm.isValidVar $k@1427))
+(assert ($Perm.isReadVar $k@1427 $Perm.Write))
+(declare-const $t@1428 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 282] $t@1423 == Null
+(assert (= $t@1423 $Ref.null))
+(declare-const $k@1429 $Perm)
+(assert ($Perm.isValidVar $k@1429))
+(assert ($Perm.isReadVar $k@1429 $Perm.Write))
+(declare-const $t@1430 $Ref)
+(declare-const $k@1431 $Perm)
+(assert ($Perm.isValidVar $k@1431))
+(assert ($Perm.isReadVar $k@1431 $Perm.Write))
+(declare-const $t@1432 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; x := null
+; [exec]
+; __flatten_51 := AtomicInteger__get(diz.BlockingQueue__count)
+; [eval] diz != null
+(declare-const sys__result@1433 Int)
+(declare-const $t@1434 $Snap)
+(declare-const $t@1435 Int)
+(assert (= $t@1434 ($Snap.combine ($SortWrappers.IntTo$Snap $t@1435) $Snap.unit)))
+; [eval] sys__result == diz.AtomicInteger__ghostVal
+(assert (= sys__result@1433 $t@1435))
+; [exec]
+; currentCount := __flatten_51
+; [eval] currentCount == 0
+(push) ; 5
+(assert (not (not (= sys__result@1433 0))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (= sys__result@1433 0)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 283] sys__result@1433 == 0
+(assert (= sys__result@1433 0))
+; [exec]
+; __flatten_52 := x
+; [exec]
+; sys__result := __flatten_52
+; [exec]
+; assert acc(diz.BlockingQueue__capacity, wildcard) && (diz.BlockingQueue__capacity > 0) && acc(diz.BlockingQueue__count, wildcard) && acc(diz.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(diz.BlockingQueue__first, write) && ((diz.BlockingQueue__first != null) ==> acc(Node__state(diz.BlockingQueue__first), write)) && acc(diz.BlockingQueue__putLock, wildcard) && acc(diz.BlockingQueue__takeLock, wildcard)
+(declare-const $k@1436 $Perm)
+(assert ($Perm.isValidVar $k@1436))
+(assert ($Perm.isReadVar $k@1436 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1436 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (< $k@1436 $k@1355))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1437 $Perm)
+(assert ($Perm.isValidVar $k@1437))
+(assert ($Perm.isReadVar $k@1437 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1437 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (< $k@1437 $k@1357))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (not (= $t@1360 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+; [dead then-branch 284] $t@1360 != Null
+(push) ; 6
+; [else-branch 284] $t@1360 == Null
+(declare-const $k@1438 $Perm)
+(assert ($Perm.isValidVar $k@1438))
+(assert ($Perm.isReadVar $k@1438 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1438 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(push) ; 7
+(assert (not (not (= $k@1414 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1414 $Perm.No)))
+(assert (< $k@1438 $k@1414))
+(declare-const $k@1439 $Perm)
+(assert ($Perm.isValidVar $k@1439))
+(assert ($Perm.isReadVar $k@1439 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1439 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(push) ; 7
+(assert (not (not (= $k@1416 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (not (= $k@1416 $Perm.No)))
+(assert (< $k@1439 $k@1416))
+; [exec]
+; inhale false
+(pop) ; 6
+(pop) ; 5
+(push) ; 5
+; [else-branch 283] sys__result@1433 != 0
+(assert (not (= sys__result@1433 0)))
+(pop) ; 5
+; [eval] !(currentCount == 0)
+; [eval] currentCount == 0
+(push) ; 5
+(assert (not (= sys__result@1433 0)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= sys__result@1433 0))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 285] sys__result@1433 != 0
+(assert (not (= sys__result@1433 0)))
+; [exec]
+; inhale true
+; [exec]
+; inhale acc(Lock__lock_held(diz.BlockingQueue__takeLock), write)
+(push) ; 6
+(assert (not (not (= $k@1416 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1416 $Perm.No)))
+(declare-const $t@1440 $Snap)
+; [exec]
+; inhale diz.BlockingQueue__first != null
+; [eval] diz.BlockingQueue__first != null
+(assert (not (= $t@1360 $Ref.null)))
+; [exec]
+; unfold acc(Node__state(diz.BlockingQueue__first), write)
+(check-sat)
+; unsat
+(pop) ; 5
+(push) ; 5
+; [else-branch 285] sys__result@1433 == 0
+(assert (= sys__result@1433 0))
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- Integer__Integer ----------
+(declare-const val@1441 Int)
+(declare-const sys__result@1442 $Ref)
+(declare-const diz@1443 $Ref)
+(declare-const __flatten_56@1444 Int)
+(declare-const __flatten_98@1445 Int)
 (push) ; 2
 (push) ; 3
 ; [eval] sys__result != null
-(assert (not (= sys__result@1347 $Ref.null)))
-(declare-const $k@1351 $Perm)
-(assert ($Perm.isValidVar $k@1351))
-(assert ($Perm.isReadVar $k@1351 $Perm.Write))
-(declare-const $t@1352 Int)
+(assert (not (= sys__result@1442 $Ref.null)))
+(declare-const $k@1446 $Perm)
+(assert ($Perm.isValidVar $k@1446))
+(assert ($Perm.isReadVar $k@1446 $Perm.Write))
+(declare-const $t@1447 Int)
 ; [eval] sys__result.Integer__val == val
 (push) ; 4
-(assert (not (not (= $k@1351 $Perm.No))))
+(assert (not (not (= $k@1446 $Perm.No))))
 (check-sat)
 ; unsat
 ; 0.00s
 (pop) ; 4
-(assert (not (= $k@1351 $Perm.No)))
-(assert (= $t@1352 val@1346))
+(assert (not (= $k@1446 $Perm.No)))
+(assert (= $t@1447 val@1441))
 (pop) ; 3
 (push) ; 3
 ; [exec]
 ; diz := new(Integer__val)
-(declare-const diz@1353 $Ref)
-(assert (not (= diz@1353 $Ref.null)))
-(declare-const Integer__val@1354 Int)
-(assert (not (= sys__result@1347 diz@1353)))
+(declare-const diz@1448 $Ref)
+(assert (not (= diz@1448 $Ref.null)))
+(declare-const Integer__val@1449 Int)
+(assert (not (= sys__result@1442 diz@1448)))
 ; [exec]
-; __flatten_51 := val
+; __flatten_56 := val
 ; [exec]
-; __flatten_91 := __flatten_51
+; __flatten_98 := __flatten_56
 ; [exec]
-; diz.Integer__val := __flatten_91
+; diz.Integer__val := __flatten_98
 ; [exec]
 ; sys__result := diz
 ; [exec]
 ; assert (sys__result != null) && acc(sys__result.Integer__val, wildcard) && (sys__result.Integer__val == val)
 ; [eval] sys__result != null
-(declare-const $k@1355 $Perm)
-(assert ($Perm.isValidVar $k@1355))
-(assert ($Perm.isReadVar $k@1355 $Perm.Write))
+(declare-const $k@1450 $Perm)
+(assert ($Perm.isValidVar $k@1450))
+(assert ($Perm.isReadVar $k@1450 $Perm.Write))
 (push) ; 4
-(assert (not (or (= $k@1355 $Perm.No) true)))
+(assert (not (or (= $k@1450 $Perm.No) true)))
 (check-sat)
 ; unsat
 ; 0.00s
 (pop) ; 4
-(assert (< $k@1355 $Perm.Write))
+(assert (< $k@1450 $Perm.Write))
 ; [eval] sys__result.Integer__val == val
 ; [exec]
 ; inhale false

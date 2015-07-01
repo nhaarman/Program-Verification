@@ -193,5 +193,24 @@ class BlockingQueue {
   		return x;
   	}
 
+  	requires state();
+  	ensures state();
+  	Integer peek()
+  	{
+  		Integer x = null;
+  		int currentCount = count.get();
+  		if (currentCount == 0)
+  		{
+  			return x;
+  		}
+  		lock takeLock;
+  		assume first != null;
+  		unfold first.state();
+  		x = new Integer(first.val);
+  		fold first.state();
+  		unlock takeLock;
+  		return x;
+  	}
+
 
 }
