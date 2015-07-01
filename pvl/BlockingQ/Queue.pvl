@@ -5,8 +5,9 @@ class Queue {
   LockableInteger count;
   LockSymbol putLock; // lock that can guard not going over max capacity
   LockSymbol takeLock; // lock that can guard not taking empty elements.
+  LockSymbol notFull;
 
-  resource state() = Perm(first, 1) ** first->state() ** Value(capacity) ** Perm(count, 1) ** Perm(putLock,1) ** Perm(takeLock,1);
+  resource state() = Perm(first, 1) ** first->state() ** Value(capacity) ** Perm(count, 1) ** count.lock_invariant() ** Perm(putLock,1) ** Perm(takeLock,1);
 
   requires state();
   seq<int> contents() = 
@@ -20,13 +21,14 @@ class Queue {
   ensures state();
   ensures first == null;
   ensures this.capacity == capacity;
-  ensures count != null ** count.state() ** count.val == 0;
+  ensures count != null ** count.lock_invariant() ** count.val == 0;
   Queue(int capacity) {
     first = null;
     this.capacity = capacity;
     this.count = new LockableInteger(0);
     putLock = new LockSymbol();
     takeLock = new LockSymbol();
+    notFull = new LockSymbol();
     fold state();
   }
 
@@ -48,12 +50,12 @@ class Queue {
     }
   }
 
-
   /*
+  requires state()
   void put(int e)
   {
     int c =-1;
-    if (held())
+    //if (held(putLock)) {}
 
     while(isFull())
     {
@@ -63,7 +65,17 @@ class Queue {
   */
   // With atomic int you do count.get() == capacity.
 
-  
+
+  requires state();
+  ensures state() ** \result == (count.val == capacity);
+  boolean isFull()
+  {
+    lock count;
+    boolean ret = count.val == capacity;
+    unlock count;
+    return ret;
+  }
+
   /*
 
   requires state() ** first != null;

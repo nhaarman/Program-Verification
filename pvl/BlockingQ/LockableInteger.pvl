@@ -4,13 +4,13 @@
 class LockableInteger {
   int val;
 
-  resource state() = Perm(val,1);
+  //resource state() = Perm(val,1);
 
-  //resource lock_invariant() = Perm(val,1);
+  resource lock_invariant() = Perm(val,1);
 
-  ensures state() ** this.val == val;
+  ensures lock_invariant() ** this.val == val;
   LockableInteger(int val) {
     this.val = val;
-    fold state();
+    fold lock_invariant();
   }
 }

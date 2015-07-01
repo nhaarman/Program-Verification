@@ -1,0 +1,87 @@
+class Lock {
+	resource lock_invariant() = true;
+	Lock(){}
+}
+
+
+class BlockingQueue {
+
+	int capacity;
+	AtomicInteger count;
+	Node first;
+
+	Lock putLock;
+	Lock takeLock;
+
+	resource state() = 
+		Value(capacity) ** capacity > 0
+		** Value(count) ** count.state()
+		** Perm(first, 1) ** first->state()
+		** Value(putLock) ** Value(takeLock)
+	;
+
+	requires state();
+	seq<int> contents() = first == null ? seq<int>{} : first.contents();
+
+
+	requires capacity > 0;
+	ensures state() 
+		** this.capacity == capacity 
+		** first == null 
+		** count.ghostVal == 0;
+	BlockingQueue(int capacity)
+	{
+		this.putLock = new Lock();
+		this.takeLock = new Lock();
+		this.capacity = capacity;
+		first = null;
+		count = new AtomicInteger(0);
+		fold state();
+	}
+
+
+	requires state();
+	ensures  state();
+	void put(int val) 
+	{
+	    int c = -1;
+	    lock putLock;
+
+	    int currentCount = count.get();
+	    loop_invariant Value(putLock) ** held(putLock);
+	    loop_invariant Value(capacity) ** Value(count) ** count != null ** count.state();
+	    while(currentCount == capacity) {
+			wait putLock;
+			currentCount = count.get();
+	    }   
+
+	    linkLast(val); 
+
+	    c = count.getAndIncrement();
+	    if (c + 1 < capacity) {
+			notify putLock;
+	    }
+	    unlock putLock;
+
+	    if (c == 0) {
+			lock takeLock;
+			notify takeLock;
+			unlock takeLock;
+	    }
+	}
+
+	requires state();
+	ensures  state() ** first != null;
+	ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
+  	ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
+  	void linkLast(int val) 
+  	{
+		if (first == null) 
+		{
+			first = new Node(val, null);
+		} else {
+			first.append(new Node(val, null));
+		}
+  	}
+
+}
