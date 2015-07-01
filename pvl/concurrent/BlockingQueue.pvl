@@ -51,6 +51,38 @@ class BlockingQueue {
   }
   
   requires state();
+  ensures  state();
+  int take() {
+    int x;
+    int c = -1;
+    lock takeLock;
+
+    int currentCount = count.get();
+    loop_invariant Value(takeLock) ** held(takeLock);
+    loop_invariant Value(count) ** count != null;
+    while(currentCount == 0) {
+      wait takeLock;
+      currentCount = count.get();
+    }
+
+    assume first != null;
+    x = unlinkFirst();
+    c = count.getAndDecrement();
+    if (c > 1) {
+      notify takeLock;
+    }
+    unlock takeLock;
+
+    if (c == capacity) {
+      lock putLock;
+      notify putLock;
+      unlock putLock;
+    }
+     
+    return x;
+  }
+
+  requires state();
   ensures  state() ** first != null;
   ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
   ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
@@ -61,6 +93,18 @@ class BlockingQueue {
       first.append(new Node(val, null));
     }
   }
+
+  requires state() ** first != null;
+  ensures  state();
+  ensures  \result == \old(head(contents()));
+  ensures  contents() == \old(tail(contents()));
+  int unlinkFirst() {
+    unfold first.state();
+    int value = first.val; 
+    first = first.next;
+    return value;
+  }
+
 }      
 /*
   requires capacity > 0;
@@ -131,14 +175,5 @@ class BlockingQueue {
   
 
 
-  requires state() ** first != null;
-  ensures  state();
-  ensures  \result == \old(head(contents()));
-  ensures  contents() == \old(tail(contents()));
-  int unlinkFirst() {
-    unfold first.state();
-    int value = first.val; 
-    first = first.next;
-    return value;
-  }
+ 
 */

@@ -19,6 +19,14 @@ class AtomicInteger {
     return res;
   }
 
+  int getAndDecrement() {
+    lock this;
+    int res = val;
+    val = val + 1;
+    unlock this;
+    return res;
+  }
+
   int get() {
     lock this;
     int res = val;
