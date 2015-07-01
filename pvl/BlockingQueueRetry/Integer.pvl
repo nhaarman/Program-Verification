@@ -1,0 +1,11 @@
+/**
+ * A class to box int values.
+ */
+class Integer {
+  int val;
+
+  ensures Value(this.val) ** this.val == val; 
+  Integer(int val) {
+    this.val = val;
+  }
+}

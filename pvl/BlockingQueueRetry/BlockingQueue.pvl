@@ -160,5 +160,38 @@ class BlockingQueue {
 	    return c >= 0;
   	}
 
+  	requires state();
+  	ensures state();
+  	Integer poll()
+  	{
+  		Integer x = null;
+  		int currentCount = count.get();
+  		if (currentCount == 0)
+  		{
+  			return x;
+  		}
+  		int c = -1;
+  		lock takeLock;
+  		currentCount = count.get();
+  		if (currentCount > 0)
+  		{
+  			assume first != null;
+  			x = new Integer(unlinkFirst());
+  			c = count.getAndDecrement();
+  			if (c > 1)
+  			{
+  				notify takeLock;
+  			}
+  		}
+  		unlock takeLock;
+  		if (c == capacity)
+  		{
+  			lock putLock;
+			notify putLock;
+			unlock putLock;
+  		}
+  		return x;
+  	}
+
 
 }
