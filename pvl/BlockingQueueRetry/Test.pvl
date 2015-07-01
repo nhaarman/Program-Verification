@@ -1,0 +1,114 @@
+class LBQThread1a {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.offer(1);
+        queue.peek();
+    }
+}
+
+class LBQThread1b {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.offer(2);
+        queue.peek();
+    }
+}
+
+class LBQThread2a {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.put(1);
+    }
+}
+
+class LBQThread2b {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.put(2);
+        queue.poll();
+    }
+}
+
+class LBQThread3a {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.put(1);
+    }
+}
+
+class LBQThread3b {
+
+    LinkedBlockingQueue queue;
+
+    public LBQThread(LinkedBlockingQueue queue) {
+        this.queue = queue;
+    }
+
+    void run() {
+        queue.take();
+    }
+}
+
+class Test {
+
+  void test1() 
+    LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+
+    LBQThread1a t1 = new LBQThread1a(queue);
+    LBQThread1b t2 = new LBQThread1b(queue);
+
+    t1.fork(); t2.fork();
+    t1.join(); t2.join();
+
+  }
+
+  void test2() {
+     LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+
+    LBQThread2a t1 = new LBQThread2a(queue);
+    LBQThread2b t2 = new LBQThread2b(queue);
+
+    t1.fork(); t2.fork();
+    t1.join(); t2.join();
+  }
+
+  void test3() {
+    LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+
+    LBQThread2a t1 = new LBQThread3a(queue);
+    LBQThread2b t2 = new LBQThread3b(queue);
+
+    t1.fork(); t2.fork();
+    t1.join(); t2.join();
+  }
+}
