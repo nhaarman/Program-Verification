@@ -1,7 +1,7 @@
 (get-info :version)
 ; (:version "4.3.2")
 ; Input file is <unknown>
-; Started: 2015-07-01 15:06:04
+; Started: 2015-07-01 16:08:46
 ; Silicon.buildVersion: 0.1-SNAPSHOT 407b787e33ff+ default 2015/06/10 17:01:19
 ; ------------------------------------------------------------
 ; Preamble start
@@ -829,8 +829,8 @@
 (declare-const diz@36 $Ref)
 (declare-const __flatten_1@37 Int)
 (declare-const __flatten_2@38 Int)
-(declare-const __flatten_57@39 Int)
-(declare-const __flatten_58@40 Int)
+(declare-const __flatten_75@39 Int)
+(declare-const __flatten_76@40 Int)
 (push) ; 2
 (push) ; 3
 ; [eval] sys__result != null
@@ -850,15 +850,15 @@
 ; [exec]
 ; __flatten_1 := val
 ; [exec]
-; __flatten_57 := __flatten_1
+; __flatten_75 := __flatten_1
 ; [exec]
-; diz.AtomicInteger__val := __flatten_57
+; diz.AtomicInteger__val := __flatten_75
 ; [exec]
 ; __flatten_2 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_58 := __flatten_2
+; __flatten_76 := __flatten_2
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_58
+; diz.AtomicInteger__ghostVal := __flatten_76
 ; [exec]
 ; exhale acc(diz.AtomicInteger__val, write) && (diz.AtomicInteger__val == diz.AtomicInteger__ghostVal)
 ; [eval] diz.AtomicInteger__val == diz.AtomicInteger__ghostVal
@@ -922,8 +922,8 @@
 (declare-const __flatten_4@57 Int)
 (declare-const __flatten_5@58 Int)
 (declare-const __flatten_6@59 Int)
-(declare-const __flatten_59@60 Int)
-(declare-const __flatten_60@61 Int)
+(declare-const __flatten_77@60 Int)
+(declare-const __flatten_78@61 Int)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@54 $Ref.null)))
@@ -951,15 +951,15 @@
 ; __flatten_4 := diz.AtomicInteger__val + 1
 ; [eval] diz.AtomicInteger__val + 1
 ; [exec]
-; __flatten_59 := __flatten_4
+; __flatten_77 := __flatten_4
 ; [exec]
-; diz.AtomicInteger__val := __flatten_59
+; diz.AtomicInteger__val := __flatten_77
 ; [exec]
 ; __flatten_5 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_60 := __flatten_5
+; __flatten_78 := __flatten_5
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_60
+; diz.AtomicInteger__ghostVal := __flatten_78
 ; [exec]
 ; exhale acc(AtomicInteger__lock_held(diz), write)
 ; [exec]
@@ -991,8 +991,8 @@
 (declare-const __flatten_7@70 Int)
 (declare-const __flatten_8@71 Int)
 (declare-const __flatten_9@72 Int)
-(declare-const __flatten_61@73 Int)
-(declare-const __flatten_62@74 Int)
+(declare-const __flatten_79@73 Int)
+(declare-const __flatten_80@74 Int)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@67 $Ref.null)))
@@ -1020,15 +1020,15 @@
 ; __flatten_7 := diz.AtomicInteger__val - 1
 ; [eval] diz.AtomicInteger__val - 1
 ; [exec]
-; __flatten_61 := __flatten_7
+; __flatten_79 := __flatten_7
 ; [exec]
-; diz.AtomicInteger__val := __flatten_61
+; diz.AtomicInteger__val := __flatten_79
 ; [exec]
 ; __flatten_8 := diz.AtomicInteger__val
 ; [exec]
-; __flatten_62 := __flatten_8
+; __flatten_80 := __flatten_8
 ; [exec]
-; diz.AtomicInteger__ghostVal := __flatten_62
+; diz.AtomicInteger__ghostVal := __flatten_80
 ; [exec]
 ; exhale acc(AtomicInteger__lock_held(diz), write)
 ; [exec]
@@ -1060,8 +1060,8 @@
 (declare-const diz@83 $Ref)
 (declare-const __flatten_10@84 Int)
 (declare-const __flatten_11@85 $Ref)
-(declare-const __flatten_63@86 Int)
-(declare-const __flatten_64@87 $Ref)
+(declare-const __flatten_81@86 Int)
+(declare-const __flatten_82@87 $Ref)
 (push) ; 2
 ; [eval] next != null
 (push) ; 3
@@ -1260,20 +1260,20 @@
   (not (= next@81 diz@97))
   (not (= sys__result@82 diz@97))
   (not (= __flatten_11@85 diz@97))
-  (not (= __flatten_64@87 diz@97))
+  (not (= __flatten_82@87 diz@97))
   (not (= Node__next@98 diz@97))))
 ; [exec]
 ; __flatten_10 := val
 ; [exec]
-; __flatten_63 := __flatten_10
+; __flatten_81 := __flatten_10
 ; [exec]
-; diz.Node__val := __flatten_63
+; diz.Node__val := __flatten_81
 ; [exec]
 ; __flatten_11 := next
 ; [exec]
-; __flatten_64 := __flatten_11
+; __flatten_82 := __flatten_11
 ; [exec]
-; diz.Node__next := __flatten_64
+; diz.Node__next := __flatten_82
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@100 $Perm)
@@ -1616,20 +1616,20 @@
   (not (= next@81 diz@115))
   (not (= sys__result@82 diz@115))
   (not (= __flatten_11@85 diz@115))
-  (not (= __flatten_64@87 diz@115))
+  (not (= __flatten_82@87 diz@115))
   (not (= Node__next@116 diz@115))))
 ; [exec]
 ; __flatten_10 := val
 ; [exec]
-; __flatten_63 := __flatten_10
+; __flatten_81 := __flatten_10
 ; [exec]
-; diz.Node__val := __flatten_63
+; diz.Node__val := __flatten_81
 ; [exec]
 ; __flatten_11 := next
 ; [exec]
-; __flatten_64 := __flatten_11
+; __flatten_82 := __flatten_11
 ; [exec]
-; diz.Node__next := __flatten_64
+; diz.Node__next := __flatten_82
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@118 $Perm)
@@ -1791,7 +1791,7 @@
 (declare-const diz@125 $Ref)
 (declare-const n@126 $Ref)
 (declare-const __flatten_12@127 $Ref)
-(declare-const __flatten_65@128 $Ref)
+(declare-const __flatten_83@128 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@125 $Ref.null)))
@@ -1989,9 +1989,9 @@
 ; [exec]
 ; __flatten_12 := n
 ; [exec]
-; __flatten_65 := __flatten_12
+; __flatten_83 := __flatten_12
 ; [exec]
-; diz.Node__next := __flatten_65
+; diz.Node__next := __flatten_83
 ; [exec]
 ; fold acc(Node__state(diz), write)
 (declare-const $k@140 $Perm)
@@ -2112,10 +2112,10 @@
 (declare-const __flatten_18@151 Int)
 (declare-const __flatten_19@152 $Ref)
 (declare-const __flatten_20@153 $Ref)
-(declare-const __flatten_68@154 $Ref)
-(declare-const __flatten_70@155 $Ref)
-(declare-const __flatten_71@156 Int)
-(declare-const __flatten_73@157 $Ref)
+(declare-const __flatten_86@154 $Ref)
+(declare-const __flatten_88@155 $Ref)
+(declare-const __flatten_89@156 Int)
+(declare-const __flatten_91@157 $Ref)
 (push) ; 2
 ; [eval] capacity > 0
 (assert (> capacity@144 0))
@@ -2217,9 +2217,9 @@
   (not (= __flatten_17@150 diz@173))
   (not (= __flatten_19@152 diz@173))
   (not (= __flatten_20@153 diz@173))
-  (not (= __flatten_68@154 diz@173))
-  (not (= __flatten_70@155 diz@173))
-  (not (= __flatten_73@157 diz@173))
+  (not (= __flatten_86@154 diz@173))
+  (not (= __flatten_88@155 diz@173))
+  (not (= __flatten_91@157 diz@173))
   (not (= BlockingQueue__count@175 diz@173))
   (not (= BlockingQueue__first@176 diz@173))
   (not (= BlockingQueue__putLock@177 diz@173))
@@ -2232,9 +2232,9 @@
 ; [exec]
 ; __flatten_14 := __flatten_15
 ; [exec]
-; __flatten_68 := __flatten_14
+; __flatten_86 := __flatten_14
 ; [exec]
-; diz.BlockingQueue__putLock := __flatten_68
+; diz.BlockingQueue__putLock := __flatten_86
 ; [exec]
 ; __flatten_17 := Lock__Lock()
 (declare-const sys__result@180 $Ref)
@@ -2243,15 +2243,15 @@
 ; [exec]
 ; __flatten_16 := __flatten_17
 ; [exec]
-; __flatten_70 := __flatten_16
+; __flatten_88 := __flatten_16
 ; [exec]
-; diz.BlockingQueue__takeLock := __flatten_70
+; diz.BlockingQueue__takeLock := __flatten_88
 ; [exec]
 ; __flatten_18 := capacity
 ; [exec]
-; __flatten_71 := __flatten_18
+; __flatten_89 := __flatten_18
 ; [exec]
-; diz.BlockingQueue__capacity := __flatten_71
+; diz.BlockingQueue__capacity := __flatten_89
 ; [exec]
 ; diz.BlockingQueue__first := null
 ; [exec]
@@ -2271,9 +2271,9 @@
 ; [exec]
 ; __flatten_19 := __flatten_20
 ; [exec]
-; __flatten_73 := __flatten_19
+; __flatten_91 := __flatten_19
 ; [exec]
-; diz.BlockingQueue__count := __flatten_73
+; diz.BlockingQueue__count := __flatten_91
 ; [exec]
 ; sys__result := diz
 ; [exec]
@@ -2346,7 +2346,7 @@
 (declare-const __flatten_22@193 $Ref)
 (declare-const __flatten_23@194 $Ref)
 (declare-const __flatten_24@195 Int)
-(declare-const __flatten_74@196 $Ref)
+(declare-const __flatten_92@196 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@189 $Ref.null)))
@@ -3058,9 +3058,9 @@
 ; [exec]
 ; __flatten_22 := __flatten_23.Node__next
 ; [exec]
-; __flatten_74 := __flatten_22
+; __flatten_92 := __flatten_22
 ; [exec]
-; diz.BlockingQueue__first := __flatten_74
+; diz.BlockingQueue__first := __flatten_92
 ; [exec]
 ; __flatten_24 := value
 ; [exec]
@@ -3455,9 +3455,9 @@
 ; [exec]
 ; __flatten_22 := __flatten_23.Node__next
 ; [exec]
-; __flatten_74 := __flatten_22
+; __flatten_92 := __flatten_22
 ; [exec]
-; diz.BlockingQueue__first := __flatten_74
+; diz.BlockingQueue__first := __flatten_92
 ; [exec]
 ; __flatten_24 := value
 ; [exec]
@@ -8921,7 +8921,7 @@
 (declare-const __flatten_34@798 $Ref)
 (declare-const __flatten_35@799 $Ref)
 (declare-const __flatten_36@800 $Ref)
-(declare-const __flatten_84@801 $Ref)
+(declare-const __flatten_102@801 $Ref)
 (push) ; 2
 ; [eval] diz != null
 (assert (not (= diz@796 $Ref.null)))
@@ -11161,9 +11161,9 @@
 ; [exec]
 ; __flatten_34 := __flatten_35
 ; [exec]
-; __flatten_84 := __flatten_34
+; __flatten_102 := __flatten_34
 ; [exec]
-; diz.BlockingQueue__first := __flatten_84
+; diz.BlockingQueue__first := __flatten_102
 (declare-const $k@925 $Perm)
 (assert ($Perm.isValidVar $k@925))
 (assert ($Perm.isReadVar $k@925 $Perm.Write))
@@ -12631,7 +12631,7 @@
 (assert (not (< (+ sys__result@1029 1) $t@1008)))
 (check-sat)
 ; unknown
-; 0.01s
+; 0.00s
 (pop) ; 9
 (push) ; 9
 ; [then-branch 182] sys__result@1029 + 1 < $t@1008
@@ -12753,7 +12753,7 @@
 (assert (not (= sys__result@1029 0)))
 (check-sat)
 ; unknown
-; 0.00s
+; 0.01s
 (pop) ; 10
 (push) ; 10
 (assert (not (not (= sys__result@1029 0))))
@@ -17919,7 +17919,7 @@
 (declare-const sys__result@1442 $Ref)
 (declare-const diz@1443 $Ref)
 (declare-const __flatten_56@1444 Int)
-(declare-const __flatten_98@1445 Int)
+(declare-const __flatten_116@1445 Int)
 (push) ; 2
 (push) ; 3
 ; [eval] sys__result != null
@@ -17948,9 +17948,9 @@
 ; [exec]
 ; __flatten_56 := val
 ; [exec]
-; __flatten_98 := __flatten_56
+; __flatten_116 := __flatten_56
 ; [exec]
-; diz.Integer__val := __flatten_98
+; diz.Integer__val := __flatten_116
 ; [exec]
 ; sys__result := diz
 ; [exec]
@@ -17967,6 +17967,11297 @@
 (pop) ; 4
 (assert (< $k@1450 $Perm.Write))
 ; [eval] sys__result.Integer__val == val
+; [exec]
+; inhale false
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread1a__LBQThread1a ----------
+(declare-const queue@1451 $Ref)
+(declare-const sys__result@1452 $Ref)
+(declare-const diz@1453 $Ref)
+(declare-const __flatten_57@1454 $Ref)
+(declare-const __flatten_117@1455 $Ref)
+(push) ; 2
+(assert (not (= queue@1451 $Ref.null)))
+(declare-const $k@1456 $Perm)
+(assert ($Perm.isValidVar $k@1456))
+(assert ($Perm.isReadVar $k@1456 $Perm.Write))
+(declare-const $t@1457 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@1456 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1456 $Perm.No)))
+(assert (> $t@1457 0))
+(declare-const $k@1458 $Perm)
+(assert ($Perm.isValidVar $k@1458))
+(assert ($Perm.isReadVar $k@1458 $Perm.Write))
+(declare-const $t@1459 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1458 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1458 $Perm.No)))
+(assert (not (= $t@1459 $Ref.null)))
+(declare-const $t@1460 Int)
+(declare-const $t@1461 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@1461 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@1461 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 286] $t@1461 != Null
+(assert (not (= $t@1461 $Ref.null)))
+(declare-const $t@1462 $Snap)
+(declare-const $k@1463 $Perm)
+(assert ($Perm.isValidVar $k@1463))
+(assert ($Perm.isReadVar $k@1463 $Perm.Write))
+(declare-const $t@1464 $Ref)
+(declare-const $k@1465 $Perm)
+(assert ($Perm.isValidVar $k@1465))
+(assert ($Perm.isReadVar $k@1465 $Perm.Write))
+(declare-const $t@1466 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@1452 $Ref.null)))
+(declare-const $k@1467 $Perm)
+(assert ($Perm.isValidVar $k@1467))
+(assert ($Perm.isReadVar $k@1467 $Perm.Write))
+(declare-const $t@1468 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1467 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1467 $Perm.No)))
+(assert (not (= $t@1468 $Ref.null)))
+(declare-const $k@1469 $Perm)
+(assert ($Perm.isValidVar $k@1469))
+(assert ($Perm.isReadVar $k@1469 $Perm.Write))
+(declare-const $t@1470 Int)
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1469 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1469 $Perm.No)))
+(assert (> $t@1470 0))
+(declare-const $k@1471 $Perm)
+(assert ($Perm.isValidVar $k@1471))
+(assert ($Perm.isReadVar $k@1471 $Perm.Write))
+(declare-const $t@1472 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1471 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1471 $Perm.No)))
+(assert (not (= $t@1472 $Ref.null)))
+(declare-const $t@1473 Int)
+(declare-const $t@1474 $Ref)
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1474 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1474 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 287] $t@1474 != Null
+(assert (not (= $t@1474 $Ref.null)))
+(declare-const $t@1475 $Snap)
+(declare-const $k@1476 $Perm)
+(assert ($Perm.isValidVar $k@1476))
+(assert ($Perm.isReadVar $k@1476 $Perm.Write))
+(declare-const $t@1477 $Ref)
+(declare-const $k@1478 $Perm)
+(assert ($Perm.isValidVar $k@1478))
+(assert ($Perm.isReadVar $k@1478 $Perm.Write))
+(declare-const $t@1479 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 287] $t@1474 == Null
+(assert (= $t@1474 $Ref.null))
+(declare-const $k@1480 $Perm)
+(assert ($Perm.isValidVar $k@1480))
+(assert ($Perm.isReadVar $k@1480 $Perm.Write))
+(declare-const $t@1481 $Ref)
+(declare-const $k@1482 $Perm)
+(assert ($Perm.isValidVar $k@1482))
+(assert ($Perm.isReadVar $k@1482 $Perm.Write))
+(declare-const $t@1483 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread1a__queue)
+(declare-const diz@1484 $Ref)
+(assert (not (= diz@1484 $Ref.null)))
+(declare-const LBQThread1a__queue@1485 $Ref)
+(assert (and
+  (not (= queue@1451 diz@1484))
+  (not (= sys__result@1452 diz@1484))
+  (not (= __flatten_57@1454 diz@1484))
+  (not (= __flatten_117@1455 diz@1484))
+  (not (= $t@1459 diz@1484))
+  (not (= $t@1461 diz@1484))
+  (not (= LBQThread1a__queue@1485 diz@1484))
+  (not (= $t@1464 diz@1484))
+  (not (= $t@1466 diz@1484))))
+; [exec]
+; __flatten_57 := queue
+; [exec]
+; __flatten_117 := __flatten_57
+; [exec]
+; diz.LBQThread1a__queue := __flatten_117
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread1a__queue, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread1a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread1a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread1a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread1a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread1a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@1486 $Perm)
+(assert ($Perm.isValidVar $k@1486))
+(assert ($Perm.isReadVar $k@1486 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1486 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1486 $Perm.Write))
+(declare-const $k@1487 $Perm)
+(assert ($Perm.isValidVar $k@1487))
+(assert ($Perm.isReadVar $k@1487 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1487 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1487 $k@1456))
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1488 $Perm)
+(assert ($Perm.isValidVar $k@1488))
+(assert ($Perm.isReadVar $k@1488 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1488 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1488 $k@1458))
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1461 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 288] $t@1461 != Null
+(declare-const $k@1489 $Perm)
+(assert ($Perm.isValidVar $k@1489))
+(assert ($Perm.isReadVar $k@1489 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1489 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1463 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1463 $Perm.No)))
+(assert (< $k@1489 $k@1463))
+(declare-const $k@1490 $Perm)
+(assert ($Perm.isValidVar $k@1490))
+(assert ($Perm.isReadVar $k@1490 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1490 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1465 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1465 $Perm.No)))
+(assert (< $k@1490 $k@1465))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 288] $t@1461 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 286] $t@1461 == Null
+(assert (= $t@1461 $Ref.null))
+(declare-const $k@1491 $Perm)
+(assert ($Perm.isValidVar $k@1491))
+(assert ($Perm.isReadVar $k@1491 $Perm.Write))
+(declare-const $t@1492 $Ref)
+(declare-const $k@1493 $Perm)
+(assert ($Perm.isValidVar $k@1493))
+(assert ($Perm.isReadVar $k@1493 $Perm.Write))
+(declare-const $t@1494 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@1452 $Ref.null)))
+(declare-const $k@1495 $Perm)
+(assert ($Perm.isValidVar $k@1495))
+(assert ($Perm.isReadVar $k@1495 $Perm.Write))
+(declare-const $t@1496 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1495 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1495 $Perm.No)))
+(assert (not (= $t@1496 $Ref.null)))
+(declare-const $k@1497 $Perm)
+(assert ($Perm.isValidVar $k@1497))
+(assert ($Perm.isReadVar $k@1497 $Perm.Write))
+(declare-const $t@1498 Int)
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1497 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1497 $Perm.No)))
+(assert (> $t@1498 0))
+(declare-const $k@1499 $Perm)
+(assert ($Perm.isValidVar $k@1499))
+(assert ($Perm.isReadVar $k@1499 $Perm.Write))
+(declare-const $t@1500 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1499 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1499 $Perm.No)))
+(assert (not (= $t@1500 $Ref.null)))
+(declare-const $t@1501 Int)
+(declare-const $t@1502 $Ref)
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1502 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1502 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 289] $t@1502 != Null
+(assert (not (= $t@1502 $Ref.null)))
+(declare-const $t@1503 $Snap)
+(declare-const $k@1504 $Perm)
+(assert ($Perm.isValidVar $k@1504))
+(assert ($Perm.isReadVar $k@1504 $Perm.Write))
+(declare-const $t@1505 $Ref)
+(declare-const $k@1506 $Perm)
+(assert ($Perm.isValidVar $k@1506))
+(assert ($Perm.isReadVar $k@1506 $Perm.Write))
+(declare-const $t@1507 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 289] $t@1502 == Null
+(assert (= $t@1502 $Ref.null))
+(declare-const $k@1508 $Perm)
+(assert ($Perm.isValidVar $k@1508))
+(assert ($Perm.isReadVar $k@1508 $Perm.Write))
+(declare-const $t@1509 $Ref)
+(declare-const $k@1510 $Perm)
+(assert ($Perm.isValidVar $k@1510))
+(assert ($Perm.isReadVar $k@1510 $Perm.Write))
+(declare-const $t@1511 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread1a__queue)
+(declare-const diz@1512 $Ref)
+(assert (not (= diz@1512 $Ref.null)))
+(declare-const LBQThread1a__queue@1513 $Ref)
+(assert (and
+  (not (= queue@1451 diz@1512))
+  (not (= sys__result@1452 diz@1512))
+  (not (= __flatten_57@1454 diz@1512))
+  (not (= __flatten_117@1455 diz@1512))
+  (not (= $t@1459 diz@1512))
+  (not (= LBQThread1a__queue@1513 diz@1512))
+  (not (= $t@1461 diz@1512))
+  (not (= $t@1492 diz@1512))
+  (not (= $t@1494 diz@1512))))
+; [exec]
+; __flatten_57 := queue
+; [exec]
+; __flatten_117 := __flatten_57
+; [exec]
+; diz.LBQThread1a__queue := __flatten_117
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread1a__queue, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread1a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread1a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread1a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread1a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread1a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread1a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@1514 $Perm)
+(assert ($Perm.isValidVar $k@1514))
+(assert ($Perm.isReadVar $k@1514 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1514 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1514 $Perm.Write))
+(declare-const $k@1515 $Perm)
+(assert ($Perm.isValidVar $k@1515))
+(assert ($Perm.isReadVar $k@1515 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1515 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1515 $k@1456))
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1516 $Perm)
+(assert ($Perm.isValidVar $k@1516))
+(assert ($Perm.isReadVar $k@1516 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1516 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1516 $k@1458))
+; [eval] sys__result.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@1461 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 290] $t@1461 != Null
+(push) ; 5
+; [else-branch 290] $t@1461 == Null
+(declare-const $k@1517 $Perm)
+(assert ($Perm.isValidVar $k@1517))
+(assert ($Perm.isReadVar $k@1517 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1517 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1491 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1491 $Perm.No)))
+(assert (< $k@1517 $k@1491))
+(declare-const $k@1518 $Perm)
+(assert ($Perm.isValidVar $k@1518))
+(assert ($Perm.isReadVar $k@1518 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1518 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1493 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1493 $Perm.No)))
+(assert (< $k@1518 $k@1493))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread1a__run ----------
+(declare-const diz@1519 $Ref)
+(declare-const b@1520 Bool)
+(declare-const __flatten_58@1521 Bool)
+(declare-const i@1522 $Ref)
+(declare-const __flatten_59@1523 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@1519 $Ref.null)))
+(declare-const $k@1524 $Perm)
+(assert ($Perm.isValidVar $k@1524))
+(assert ($Perm.isReadVar $k@1524 $Perm.Write))
+(declare-const $t@1525 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1524 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1524 $Perm.No)))
+(assert (not (= $t@1525 $Ref.null)))
+(declare-const $k@1526 $Perm)
+(assert ($Perm.isValidVar $k@1526))
+(assert ($Perm.isReadVar $k@1526 $Perm.Write))
+(declare-const $t@1527 Int)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@1526 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1526 $Perm.No)))
+(assert (> $t@1527 0))
+(declare-const $k@1528 $Perm)
+(assert ($Perm.isValidVar $k@1528))
+(assert ($Perm.isReadVar $k@1528 $Perm.Write))
+(declare-const $t@1529 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1528 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1528 $Perm.No)))
+(assert (not (= $t@1529 $Ref.null)))
+(declare-const $t@1530 Int)
+(declare-const $t@1531 $Ref)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@1531 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@1531 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 291] $t@1531 != Null
+(assert (not (= $t@1531 $Ref.null)))
+(declare-const $t@1532 $Snap)
+(declare-const $k@1533 $Perm)
+(assert ($Perm.isValidVar $k@1533))
+(assert ($Perm.isReadVar $k@1533 $Perm.Write))
+(declare-const $t@1534 $Ref)
+(declare-const $k@1535 $Perm)
+(assert ($Perm.isValidVar $k@1535))
+(assert ($Perm.isReadVar $k@1535 $Perm.Write))
+(declare-const $t@1536 $Ref)
+(push) ; 4
+(declare-const $k@1537 $Perm)
+(assert ($Perm.isValidVar $k@1537))
+(assert ($Perm.isReadVar $k@1537 $Perm.Write))
+(declare-const $t@1538 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1537 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1537 $Perm.No)))
+(assert (not (= $t@1538 $Ref.null)))
+(declare-const $k@1539 $Perm)
+(assert ($Perm.isValidVar $k@1539))
+(assert ($Perm.isReadVar $k@1539 $Perm.Write))
+(declare-const $t@1540 Int)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1539 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1539 $Perm.No)))
+(assert (> $t@1540 0))
+(declare-const $k@1541 $Perm)
+(assert ($Perm.isValidVar $k@1541))
+(assert ($Perm.isReadVar $k@1541 $Perm.Write))
+(declare-const $t@1542 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1541 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1541 $Perm.No)))
+(assert (not (= $t@1542 $Ref.null)))
+(declare-const $t@1543 Int)
+(declare-const $t@1544 $Ref)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1544 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1544 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 292] $t@1544 != Null
+(assert (not (= $t@1544 $Ref.null)))
+(declare-const $t@1545 $Snap)
+(declare-const $k@1546 $Perm)
+(assert ($Perm.isValidVar $k@1546))
+(assert ($Perm.isReadVar $k@1546 $Perm.Write))
+(declare-const $t@1547 $Ref)
+(declare-const $k@1548 $Perm)
+(assert ($Perm.isValidVar $k@1548))
+(assert ($Perm.isReadVar $k@1548 $Perm.Write))
+(declare-const $t@1549 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 292] $t@1544 == Null
+(assert (= $t@1544 $Ref.null))
+(declare-const $k@1550 $Perm)
+(assert ($Perm.isValidVar $k@1550))
+(assert ($Perm.isReadVar $k@1550 $Perm.Write))
+(declare-const $t@1551 $Ref)
+(declare-const $k@1552 $Perm)
+(assert ($Perm.isValidVar $k@1552))
+(assert ($Perm.isReadVar $k@1552 $Perm.Write))
+(declare-const $t@1553 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_58 := BlockingQueue__offer(diz.LBQThread1a__queue, 1)
+; [eval] diz != null
+(declare-const $k@1554 $Perm)
+(assert ($Perm.isValidVar $k@1554))
+(assert ($Perm.isReadVar $k@1554 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1554 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1554 $k@1526))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1555 $Perm)
+(assert ($Perm.isValidVar $k@1555))
+(assert ($Perm.isReadVar $k@1555 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1555 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1555 $k@1528))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1531 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 293] $t@1531 != Null
+(declare-const $k@1556 $Perm)
+(assert ($Perm.isValidVar $k@1556))
+(assert ($Perm.isReadVar $k@1556 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1556 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1533 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1533 $Perm.No)))
+(assert (< $k@1556 $k@1533))
+(declare-const $k@1557 $Perm)
+(assert ($Perm.isValidVar $k@1557))
+(assert ($Perm.isReadVar $k@1557 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1557 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1535 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1535 $Perm.No)))
+(assert (< $k@1557 $k@1535))
+(declare-const sys__result@1558 Bool)
+(declare-const $t@1559 $Snap)
+(declare-const $t@1560 $Snap)
+(declare-const $t@1561 $Ref)
+(assert (= $t@1559 ($Snap.combine $t@1560 ($SortWrappers.$RefTo$Snap $t@1561))))
+(declare-const $t@1562 $Snap)
+(declare-const $t@1563 $Ref)
+(assert (= $t@1560 ($Snap.combine $t@1562 ($SortWrappers.$RefTo$Snap $t@1563))))
+(declare-const $t@1564 $Snap)
+(declare-const $t@1565 $Snap)
+(assert (= $t@1562 ($Snap.combine $t@1564 $t@1565)))
+(declare-const $t@1566 $Snap)
+(declare-const $t@1567 $Ref)
+(assert (= $t@1564 ($Snap.combine $t@1566 ($SortWrappers.$RefTo$Snap $t@1567))))
+(declare-const $t@1568 $Snap)
+(declare-const $t@1569 Int)
+(assert (= $t@1566 ($Snap.combine $t@1568 ($SortWrappers.IntTo$Snap $t@1569))))
+(declare-const $t@1570 Int)
+(declare-const $t@1571 $Ref)
+(assert (=
+  $t@1568
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1570)
+    ($SortWrappers.$RefTo$Snap $t@1571))))
+(declare-const $t@1572 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1570)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1572) $Snap.unit)))
+(declare-const $k@1573 $Perm)
+(assert ($Perm.isValidVar $k@1573))
+(assert ($Perm.isReadVar $k@1573 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1526 $k@1554)) (= $t@1572 $t@1527)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@1526 $k@1554) $k@1573) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1526 $k@1554) $k@1573) $Perm.No)))
+(assert (> $t@1572 0))
+(declare-const $k@1574 $Perm)
+(assert ($Perm.isValidVar $k@1574))
+(assert ($Perm.isReadVar $k@1574 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1528 $k@1555)) (= $t@1571 $t@1529)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@1528 $k@1555) $k@1574) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1528 $k@1555) $k@1574) $Perm.No)))
+(assert (not (= $t@1571 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@1567 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@1567 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 294] $t@1567 != Null
+(assert (not (= $t@1567 $Ref.null)))
+(declare-const $k@1575 $Perm)
+(assert ($Perm.isValidVar $k@1575))
+(assert ($Perm.isReadVar $k@1575 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1533 $k@1556)) (= $t@1563 $t@1534)))
+(declare-const $k@1576 $Perm)
+(assert ($Perm.isValidVar $k@1576))
+(assert ($Perm.isReadVar $k@1576 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1535 $k@1557)) (= $t@1561 $t@1536)))
+; [exec]
+; b := __flatten_58
+; [exec]
+; __flatten_59 := BlockingQueue__peek(diz.LBQThread1a__queue)
+; [eval] diz != null
+(declare-const $k@1577 $Perm)
+(assert ($Perm.isValidVar $k@1577))
+(assert ($Perm.isReadVar $k@1577 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1577 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1577 (+ (- $k@1526 $k@1554) $k@1573)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1578 $Perm)
+(assert ($Perm.isValidVar $k@1578))
+(assert ($Perm.isReadVar $k@1578 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1578 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1578 (+ (- $k@1528 $k@1555) $k@1574)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@1567 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 295] $t@1567 != Null
+(declare-const $k@1579 $Perm)
+(assert ($Perm.isValidVar $k@1579))
+(assert ($Perm.isReadVar $k@1579 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1579 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1533 $k@1556) $k@1575) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1533 $k@1556) $k@1575) $Perm.No)))
+(assert (< $k@1579 (+ (- $k@1533 $k@1556) $k@1575)))
+(declare-const $k@1580 $Perm)
+(assert ($Perm.isValidVar $k@1580))
+(assert ($Perm.isReadVar $k@1580 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1580 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1535 $k@1557) $k@1576) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1535 $k@1557) $k@1576) $Perm.No)))
+(assert (< $k@1580 (+ (- $k@1535 $k@1557) $k@1576)))
+(declare-const sys__result@1581 $Ref)
+(declare-const $t@1582 $Snap)
+(declare-const $t@1583 $Snap)
+(declare-const $t@1584 $Ref)
+(assert (= $t@1582 ($Snap.combine $t@1583 ($SortWrappers.$RefTo$Snap $t@1584))))
+(declare-const $t@1585 $Snap)
+(declare-const $t@1586 $Ref)
+(assert (= $t@1583 ($Snap.combine $t@1585 ($SortWrappers.$RefTo$Snap $t@1586))))
+(declare-const $t@1587 $Snap)
+(declare-const $t@1588 $Snap)
+(assert (= $t@1585 ($Snap.combine $t@1587 $t@1588)))
+(declare-const $t@1589 $Snap)
+(declare-const $t@1590 $Ref)
+(assert (= $t@1587 ($Snap.combine $t@1589 ($SortWrappers.$RefTo$Snap $t@1590))))
+(declare-const $t@1591 $Snap)
+(declare-const $t@1592 Int)
+(assert (= $t@1589 ($Snap.combine $t@1591 ($SortWrappers.IntTo$Snap $t@1592))))
+(declare-const $t@1593 Int)
+(declare-const $t@1594 $Ref)
+(assert (=
+  $t@1591
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1593)
+    ($SortWrappers.$RefTo$Snap $t@1594))))
+(declare-const $t@1595 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1593)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1595) $Snap.unit)))
+(declare-const $k@1596 $Perm)
+(assert ($Perm.isValidVar $k@1596))
+(assert ($Perm.isReadVar $k@1596 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1526 $k@1554) $k@1573) $k@1577))
+  (= $t@1595 $t@1572)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1577) $k@1596) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1577) $k@1596) $Perm.No)))
+(assert (> $t@1595 0))
+(declare-const $k@1597 $Perm)
+(assert ($Perm.isValidVar $k@1597))
+(assert ($Perm.isReadVar $k@1597 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1528 $k@1555) $k@1574) $k@1578))
+  (= $t@1594 $t@1571)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1578) $k@1597) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1578) $k@1597) $Perm.No)))
+(assert (not (= $t@1594 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1590 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1590 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 296] $t@1590 != Null
+(assert (not (= $t@1590 $Ref.null)))
+(declare-const $k@1598 $Perm)
+(assert ($Perm.isValidVar $k@1598))
+(assert ($Perm.isReadVar $k@1598 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579))
+  (= $t@1586 $t@1563)))
+(declare-const $k@1599 $Perm)
+(assert ($Perm.isValidVar $k@1599))
+(assert ($Perm.isReadVar $k@1599 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580))
+  (= $t@1584 $t@1561)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1600 $Perm)
+(assert ($Perm.isValidVar $k@1600))
+(assert ($Perm.isReadVar $k@1600 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1600 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1600 $k@1524))
+(declare-const $k@1601 $Perm)
+(assert ($Perm.isValidVar $k@1601))
+(assert ($Perm.isReadVar $k@1601 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1601 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1601 (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1577) $k@1596)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1602 $Perm)
+(assert ($Perm.isValidVar $k@1602))
+(assert ($Perm.isReadVar $k@1602 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1602 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1602 (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1578) $k@1597)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1590 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 297] $t@1590 != Null
+(declare-const $k@1603 $Perm)
+(assert ($Perm.isValidVar $k@1603))
+(assert ($Perm.isReadVar $k@1603 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1603 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1598) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1598) $Perm.No)))
+(assert (< $k@1603 (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1598)))
+(declare-const $k@1604 $Perm)
+(assert ($Perm.isValidVar $k@1604))
+(assert ($Perm.isReadVar $k@1604 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1604 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1599) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1599) $Perm.No)))
+(assert (< $k@1604 (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1599)))
+(pop) ; 9
+; [dead else-branch 297] $t@1590 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 296] $t@1590 == Null
+(assert (= $t@1590 $Ref.null))
+(declare-const $k@1605 $Perm)
+(assert ($Perm.isValidVar $k@1605))
+(assert ($Perm.isReadVar $k@1605 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579))
+  (= $t@1586 $t@1563)))
+(declare-const $k@1606 $Perm)
+(assert ($Perm.isValidVar $k@1606))
+(assert ($Perm.isReadVar $k@1606 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580))
+  (= $t@1584 $t@1561)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1607 $Perm)
+(assert ($Perm.isValidVar $k@1607))
+(assert ($Perm.isReadVar $k@1607 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1607 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1607 $k@1524))
+(declare-const $k@1608 $Perm)
+(assert ($Perm.isValidVar $k@1608))
+(assert ($Perm.isReadVar $k@1608 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1608 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1608 (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1577) $k@1596)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1609 $Perm)
+(assert ($Perm.isValidVar $k@1609))
+(assert ($Perm.isReadVar $k@1609 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1609 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1609 (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1578) $k@1597)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1590 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 298] $t@1590 != Null
+(push) ; 9
+; [else-branch 298] $t@1590 == Null
+(declare-const $k@1610 $Perm)
+(assert ($Perm.isValidVar $k@1610))
+(assert ($Perm.isReadVar $k@1610 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1610 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1605) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1605) $Perm.No)))
+(assert (< $k@1610 (+ (- (+ (- $k@1533 $k@1556) $k@1575) $k@1579) $k@1605)))
+(declare-const $k@1611 $Perm)
+(assert ($Perm.isValidVar $k@1611))
+(assert ($Perm.isReadVar $k@1611 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1611 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1606) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1606) $Perm.No)))
+(assert (< $k@1611 (+ (- (+ (- $k@1535 $k@1557) $k@1576) $k@1580) $k@1606)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 295] $t@1567 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 294] $t@1567 == Null
+(assert (= $t@1567 $Ref.null))
+(declare-const $k@1612 $Perm)
+(assert ($Perm.isValidVar $k@1612))
+(assert ($Perm.isReadVar $k@1612 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1533 $k@1556)) (= $t@1563 $t@1534)))
+(declare-const $k@1613 $Perm)
+(assert ($Perm.isValidVar $k@1613))
+(assert ($Perm.isReadVar $k@1613 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1535 $k@1557)) (= $t@1561 $t@1536)))
+; [exec]
+; b := __flatten_58
+; [exec]
+; __flatten_59 := BlockingQueue__peek(diz.LBQThread1a__queue)
+; [eval] diz != null
+(declare-const $k@1614 $Perm)
+(assert ($Perm.isValidVar $k@1614))
+(assert ($Perm.isReadVar $k@1614 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1614 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1614 (+ (- $k@1526 $k@1554) $k@1573)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1615 $Perm)
+(assert ($Perm.isValidVar $k@1615))
+(assert ($Perm.isReadVar $k@1615 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1615 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1615 (+ (- $k@1528 $k@1555) $k@1574)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@1567 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 299] $t@1567 != Null
+(push) ; 7
+; [else-branch 299] $t@1567 == Null
+(declare-const $k@1616 $Perm)
+(assert ($Perm.isValidVar $k@1616))
+(assert ($Perm.isReadVar $k@1616 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1616 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1533 $k@1556) $k@1612) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1533 $k@1556) $k@1612) $Perm.No)))
+(assert (< $k@1616 (+ (- $k@1533 $k@1556) $k@1612)))
+(declare-const $k@1617 $Perm)
+(assert ($Perm.isValidVar $k@1617))
+(assert ($Perm.isReadVar $k@1617 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1617 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1535 $k@1557) $k@1613) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1535 $k@1557) $k@1613) $Perm.No)))
+(assert (< $k@1617 (+ (- $k@1535 $k@1557) $k@1613)))
+(declare-const sys__result@1618 $Ref)
+(declare-const $t@1619 $Snap)
+(declare-const $t@1620 $Snap)
+(declare-const $t@1621 $Ref)
+(assert (= $t@1619 ($Snap.combine $t@1620 ($SortWrappers.$RefTo$Snap $t@1621))))
+(declare-const $t@1622 $Snap)
+(declare-const $t@1623 $Ref)
+(assert (= $t@1620 ($Snap.combine $t@1622 ($SortWrappers.$RefTo$Snap $t@1623))))
+(declare-const $t@1624 $Snap)
+(declare-const $t@1625 $Snap)
+(assert (= $t@1622 ($Snap.combine $t@1624 $t@1625)))
+(declare-const $t@1626 $Snap)
+(declare-const $t@1627 $Ref)
+(assert (= $t@1624 ($Snap.combine $t@1626 ($SortWrappers.$RefTo$Snap $t@1627))))
+(declare-const $t@1628 $Snap)
+(declare-const $t@1629 Int)
+(assert (= $t@1626 ($Snap.combine $t@1628 ($SortWrappers.IntTo$Snap $t@1629))))
+(declare-const $t@1630 Int)
+(declare-const $t@1631 $Ref)
+(assert (=
+  $t@1628
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1630)
+    ($SortWrappers.$RefTo$Snap $t@1631))))
+(declare-const $t@1632 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1630)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1632) $Snap.unit)))
+(declare-const $k@1633 $Perm)
+(assert ($Perm.isValidVar $k@1633))
+(assert ($Perm.isReadVar $k@1633 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1526 $k@1554) $k@1573) $k@1614))
+  (= $t@1632 $t@1572)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1614) $k@1633) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1614) $k@1633) $Perm.No)))
+(assert (> $t@1632 0))
+(declare-const $k@1634 $Perm)
+(assert ($Perm.isValidVar $k@1634))
+(assert ($Perm.isReadVar $k@1634 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1528 $k@1555) $k@1574) $k@1615))
+  (= $t@1631 $t@1571)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1615) $k@1634) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1615) $k@1634) $Perm.No)))
+(assert (not (= $t@1631 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1627 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1627 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 300] $t@1627 != Null
+(assert (not (= $t@1627 $Ref.null)))
+(declare-const $k@1635 $Perm)
+(assert ($Perm.isValidVar $k@1635))
+(assert ($Perm.isReadVar $k@1635 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616))
+  (= $t@1623 $t@1563)))
+(declare-const $k@1636 $Perm)
+(assert ($Perm.isValidVar $k@1636))
+(assert ($Perm.isReadVar $k@1636 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617))
+  (= $t@1621 $t@1561)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1637 $Perm)
+(assert ($Perm.isValidVar $k@1637))
+(assert ($Perm.isReadVar $k@1637 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1637 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1637 $k@1524))
+(declare-const $k@1638 $Perm)
+(assert ($Perm.isValidVar $k@1638))
+(assert ($Perm.isReadVar $k@1638 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1638 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1638 (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1614) $k@1633)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1639 $Perm)
+(assert ($Perm.isValidVar $k@1639))
+(assert ($Perm.isReadVar $k@1639 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1639 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1639 (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1615) $k@1634)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1627 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 301] $t@1627 != Null
+(declare-const $k@1640 $Perm)
+(assert ($Perm.isValidVar $k@1640))
+(assert ($Perm.isReadVar $k@1640 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1640 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1635) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1635) $Perm.No)))
+(assert (< $k@1640 (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1635)))
+(declare-const $k@1641 $Perm)
+(assert ($Perm.isValidVar $k@1641))
+(assert ($Perm.isReadVar $k@1641 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1641 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1636) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1636) $Perm.No)))
+(assert (< $k@1641 (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1636)))
+(pop) ; 9
+; [dead else-branch 301] $t@1627 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 300] $t@1627 == Null
+(assert (= $t@1627 $Ref.null))
+(declare-const $k@1642 $Perm)
+(assert ($Perm.isValidVar $k@1642))
+(assert ($Perm.isReadVar $k@1642 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616))
+  (= $t@1623 $t@1563)))
+(declare-const $k@1643 $Perm)
+(assert ($Perm.isValidVar $k@1643))
+(assert ($Perm.isReadVar $k@1643 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617))
+  (= $t@1621 $t@1561)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1644 $Perm)
+(assert ($Perm.isValidVar $k@1644))
+(assert ($Perm.isReadVar $k@1644 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1644 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1644 $k@1524))
+(declare-const $k@1645 $Perm)
+(assert ($Perm.isValidVar $k@1645))
+(assert ($Perm.isReadVar $k@1645 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1645 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1645 (+ (- (+ (- $k@1526 $k@1554) $k@1573) $k@1614) $k@1633)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1646 $Perm)
+(assert ($Perm.isValidVar $k@1646))
+(assert ($Perm.isReadVar $k@1646 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1646 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1646 (+ (- (+ (- $k@1528 $k@1555) $k@1574) $k@1615) $k@1634)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1627 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 302] $t@1627 != Null
+(push) ; 9
+; [else-branch 302] $t@1627 == Null
+(declare-const $k@1647 $Perm)
+(assert ($Perm.isValidVar $k@1647))
+(assert ($Perm.isReadVar $k@1647 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1647 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1642) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1642) $Perm.No)))
+(assert (< $k@1647 (+ (- (+ (- $k@1533 $k@1556) $k@1612) $k@1616) $k@1642)))
+(declare-const $k@1648 $Perm)
+(assert ($Perm.isValidVar $k@1648))
+(assert ($Perm.isReadVar $k@1648 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1648 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1643) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1643) $Perm.No)))
+(assert (< $k@1648 (+ (- (+ (- $k@1535 $k@1557) $k@1613) $k@1617) $k@1643)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 293] $t@1531 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 291] $t@1531 == Null
+(assert (= $t@1531 $Ref.null))
+(declare-const $k@1649 $Perm)
+(assert ($Perm.isValidVar $k@1649))
+(assert ($Perm.isReadVar $k@1649 $Perm.Write))
+(declare-const $t@1650 $Ref)
+(declare-const $k@1651 $Perm)
+(assert ($Perm.isValidVar $k@1651))
+(assert ($Perm.isReadVar $k@1651 $Perm.Write))
+(declare-const $t@1652 $Ref)
+(push) ; 4
+(declare-const $k@1653 $Perm)
+(assert ($Perm.isValidVar $k@1653))
+(assert ($Perm.isReadVar $k@1653 $Perm.Write))
+(declare-const $t@1654 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1653 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1653 $Perm.No)))
+(assert (not (= $t@1654 $Ref.null)))
+(declare-const $k@1655 $Perm)
+(assert ($Perm.isValidVar $k@1655))
+(assert ($Perm.isReadVar $k@1655 $Perm.Write))
+(declare-const $t@1656 Int)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1655 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1655 $Perm.No)))
+(assert (> $t@1656 0))
+(declare-const $k@1657 $Perm)
+(assert ($Perm.isValidVar $k@1657))
+(assert ($Perm.isReadVar $k@1657 $Perm.Write))
+(declare-const $t@1658 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1657 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1657 $Perm.No)))
+(assert (not (= $t@1658 $Ref.null)))
+(declare-const $t@1659 Int)
+(declare-const $t@1660 $Ref)
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1660 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1660 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 303] $t@1660 != Null
+(assert (not (= $t@1660 $Ref.null)))
+(declare-const $t@1661 $Snap)
+(declare-const $k@1662 $Perm)
+(assert ($Perm.isValidVar $k@1662))
+(assert ($Perm.isReadVar $k@1662 $Perm.Write))
+(declare-const $t@1663 $Ref)
+(declare-const $k@1664 $Perm)
+(assert ($Perm.isValidVar $k@1664))
+(assert ($Perm.isReadVar $k@1664 $Perm.Write))
+(declare-const $t@1665 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 303] $t@1660 == Null
+(assert (= $t@1660 $Ref.null))
+(declare-const $k@1666 $Perm)
+(assert ($Perm.isValidVar $k@1666))
+(assert ($Perm.isReadVar $k@1666 $Perm.Write))
+(declare-const $t@1667 $Ref)
+(declare-const $k@1668 $Perm)
+(assert ($Perm.isValidVar $k@1668))
+(assert ($Perm.isReadVar $k@1668 $Perm.Write))
+(declare-const $t@1669 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_58 := BlockingQueue__offer(diz.LBQThread1a__queue, 1)
+; [eval] diz != null
+(declare-const $k@1670 $Perm)
+(assert ($Perm.isValidVar $k@1670))
+(assert ($Perm.isReadVar $k@1670 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1670 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1670 $k@1526))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1671 $Perm)
+(assert ($Perm.isValidVar $k@1671))
+(assert ($Perm.isReadVar $k@1671 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1671 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1671 $k@1528))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@1531 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 304] $t@1531 != Null
+(push) ; 5
+; [else-branch 304] $t@1531 == Null
+(declare-const $k@1672 $Perm)
+(assert ($Perm.isValidVar $k@1672))
+(assert ($Perm.isReadVar $k@1672 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1672 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1649 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1649 $Perm.No)))
+(assert (< $k@1672 $k@1649))
+(declare-const $k@1673 $Perm)
+(assert ($Perm.isValidVar $k@1673))
+(assert ($Perm.isReadVar $k@1673 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1673 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1651 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1651 $Perm.No)))
+(assert (< $k@1673 $k@1651))
+(declare-const sys__result@1674 Bool)
+(declare-const $t@1675 $Snap)
+(declare-const $t@1676 $Snap)
+(declare-const $t@1677 $Ref)
+(assert (= $t@1675 ($Snap.combine $t@1676 ($SortWrappers.$RefTo$Snap $t@1677))))
+(declare-const $t@1678 $Snap)
+(declare-const $t@1679 $Ref)
+(assert (= $t@1676 ($Snap.combine $t@1678 ($SortWrappers.$RefTo$Snap $t@1679))))
+(declare-const $t@1680 $Snap)
+(declare-const $t@1681 $Snap)
+(assert (= $t@1678 ($Snap.combine $t@1680 $t@1681)))
+(declare-const $t@1682 $Snap)
+(declare-const $t@1683 $Ref)
+(assert (= $t@1680 ($Snap.combine $t@1682 ($SortWrappers.$RefTo$Snap $t@1683))))
+(declare-const $t@1684 $Snap)
+(declare-const $t@1685 Int)
+(assert (= $t@1682 ($Snap.combine $t@1684 ($SortWrappers.IntTo$Snap $t@1685))))
+(declare-const $t@1686 Int)
+(declare-const $t@1687 $Ref)
+(assert (=
+  $t@1684
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1686)
+    ($SortWrappers.$RefTo$Snap $t@1687))))
+(declare-const $t@1688 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1686)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1688) $Snap.unit)))
+(declare-const $k@1689 $Perm)
+(assert ($Perm.isValidVar $k@1689))
+(assert ($Perm.isReadVar $k@1689 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1526 $k@1670)) (= $t@1688 $t@1527)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@1526 $k@1670) $k@1689) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1526 $k@1670) $k@1689) $Perm.No)))
+(assert (> $t@1688 0))
+(declare-const $k@1690 $Perm)
+(assert ($Perm.isValidVar $k@1690))
+(assert ($Perm.isReadVar $k@1690 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1528 $k@1671)) (= $t@1687 $t@1529)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@1528 $k@1671) $k@1690) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1528 $k@1671) $k@1690) $Perm.No)))
+(assert (not (= $t@1687 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@1683 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@1683 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 305] $t@1683 != Null
+(assert (not (= $t@1683 $Ref.null)))
+(declare-const $k@1691 $Perm)
+(assert ($Perm.isValidVar $k@1691))
+(assert ($Perm.isReadVar $k@1691 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1649 $k@1672)) (= $t@1679 $t@1650)))
+(declare-const $k@1692 $Perm)
+(assert ($Perm.isValidVar $k@1692))
+(assert ($Perm.isReadVar $k@1692 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1651 $k@1673)) (= $t@1677 $t@1652)))
+; [exec]
+; b := __flatten_58
+; [exec]
+; __flatten_59 := BlockingQueue__peek(diz.LBQThread1a__queue)
+; [eval] diz != null
+(declare-const $k@1693 $Perm)
+(assert ($Perm.isValidVar $k@1693))
+(assert ($Perm.isReadVar $k@1693 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1693 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1693 (+ (- $k@1526 $k@1670) $k@1689)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1694 $Perm)
+(assert ($Perm.isValidVar $k@1694))
+(assert ($Perm.isReadVar $k@1694 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1694 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1694 (+ (- $k@1528 $k@1671) $k@1690)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@1683 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 306] $t@1683 != Null
+(declare-const $k@1695 $Perm)
+(assert ($Perm.isValidVar $k@1695))
+(assert ($Perm.isReadVar $k@1695 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1695 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1649 $k@1672) $k@1691) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1649 $k@1672) $k@1691) $Perm.No)))
+(assert (< $k@1695 (+ (- $k@1649 $k@1672) $k@1691)))
+(declare-const $k@1696 $Perm)
+(assert ($Perm.isValidVar $k@1696))
+(assert ($Perm.isReadVar $k@1696 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1696 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1651 $k@1673) $k@1692) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1651 $k@1673) $k@1692) $Perm.No)))
+(assert (< $k@1696 (+ (- $k@1651 $k@1673) $k@1692)))
+(declare-const sys__result@1697 $Ref)
+(declare-const $t@1698 $Snap)
+(declare-const $t@1699 $Snap)
+(declare-const $t@1700 $Ref)
+(assert (= $t@1698 ($Snap.combine $t@1699 ($SortWrappers.$RefTo$Snap $t@1700))))
+(declare-const $t@1701 $Snap)
+(declare-const $t@1702 $Ref)
+(assert (= $t@1699 ($Snap.combine $t@1701 ($SortWrappers.$RefTo$Snap $t@1702))))
+(declare-const $t@1703 $Snap)
+(declare-const $t@1704 $Snap)
+(assert (= $t@1701 ($Snap.combine $t@1703 $t@1704)))
+(declare-const $t@1705 $Snap)
+(declare-const $t@1706 $Ref)
+(assert (= $t@1703 ($Snap.combine $t@1705 ($SortWrappers.$RefTo$Snap $t@1706))))
+(declare-const $t@1707 $Snap)
+(declare-const $t@1708 Int)
+(assert (= $t@1705 ($Snap.combine $t@1707 ($SortWrappers.IntTo$Snap $t@1708))))
+(declare-const $t@1709 Int)
+(declare-const $t@1710 $Ref)
+(assert (=
+  $t@1707
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1709)
+    ($SortWrappers.$RefTo$Snap $t@1710))))
+(declare-const $t@1711 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1709)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1711) $Snap.unit)))
+(declare-const $k@1712 $Perm)
+(assert ($Perm.isValidVar $k@1712))
+(assert ($Perm.isReadVar $k@1712 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1526 $k@1670) $k@1689) $k@1693))
+  (= $t@1711 $t@1688)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1693) $k@1712) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1693) $k@1712) $Perm.No)))
+(assert (> $t@1711 0))
+(declare-const $k@1713 $Perm)
+(assert ($Perm.isValidVar $k@1713))
+(assert ($Perm.isReadVar $k@1713 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1528 $k@1671) $k@1690) $k@1694))
+  (= $t@1710 $t@1687)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1694) $k@1713) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1694) $k@1713) $Perm.No)))
+(assert (not (= $t@1710 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1706 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1706 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 307] $t@1706 != Null
+(assert (not (= $t@1706 $Ref.null)))
+(declare-const $k@1714 $Perm)
+(assert ($Perm.isValidVar $k@1714))
+(assert ($Perm.isReadVar $k@1714 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695))
+  (= $t@1702 $t@1679)))
+(declare-const $k@1715 $Perm)
+(assert ($Perm.isValidVar $k@1715))
+(assert ($Perm.isReadVar $k@1715 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696))
+  (= $t@1700 $t@1677)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1716 $Perm)
+(assert ($Perm.isValidVar $k@1716))
+(assert ($Perm.isReadVar $k@1716 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1716 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1716 $k@1524))
+(declare-const $k@1717 $Perm)
+(assert ($Perm.isValidVar $k@1717))
+(assert ($Perm.isReadVar $k@1717 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1717 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1717 (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1693) $k@1712)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1718 $Perm)
+(assert ($Perm.isValidVar $k@1718))
+(assert ($Perm.isReadVar $k@1718 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1718 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1718 (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1694) $k@1713)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1706 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 308] $t@1706 != Null
+(declare-const $k@1719 $Perm)
+(assert ($Perm.isValidVar $k@1719))
+(assert ($Perm.isReadVar $k@1719 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1719 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1714) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1714) $Perm.No)))
+(assert (< $k@1719 (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1714)))
+(declare-const $k@1720 $Perm)
+(assert ($Perm.isValidVar $k@1720))
+(assert ($Perm.isReadVar $k@1720 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1720 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1715) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1715) $Perm.No)))
+(assert (< $k@1720 (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1715)))
+(pop) ; 9
+; [dead else-branch 308] $t@1706 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 307] $t@1706 == Null
+(assert (= $t@1706 $Ref.null))
+(declare-const $k@1721 $Perm)
+(assert ($Perm.isValidVar $k@1721))
+(assert ($Perm.isReadVar $k@1721 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695))
+  (= $t@1702 $t@1679)))
+(declare-const $k@1722 $Perm)
+(assert ($Perm.isValidVar $k@1722))
+(assert ($Perm.isReadVar $k@1722 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696))
+  (= $t@1700 $t@1677)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1723 $Perm)
+(assert ($Perm.isValidVar $k@1723))
+(assert ($Perm.isReadVar $k@1723 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1723 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1723 $k@1524))
+(declare-const $k@1724 $Perm)
+(assert ($Perm.isValidVar $k@1724))
+(assert ($Perm.isReadVar $k@1724 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1724 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1724 (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1693) $k@1712)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1725 $Perm)
+(assert ($Perm.isValidVar $k@1725))
+(assert ($Perm.isReadVar $k@1725 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1725 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1725 (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1694) $k@1713)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1706 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 309] $t@1706 != Null
+(push) ; 9
+; [else-branch 309] $t@1706 == Null
+(declare-const $k@1726 $Perm)
+(assert ($Perm.isValidVar $k@1726))
+(assert ($Perm.isReadVar $k@1726 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1726 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1721) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1721) $Perm.No)))
+(assert (< $k@1726 (+ (- (+ (- $k@1649 $k@1672) $k@1691) $k@1695) $k@1721)))
+(declare-const $k@1727 $Perm)
+(assert ($Perm.isValidVar $k@1727))
+(assert ($Perm.isReadVar $k@1727 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1727 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1722) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1722) $Perm.No)))
+(assert (< $k@1727 (+ (- (+ (- $k@1651 $k@1673) $k@1692) $k@1696) $k@1722)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 306] $t@1683 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 305] $t@1683 == Null
+(assert (= $t@1683 $Ref.null))
+(declare-const $k@1728 $Perm)
+(assert ($Perm.isValidVar $k@1728))
+(assert ($Perm.isReadVar $k@1728 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1649 $k@1672)) (= $t@1679 $t@1650)))
+(declare-const $k@1729 $Perm)
+(assert ($Perm.isValidVar $k@1729))
+(assert ($Perm.isReadVar $k@1729 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1651 $k@1673)) (= $t@1677 $t@1652)))
+; [exec]
+; b := __flatten_58
+; [exec]
+; __flatten_59 := BlockingQueue__peek(diz.LBQThread1a__queue)
+; [eval] diz != null
+(declare-const $k@1730 $Perm)
+(assert ($Perm.isValidVar $k@1730))
+(assert ($Perm.isReadVar $k@1730 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1730 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1730 (+ (- $k@1526 $k@1670) $k@1689)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1731 $Perm)
+(assert ($Perm.isValidVar $k@1731))
+(assert ($Perm.isReadVar $k@1731 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1731 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1731 (+ (- $k@1528 $k@1671) $k@1690)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@1683 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 310] $t@1683 != Null
+(push) ; 7
+; [else-branch 310] $t@1683 == Null
+(declare-const $k@1732 $Perm)
+(assert ($Perm.isValidVar $k@1732))
+(assert ($Perm.isReadVar $k@1732 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1732 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1649 $k@1672) $k@1728) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1649 $k@1672) $k@1728) $Perm.No)))
+(assert (< $k@1732 (+ (- $k@1649 $k@1672) $k@1728)))
+(declare-const $k@1733 $Perm)
+(assert ($Perm.isValidVar $k@1733))
+(assert ($Perm.isReadVar $k@1733 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1733 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1651 $k@1673) $k@1729) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1651 $k@1673) $k@1729) $Perm.No)))
+(assert (< $k@1733 (+ (- $k@1651 $k@1673) $k@1729)))
+(declare-const sys__result@1734 $Ref)
+(declare-const $t@1735 $Snap)
+(declare-const $t@1736 $Snap)
+(declare-const $t@1737 $Ref)
+(assert (= $t@1735 ($Snap.combine $t@1736 ($SortWrappers.$RefTo$Snap $t@1737))))
+(declare-const $t@1738 $Snap)
+(declare-const $t@1739 $Ref)
+(assert (= $t@1736 ($Snap.combine $t@1738 ($SortWrappers.$RefTo$Snap $t@1739))))
+(declare-const $t@1740 $Snap)
+(declare-const $t@1741 $Snap)
+(assert (= $t@1738 ($Snap.combine $t@1740 $t@1741)))
+(declare-const $t@1742 $Snap)
+(declare-const $t@1743 $Ref)
+(assert (= $t@1740 ($Snap.combine $t@1742 ($SortWrappers.$RefTo$Snap $t@1743))))
+(declare-const $t@1744 $Snap)
+(declare-const $t@1745 Int)
+(assert (= $t@1742 ($Snap.combine $t@1744 ($SortWrappers.IntTo$Snap $t@1745))))
+(declare-const $t@1746 Int)
+(declare-const $t@1747 $Ref)
+(assert (=
+  $t@1744
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1746)
+    ($SortWrappers.$RefTo$Snap $t@1747))))
+(declare-const $t@1748 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1746)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1748) $Snap.unit)))
+(declare-const $k@1749 $Perm)
+(assert ($Perm.isValidVar $k@1749))
+(assert ($Perm.isReadVar $k@1749 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1526 $k@1670) $k@1689) $k@1730))
+  (= $t@1748 $t@1688)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1730) $k@1749) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1730) $k@1749) $Perm.No)))
+(assert (> $t@1748 0))
+(declare-const $k@1750 $Perm)
+(assert ($Perm.isValidVar $k@1750))
+(assert ($Perm.isReadVar $k@1750 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1528 $k@1671) $k@1690) $k@1731))
+  (= $t@1747 $t@1687)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1731) $k@1750) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1731) $k@1750) $Perm.No)))
+(assert (not (= $t@1747 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1743 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1743 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 311] $t@1743 != Null
+(assert (not (= $t@1743 $Ref.null)))
+(declare-const $k@1751 $Perm)
+(assert ($Perm.isValidVar $k@1751))
+(assert ($Perm.isReadVar $k@1751 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732))
+  (= $t@1739 $t@1679)))
+(declare-const $k@1752 $Perm)
+(assert ($Perm.isValidVar $k@1752))
+(assert ($Perm.isReadVar $k@1752 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733))
+  (= $t@1737 $t@1677)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1753 $Perm)
+(assert ($Perm.isValidVar $k@1753))
+(assert ($Perm.isReadVar $k@1753 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1753 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1753 $k@1524))
+(declare-const $k@1754 $Perm)
+(assert ($Perm.isValidVar $k@1754))
+(assert ($Perm.isReadVar $k@1754 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1754 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1754 (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1730) $k@1749)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1755 $Perm)
+(assert ($Perm.isValidVar $k@1755))
+(assert ($Perm.isReadVar $k@1755 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1755 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1755 (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1731) $k@1750)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1743 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 312] $t@1743 != Null
+(declare-const $k@1756 $Perm)
+(assert ($Perm.isValidVar $k@1756))
+(assert ($Perm.isReadVar $k@1756 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1756 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1751) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1751) $Perm.No)))
+(assert (< $k@1756 (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1751)))
+(declare-const $k@1757 $Perm)
+(assert ($Perm.isValidVar $k@1757))
+(assert ($Perm.isReadVar $k@1757 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1757 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1752) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1752) $Perm.No)))
+(assert (< $k@1757 (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1752)))
+(pop) ; 9
+; [dead else-branch 312] $t@1743 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 311] $t@1743 == Null
+(assert (= $t@1743 $Ref.null))
+(declare-const $k@1758 $Perm)
+(assert ($Perm.isValidVar $k@1758))
+(assert ($Perm.isReadVar $k@1758 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732))
+  (= $t@1739 $t@1679)))
+(declare-const $k@1759 $Perm)
+(assert ($Perm.isValidVar $k@1759))
+(assert ($Perm.isReadVar $k@1759 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733))
+  (= $t@1737 $t@1677)))
+; [exec]
+; i := __flatten_59
+(declare-const $k@1760 $Perm)
+(assert ($Perm.isValidVar $k@1760))
+(assert ($Perm.isReadVar $k@1760 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1760 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1760 $k@1524))
+(declare-const $k@1761 $Perm)
+(assert ($Perm.isValidVar $k@1761))
+(assert ($Perm.isReadVar $k@1761 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1761 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1761 (+ (- (+ (- $k@1526 $k@1670) $k@1689) $k@1730) $k@1749)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__capacity > 0
+(declare-const $k@1762 $Perm)
+(assert ($Perm.isValidVar $k@1762))
+(assert ($Perm.isReadVar $k@1762 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1762 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1762 (+ (- (+ (- $k@1528 $k@1671) $k@1690) $k@1731) $k@1750)))
+; [eval] diz.LBQThread1a__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1743 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 313] $t@1743 != Null
+(push) ; 9
+; [else-branch 313] $t@1743 == Null
+(declare-const $k@1763 $Perm)
+(assert ($Perm.isValidVar $k@1763))
+(assert ($Perm.isReadVar $k@1763 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1763 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1758) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1758) $Perm.No)))
+(assert (< $k@1763 (+ (- (+ (- $k@1649 $k@1672) $k@1728) $k@1732) $k@1758)))
+(declare-const $k@1764 $Perm)
+(assert ($Perm.isValidVar $k@1764))
+(assert ($Perm.isReadVar $k@1764 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1764 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1759) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1759) $Perm.No)))
+(assert (< $k@1764 (+ (- (+ (- $k@1651 $k@1673) $k@1729) $k@1733) $k@1759)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread1b__LBQThread1a ----------
+(declare-const queue@1765 $Ref)
+(declare-const sys__result@1766 $Ref)
+(declare-const diz@1767 $Ref)
+(declare-const __flatten_60@1768 $Ref)
+(declare-const __flatten_120@1769 $Ref)
+(push) ; 2
+(assert (not (= queue@1765 $Ref.null)))
+(declare-const $k@1770 $Perm)
+(assert ($Perm.isValidVar $k@1770))
+(assert ($Perm.isReadVar $k@1770 $Perm.Write))
+(declare-const $t@1771 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@1770 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1770 $Perm.No)))
+(assert (> $t@1771 0))
+(declare-const $k@1772 $Perm)
+(assert ($Perm.isValidVar $k@1772))
+(assert ($Perm.isReadVar $k@1772 $Perm.Write))
+(declare-const $t@1773 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1772 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1772 $Perm.No)))
+(assert (not (= $t@1773 $Ref.null)))
+(declare-const $t@1774 Int)
+(declare-const $t@1775 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@1775 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@1775 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 314] $t@1775 != Null
+(assert (not (= $t@1775 $Ref.null)))
+(declare-const $t@1776 $Snap)
+(declare-const $k@1777 $Perm)
+(assert ($Perm.isValidVar $k@1777))
+(assert ($Perm.isReadVar $k@1777 $Perm.Write))
+(declare-const $t@1778 $Ref)
+(declare-const $k@1779 $Perm)
+(assert ($Perm.isValidVar $k@1779))
+(assert ($Perm.isReadVar $k@1779 $Perm.Write))
+(declare-const $t@1780 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@1766 $Ref.null)))
+(declare-const $k@1781 $Perm)
+(assert ($Perm.isValidVar $k@1781))
+(assert ($Perm.isReadVar $k@1781 $Perm.Write))
+(declare-const $t@1782 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1781 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1781 $Perm.No)))
+(assert (not (= $t@1782 $Ref.null)))
+(declare-const $k@1783 $Perm)
+(assert ($Perm.isValidVar $k@1783))
+(assert ($Perm.isReadVar $k@1783 $Perm.Write))
+(declare-const $t@1784 Int)
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1783 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1783 $Perm.No)))
+(assert (> $t@1784 0))
+(declare-const $k@1785 $Perm)
+(assert ($Perm.isValidVar $k@1785))
+(assert ($Perm.isReadVar $k@1785 $Perm.Write))
+(declare-const $t@1786 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1785 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1785 $Perm.No)))
+(assert (not (= $t@1786 $Ref.null)))
+(declare-const $t@1787 Int)
+(declare-const $t@1788 $Ref)
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1788 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1788 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 315] $t@1788 != Null
+(assert (not (= $t@1788 $Ref.null)))
+(declare-const $t@1789 $Snap)
+(declare-const $k@1790 $Perm)
+(assert ($Perm.isValidVar $k@1790))
+(assert ($Perm.isReadVar $k@1790 $Perm.Write))
+(declare-const $t@1791 $Ref)
+(declare-const $k@1792 $Perm)
+(assert ($Perm.isValidVar $k@1792))
+(assert ($Perm.isReadVar $k@1792 $Perm.Write))
+(declare-const $t@1793 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 315] $t@1788 == Null
+(assert (= $t@1788 $Ref.null))
+(declare-const $k@1794 $Perm)
+(assert ($Perm.isValidVar $k@1794))
+(assert ($Perm.isReadVar $k@1794 $Perm.Write))
+(declare-const $t@1795 $Ref)
+(declare-const $k@1796 $Perm)
+(assert ($Perm.isValidVar $k@1796))
+(assert ($Perm.isReadVar $k@1796 $Perm.Write))
+(declare-const $t@1797 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread1b__queue)
+(declare-const diz@1798 $Ref)
+(assert (not (= diz@1798 $Ref.null)))
+(declare-const LBQThread1b__queue@1799 $Ref)
+(assert (and
+  (not (= queue@1765 diz@1798))
+  (not (= sys__result@1766 diz@1798))
+  (not (= __flatten_60@1768 diz@1798))
+  (not (= __flatten_120@1769 diz@1798))
+  (not (= $t@1773 diz@1798))
+  (not (= $t@1775 diz@1798))
+  (not (= LBQThread1b__queue@1799 diz@1798))
+  (not (= $t@1778 diz@1798))
+  (not (= $t@1780 diz@1798))))
+; [exec]
+; __flatten_60 := queue
+; [exec]
+; __flatten_120 := __flatten_60
+; [exec]
+; diz.LBQThread1b__queue := __flatten_120
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread1b__queue, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread1b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread1b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread1b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread1b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread1b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@1800 $Perm)
+(assert ($Perm.isValidVar $k@1800))
+(assert ($Perm.isReadVar $k@1800 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1800 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1800 $Perm.Write))
+(declare-const $k@1801 $Perm)
+(assert ($Perm.isValidVar $k@1801))
+(assert ($Perm.isReadVar $k@1801 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1801 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1801 $k@1770))
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1802 $Perm)
+(assert ($Perm.isValidVar $k@1802))
+(assert ($Perm.isReadVar $k@1802 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1802 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1802 $k@1772))
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1775 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 316] $t@1775 != Null
+(declare-const $k@1803 $Perm)
+(assert ($Perm.isValidVar $k@1803))
+(assert ($Perm.isReadVar $k@1803 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1803 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1777 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1777 $Perm.No)))
+(assert (< $k@1803 $k@1777))
+(declare-const $k@1804 $Perm)
+(assert ($Perm.isValidVar $k@1804))
+(assert ($Perm.isReadVar $k@1804 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1804 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1779 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1779 $Perm.No)))
+(assert (< $k@1804 $k@1779))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 316] $t@1775 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 314] $t@1775 == Null
+(assert (= $t@1775 $Ref.null))
+(declare-const $k@1805 $Perm)
+(assert ($Perm.isValidVar $k@1805))
+(assert ($Perm.isReadVar $k@1805 $Perm.Write))
+(declare-const $t@1806 $Ref)
+(declare-const $k@1807 $Perm)
+(assert ($Perm.isValidVar $k@1807))
+(assert ($Perm.isReadVar $k@1807 $Perm.Write))
+(declare-const $t@1808 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@1766 $Ref.null)))
+(declare-const $k@1809 $Perm)
+(assert ($Perm.isValidVar $k@1809))
+(assert ($Perm.isReadVar $k@1809 $Perm.Write))
+(declare-const $t@1810 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1809 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1809 $Perm.No)))
+(assert (not (= $t@1810 $Ref.null)))
+(declare-const $k@1811 $Perm)
+(assert ($Perm.isValidVar $k@1811))
+(assert ($Perm.isReadVar $k@1811 $Perm.Write))
+(declare-const $t@1812 Int)
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1811 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1811 $Perm.No)))
+(assert (> $t@1812 0))
+(declare-const $k@1813 $Perm)
+(assert ($Perm.isValidVar $k@1813))
+(assert ($Perm.isReadVar $k@1813 $Perm.Write))
+(declare-const $t@1814 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1813 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1813 $Perm.No)))
+(assert (not (= $t@1814 $Ref.null)))
+(declare-const $t@1815 Int)
+(declare-const $t@1816 $Ref)
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1816 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1816 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 317] $t@1816 != Null
+(assert (not (= $t@1816 $Ref.null)))
+(declare-const $t@1817 $Snap)
+(declare-const $k@1818 $Perm)
+(assert ($Perm.isValidVar $k@1818))
+(assert ($Perm.isReadVar $k@1818 $Perm.Write))
+(declare-const $t@1819 $Ref)
+(declare-const $k@1820 $Perm)
+(assert ($Perm.isValidVar $k@1820))
+(assert ($Perm.isReadVar $k@1820 $Perm.Write))
+(declare-const $t@1821 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 317] $t@1816 == Null
+(assert (= $t@1816 $Ref.null))
+(declare-const $k@1822 $Perm)
+(assert ($Perm.isValidVar $k@1822))
+(assert ($Perm.isReadVar $k@1822 $Perm.Write))
+(declare-const $t@1823 $Ref)
+(declare-const $k@1824 $Perm)
+(assert ($Perm.isValidVar $k@1824))
+(assert ($Perm.isReadVar $k@1824 $Perm.Write))
+(declare-const $t@1825 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread1b__queue)
+(declare-const diz@1826 $Ref)
+(assert (not (= diz@1826 $Ref.null)))
+(declare-const LBQThread1b__queue@1827 $Ref)
+(assert (and
+  (not (= queue@1765 diz@1826))
+  (not (= sys__result@1766 diz@1826))
+  (not (= __flatten_60@1768 diz@1826))
+  (not (= __flatten_120@1769 diz@1826))
+  (not (= $t@1773 diz@1826))
+  (not (= LBQThread1b__queue@1827 diz@1826))
+  (not (= $t@1775 diz@1826))
+  (not (= $t@1806 diz@1826))
+  (not (= $t@1808 diz@1826))))
+; [exec]
+; __flatten_60 := queue
+; [exec]
+; __flatten_120 := __flatten_60
+; [exec]
+; diz.LBQThread1b__queue := __flatten_120
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread1b__queue, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread1b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread1b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread1b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread1b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread1b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread1b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@1828 $Perm)
+(assert ($Perm.isValidVar $k@1828))
+(assert ($Perm.isReadVar $k@1828 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1828 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1828 $Perm.Write))
+(declare-const $k@1829 $Perm)
+(assert ($Perm.isValidVar $k@1829))
+(assert ($Perm.isReadVar $k@1829 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1829 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1829 $k@1770))
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1830 $Perm)
+(assert ($Perm.isValidVar $k@1830))
+(assert ($Perm.isReadVar $k@1830 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1830 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1830 $k@1772))
+; [eval] sys__result.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@1775 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 318] $t@1775 != Null
+(push) ; 5
+; [else-branch 318] $t@1775 == Null
+(declare-const $k@1831 $Perm)
+(assert ($Perm.isValidVar $k@1831))
+(assert ($Perm.isReadVar $k@1831 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1831 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1805 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1805 $Perm.No)))
+(assert (< $k@1831 $k@1805))
+(declare-const $k@1832 $Perm)
+(assert ($Perm.isValidVar $k@1832))
+(assert ($Perm.isReadVar $k@1832 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1832 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1807 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1807 $Perm.No)))
+(assert (< $k@1832 $k@1807))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread1b__run ----------
+(declare-const diz@1833 $Ref)
+(declare-const b@1834 Bool)
+(declare-const __flatten_61@1835 Bool)
+(declare-const i@1836 $Ref)
+(declare-const __flatten_62@1837 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@1833 $Ref.null)))
+(declare-const $k@1838 $Perm)
+(assert ($Perm.isValidVar $k@1838))
+(assert ($Perm.isReadVar $k@1838 $Perm.Write))
+(declare-const $t@1839 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1838 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1838 $Perm.No)))
+(assert (not (= $t@1839 $Ref.null)))
+(declare-const $k@1840 $Perm)
+(assert ($Perm.isValidVar $k@1840))
+(assert ($Perm.isReadVar $k@1840 $Perm.Write))
+(declare-const $t@1841 Int)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@1840 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1840 $Perm.No)))
+(assert (> $t@1841 0))
+(declare-const $k@1842 $Perm)
+(assert ($Perm.isValidVar $k@1842))
+(assert ($Perm.isReadVar $k@1842 $Perm.Write))
+(declare-const $t@1843 $Ref)
+(push) ; 3
+(assert (not (not (= $k@1842 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@1842 $Perm.No)))
+(assert (not (= $t@1843 $Ref.null)))
+(declare-const $t@1844 Int)
+(declare-const $t@1845 $Ref)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@1845 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@1845 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 319] $t@1845 != Null
+(assert (not (= $t@1845 $Ref.null)))
+(declare-const $t@1846 $Snap)
+(declare-const $k@1847 $Perm)
+(assert ($Perm.isValidVar $k@1847))
+(assert ($Perm.isReadVar $k@1847 $Perm.Write))
+(declare-const $t@1848 $Ref)
+(declare-const $k@1849 $Perm)
+(assert ($Perm.isValidVar $k@1849))
+(assert ($Perm.isReadVar $k@1849 $Perm.Write))
+(declare-const $t@1850 $Ref)
+(push) ; 4
+(declare-const $k@1851 $Perm)
+(assert ($Perm.isValidVar $k@1851))
+(assert ($Perm.isReadVar $k@1851 $Perm.Write))
+(declare-const $t@1852 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1851 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1851 $Perm.No)))
+(assert (not (= $t@1852 $Ref.null)))
+(declare-const $k@1853 $Perm)
+(assert ($Perm.isValidVar $k@1853))
+(assert ($Perm.isReadVar $k@1853 $Perm.Write))
+(declare-const $t@1854 Int)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1853 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1853 $Perm.No)))
+(assert (> $t@1854 0))
+(declare-const $k@1855 $Perm)
+(assert ($Perm.isValidVar $k@1855))
+(assert ($Perm.isReadVar $k@1855 $Perm.Write))
+(declare-const $t@1856 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1855 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1855 $Perm.No)))
+(assert (not (= $t@1856 $Ref.null)))
+(declare-const $t@1857 Int)
+(declare-const $t@1858 $Ref)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1858 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1858 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 320] $t@1858 != Null
+(assert (not (= $t@1858 $Ref.null)))
+(declare-const $t@1859 $Snap)
+(declare-const $k@1860 $Perm)
+(assert ($Perm.isValidVar $k@1860))
+(assert ($Perm.isReadVar $k@1860 $Perm.Write))
+(declare-const $t@1861 $Ref)
+(declare-const $k@1862 $Perm)
+(assert ($Perm.isValidVar $k@1862))
+(assert ($Perm.isReadVar $k@1862 $Perm.Write))
+(declare-const $t@1863 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 320] $t@1858 == Null
+(assert (= $t@1858 $Ref.null))
+(declare-const $k@1864 $Perm)
+(assert ($Perm.isValidVar $k@1864))
+(assert ($Perm.isReadVar $k@1864 $Perm.Write))
+(declare-const $t@1865 $Ref)
+(declare-const $k@1866 $Perm)
+(assert ($Perm.isValidVar $k@1866))
+(assert ($Perm.isReadVar $k@1866 $Perm.Write))
+(declare-const $t@1867 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_61 := BlockingQueue__offer(diz.LBQThread1b__queue, 2)
+; [eval] diz != null
+(declare-const $k@1868 $Perm)
+(assert ($Perm.isValidVar $k@1868))
+(assert ($Perm.isReadVar $k@1868 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1868 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1868 $k@1840))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1869 $Perm)
+(assert ($Perm.isValidVar $k@1869))
+(assert ($Perm.isReadVar $k@1869 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1869 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1869 $k@1842))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1845 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 321] $t@1845 != Null
+(declare-const $k@1870 $Perm)
+(assert ($Perm.isValidVar $k@1870))
+(assert ($Perm.isReadVar $k@1870 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1870 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1847 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1847 $Perm.No)))
+(assert (< $k@1870 $k@1847))
+(declare-const $k@1871 $Perm)
+(assert ($Perm.isValidVar $k@1871))
+(assert ($Perm.isReadVar $k@1871 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1871 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1849 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1849 $Perm.No)))
+(assert (< $k@1871 $k@1849))
+(declare-const sys__result@1872 Bool)
+(declare-const $t@1873 $Snap)
+(declare-const $t@1874 $Snap)
+(declare-const $t@1875 $Ref)
+(assert (= $t@1873 ($Snap.combine $t@1874 ($SortWrappers.$RefTo$Snap $t@1875))))
+(declare-const $t@1876 $Snap)
+(declare-const $t@1877 $Ref)
+(assert (= $t@1874 ($Snap.combine $t@1876 ($SortWrappers.$RefTo$Snap $t@1877))))
+(declare-const $t@1878 $Snap)
+(declare-const $t@1879 $Snap)
+(assert (= $t@1876 ($Snap.combine $t@1878 $t@1879)))
+(declare-const $t@1880 $Snap)
+(declare-const $t@1881 $Ref)
+(assert (= $t@1878 ($Snap.combine $t@1880 ($SortWrappers.$RefTo$Snap $t@1881))))
+(declare-const $t@1882 $Snap)
+(declare-const $t@1883 Int)
+(assert (= $t@1880 ($Snap.combine $t@1882 ($SortWrappers.IntTo$Snap $t@1883))))
+(declare-const $t@1884 Int)
+(declare-const $t@1885 $Ref)
+(assert (=
+  $t@1882
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1884)
+    ($SortWrappers.$RefTo$Snap $t@1885))))
+(declare-const $t@1886 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1884)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1886) $Snap.unit)))
+(declare-const $k@1887 $Perm)
+(assert ($Perm.isValidVar $k@1887))
+(assert ($Perm.isReadVar $k@1887 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1840 $k@1868)) (= $t@1886 $t@1841)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@1840 $k@1868) $k@1887) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1840 $k@1868) $k@1887) $Perm.No)))
+(assert (> $t@1886 0))
+(declare-const $k@1888 $Perm)
+(assert ($Perm.isValidVar $k@1888))
+(assert ($Perm.isReadVar $k@1888 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1842 $k@1869)) (= $t@1885 $t@1843)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@1842 $k@1869) $k@1888) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1842 $k@1869) $k@1888) $Perm.No)))
+(assert (not (= $t@1885 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@1881 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@1881 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 322] $t@1881 != Null
+(assert (not (= $t@1881 $Ref.null)))
+(declare-const $k@1889 $Perm)
+(assert ($Perm.isValidVar $k@1889))
+(assert ($Perm.isReadVar $k@1889 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1847 $k@1870)) (= $t@1877 $t@1848)))
+(declare-const $k@1890 $Perm)
+(assert ($Perm.isValidVar $k@1890))
+(assert ($Perm.isReadVar $k@1890 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1849 $k@1871)) (= $t@1875 $t@1850)))
+; [exec]
+; b := __flatten_61
+; [exec]
+; __flatten_62 := BlockingQueue__peek(diz.LBQThread1b__queue)
+; [eval] diz != null
+(declare-const $k@1891 $Perm)
+(assert ($Perm.isValidVar $k@1891))
+(assert ($Perm.isReadVar $k@1891 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1891 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1891 (+ (- $k@1840 $k@1868) $k@1887)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1892 $Perm)
+(assert ($Perm.isValidVar $k@1892))
+(assert ($Perm.isReadVar $k@1892 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1892 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1892 (+ (- $k@1842 $k@1869) $k@1888)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@1881 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 323] $t@1881 != Null
+(declare-const $k@1893 $Perm)
+(assert ($Perm.isValidVar $k@1893))
+(assert ($Perm.isReadVar $k@1893 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1893 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1847 $k@1870) $k@1889) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1847 $k@1870) $k@1889) $Perm.No)))
+(assert (< $k@1893 (+ (- $k@1847 $k@1870) $k@1889)))
+(declare-const $k@1894 $Perm)
+(assert ($Perm.isValidVar $k@1894))
+(assert ($Perm.isReadVar $k@1894 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1894 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1849 $k@1871) $k@1890) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1849 $k@1871) $k@1890) $Perm.No)))
+(assert (< $k@1894 (+ (- $k@1849 $k@1871) $k@1890)))
+(declare-const sys__result@1895 $Ref)
+(declare-const $t@1896 $Snap)
+(declare-const $t@1897 $Snap)
+(declare-const $t@1898 $Ref)
+(assert (= $t@1896 ($Snap.combine $t@1897 ($SortWrappers.$RefTo$Snap $t@1898))))
+(declare-const $t@1899 $Snap)
+(declare-const $t@1900 $Ref)
+(assert (= $t@1897 ($Snap.combine $t@1899 ($SortWrappers.$RefTo$Snap $t@1900))))
+(declare-const $t@1901 $Snap)
+(declare-const $t@1902 $Snap)
+(assert (= $t@1899 ($Snap.combine $t@1901 $t@1902)))
+(declare-const $t@1903 $Snap)
+(declare-const $t@1904 $Ref)
+(assert (= $t@1901 ($Snap.combine $t@1903 ($SortWrappers.$RefTo$Snap $t@1904))))
+(declare-const $t@1905 $Snap)
+(declare-const $t@1906 Int)
+(assert (= $t@1903 ($Snap.combine $t@1905 ($SortWrappers.IntTo$Snap $t@1906))))
+(declare-const $t@1907 Int)
+(declare-const $t@1908 $Ref)
+(assert (=
+  $t@1905
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1907)
+    ($SortWrappers.$RefTo$Snap $t@1908))))
+(declare-const $t@1909 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1907)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1909) $Snap.unit)))
+(declare-const $k@1910 $Perm)
+(assert ($Perm.isValidVar $k@1910))
+(assert ($Perm.isReadVar $k@1910 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1840 $k@1868) $k@1887) $k@1891))
+  (= $t@1909 $t@1886)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1891) $k@1910) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1891) $k@1910) $Perm.No)))
+(assert (> $t@1909 0))
+(declare-const $k@1911 $Perm)
+(assert ($Perm.isValidVar $k@1911))
+(assert ($Perm.isReadVar $k@1911 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1842 $k@1869) $k@1888) $k@1892))
+  (= $t@1908 $t@1885)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1892) $k@1911) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1892) $k@1911) $Perm.No)))
+(assert (not (= $t@1908 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1904 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1904 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 324] $t@1904 != Null
+(assert (not (= $t@1904 $Ref.null)))
+(declare-const $k@1912 $Perm)
+(assert ($Perm.isValidVar $k@1912))
+(assert ($Perm.isReadVar $k@1912 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893))
+  (= $t@1900 $t@1877)))
+(declare-const $k@1913 $Perm)
+(assert ($Perm.isValidVar $k@1913))
+(assert ($Perm.isReadVar $k@1913 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894))
+  (= $t@1898 $t@1875)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@1914 $Perm)
+(assert ($Perm.isValidVar $k@1914))
+(assert ($Perm.isReadVar $k@1914 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1914 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1914 $k@1838))
+(declare-const $k@1915 $Perm)
+(assert ($Perm.isValidVar $k@1915))
+(assert ($Perm.isReadVar $k@1915 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1915 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1915 (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1891) $k@1910)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1916 $Perm)
+(assert ($Perm.isValidVar $k@1916))
+(assert ($Perm.isReadVar $k@1916 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1916 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1916 (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1892) $k@1911)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1904 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 325] $t@1904 != Null
+(declare-const $k@1917 $Perm)
+(assert ($Perm.isValidVar $k@1917))
+(assert ($Perm.isReadVar $k@1917 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1917 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1912) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1912) $Perm.No)))
+(assert (< $k@1917 (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1912)))
+(declare-const $k@1918 $Perm)
+(assert ($Perm.isValidVar $k@1918))
+(assert ($Perm.isReadVar $k@1918 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1918 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1913) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1913) $Perm.No)))
+(assert (< $k@1918 (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1913)))
+(pop) ; 9
+; [dead else-branch 325] $t@1904 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 324] $t@1904 == Null
+(assert (= $t@1904 $Ref.null))
+(declare-const $k@1919 $Perm)
+(assert ($Perm.isValidVar $k@1919))
+(assert ($Perm.isReadVar $k@1919 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893))
+  (= $t@1900 $t@1877)))
+(declare-const $k@1920 $Perm)
+(assert ($Perm.isValidVar $k@1920))
+(assert ($Perm.isReadVar $k@1920 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894))
+  (= $t@1898 $t@1875)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@1921 $Perm)
+(assert ($Perm.isValidVar $k@1921))
+(assert ($Perm.isReadVar $k@1921 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1921 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1921 $k@1838))
+(declare-const $k@1922 $Perm)
+(assert ($Perm.isValidVar $k@1922))
+(assert ($Perm.isReadVar $k@1922 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1922 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1922 (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1891) $k@1910)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1923 $Perm)
+(assert ($Perm.isValidVar $k@1923))
+(assert ($Perm.isReadVar $k@1923 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1923 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1923 (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1892) $k@1911)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1904 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 326] $t@1904 != Null
+(push) ; 9
+; [else-branch 326] $t@1904 == Null
+(declare-const $k@1924 $Perm)
+(assert ($Perm.isValidVar $k@1924))
+(assert ($Perm.isReadVar $k@1924 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1924 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1919) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1919) $Perm.No)))
+(assert (< $k@1924 (+ (- (+ (- $k@1847 $k@1870) $k@1889) $k@1893) $k@1919)))
+(declare-const $k@1925 $Perm)
+(assert ($Perm.isValidVar $k@1925))
+(assert ($Perm.isReadVar $k@1925 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1925 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1920) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1920) $Perm.No)))
+(assert (< $k@1925 (+ (- (+ (- $k@1849 $k@1871) $k@1890) $k@1894) $k@1920)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 323] $t@1881 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 322] $t@1881 == Null
+(assert (= $t@1881 $Ref.null))
+(declare-const $k@1926 $Perm)
+(assert ($Perm.isValidVar $k@1926))
+(assert ($Perm.isReadVar $k@1926 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1847 $k@1870)) (= $t@1877 $t@1848)))
+(declare-const $k@1927 $Perm)
+(assert ($Perm.isValidVar $k@1927))
+(assert ($Perm.isReadVar $k@1927 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1849 $k@1871)) (= $t@1875 $t@1850)))
+; [exec]
+; b := __flatten_61
+; [exec]
+; __flatten_62 := BlockingQueue__peek(diz.LBQThread1b__queue)
+; [eval] diz != null
+(declare-const $k@1928 $Perm)
+(assert ($Perm.isValidVar $k@1928))
+(assert ($Perm.isReadVar $k@1928 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1928 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1928 (+ (- $k@1840 $k@1868) $k@1887)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1929 $Perm)
+(assert ($Perm.isValidVar $k@1929))
+(assert ($Perm.isReadVar $k@1929 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@1929 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@1929 (+ (- $k@1842 $k@1869) $k@1888)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@1881 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 327] $t@1881 != Null
+(push) ; 7
+; [else-branch 327] $t@1881 == Null
+(declare-const $k@1930 $Perm)
+(assert ($Perm.isValidVar $k@1930))
+(assert ($Perm.isReadVar $k@1930 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1930 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1847 $k@1870) $k@1926) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1847 $k@1870) $k@1926) $Perm.No)))
+(assert (< $k@1930 (+ (- $k@1847 $k@1870) $k@1926)))
+(declare-const $k@1931 $Perm)
+(assert ($Perm.isValidVar $k@1931))
+(assert ($Perm.isReadVar $k@1931 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@1931 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1849 $k@1871) $k@1927) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1849 $k@1871) $k@1927) $Perm.No)))
+(assert (< $k@1931 (+ (- $k@1849 $k@1871) $k@1927)))
+(declare-const sys__result@1932 $Ref)
+(declare-const $t@1933 $Snap)
+(declare-const $t@1934 $Snap)
+(declare-const $t@1935 $Ref)
+(assert (= $t@1933 ($Snap.combine $t@1934 ($SortWrappers.$RefTo$Snap $t@1935))))
+(declare-const $t@1936 $Snap)
+(declare-const $t@1937 $Ref)
+(assert (= $t@1934 ($Snap.combine $t@1936 ($SortWrappers.$RefTo$Snap $t@1937))))
+(declare-const $t@1938 $Snap)
+(declare-const $t@1939 $Snap)
+(assert (= $t@1936 ($Snap.combine $t@1938 $t@1939)))
+(declare-const $t@1940 $Snap)
+(declare-const $t@1941 $Ref)
+(assert (= $t@1938 ($Snap.combine $t@1940 ($SortWrappers.$RefTo$Snap $t@1941))))
+(declare-const $t@1942 $Snap)
+(declare-const $t@1943 Int)
+(assert (= $t@1940 ($Snap.combine $t@1942 ($SortWrappers.IntTo$Snap $t@1943))))
+(declare-const $t@1944 Int)
+(declare-const $t@1945 $Ref)
+(assert (=
+  $t@1942
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@1944)
+    ($SortWrappers.$RefTo$Snap $t@1945))))
+(declare-const $t@1946 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@1944)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@1946) $Snap.unit)))
+(declare-const $k@1947 $Perm)
+(assert ($Perm.isValidVar $k@1947))
+(assert ($Perm.isReadVar $k@1947 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1840 $k@1868) $k@1887) $k@1928))
+  (= $t@1946 $t@1886)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1928) $k@1947) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1928) $k@1947) $Perm.No)))
+(assert (> $t@1946 0))
+(declare-const $k@1948 $Perm)
+(assert ($Perm.isValidVar $k@1948))
+(assert ($Perm.isReadVar $k@1948 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1842 $k@1869) $k@1888) $k@1929))
+  (= $t@1945 $t@1885)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1929) $k@1948) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1929) $k@1948) $Perm.No)))
+(assert (not (= $t@1945 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@1941 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@1941 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 328] $t@1941 != Null
+(assert (not (= $t@1941 $Ref.null)))
+(declare-const $k@1949 $Perm)
+(assert ($Perm.isValidVar $k@1949))
+(assert ($Perm.isReadVar $k@1949 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930))
+  (= $t@1937 $t@1877)))
+(declare-const $k@1950 $Perm)
+(assert ($Perm.isValidVar $k@1950))
+(assert ($Perm.isReadVar $k@1950 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931))
+  (= $t@1935 $t@1875)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@1951 $Perm)
+(assert ($Perm.isValidVar $k@1951))
+(assert ($Perm.isReadVar $k@1951 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1951 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1951 $k@1838))
+(declare-const $k@1952 $Perm)
+(assert ($Perm.isValidVar $k@1952))
+(assert ($Perm.isReadVar $k@1952 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1952 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1952 (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1928) $k@1947)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1953 $Perm)
+(assert ($Perm.isValidVar $k@1953))
+(assert ($Perm.isReadVar $k@1953 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1953 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1953 (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1929) $k@1948)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@1941 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 329] $t@1941 != Null
+(declare-const $k@1954 $Perm)
+(assert ($Perm.isValidVar $k@1954))
+(assert ($Perm.isReadVar $k@1954 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1954 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1949) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1949) $Perm.No)))
+(assert (< $k@1954 (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1949)))
+(declare-const $k@1955 $Perm)
+(assert ($Perm.isValidVar $k@1955))
+(assert ($Perm.isReadVar $k@1955 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1955 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1950) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1950) $Perm.No)))
+(assert (< $k@1955 (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1950)))
+(pop) ; 9
+; [dead else-branch 329] $t@1941 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 328] $t@1941 == Null
+(assert (= $t@1941 $Ref.null))
+(declare-const $k@1956 $Perm)
+(assert ($Perm.isValidVar $k@1956))
+(assert ($Perm.isReadVar $k@1956 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930))
+  (= $t@1937 $t@1877)))
+(declare-const $k@1957 $Perm)
+(assert ($Perm.isValidVar $k@1957))
+(assert ($Perm.isReadVar $k@1957 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931))
+  (= $t@1935 $t@1875)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@1958 $Perm)
+(assert ($Perm.isValidVar $k@1958))
+(assert ($Perm.isReadVar $k@1958 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1958 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1958 $k@1838))
+(declare-const $k@1959 $Perm)
+(assert ($Perm.isValidVar $k@1959))
+(assert ($Perm.isReadVar $k@1959 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1959 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1959 (+ (- (+ (- $k@1840 $k@1868) $k@1887) $k@1928) $k@1947)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@1960 $Perm)
+(assert ($Perm.isValidVar $k@1960))
+(assert ($Perm.isReadVar $k@1960 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@1960 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@1960 (+ (- (+ (- $k@1842 $k@1869) $k@1888) $k@1929) $k@1948)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@1941 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 330] $t@1941 != Null
+(push) ; 9
+; [else-branch 330] $t@1941 == Null
+(declare-const $k@1961 $Perm)
+(assert ($Perm.isValidVar $k@1961))
+(assert ($Perm.isReadVar $k@1961 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1961 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1956) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1956) $Perm.No)))
+(assert (< $k@1961 (+ (- (+ (- $k@1847 $k@1870) $k@1926) $k@1930) $k@1956)))
+(declare-const $k@1962 $Perm)
+(assert ($Perm.isValidVar $k@1962))
+(assert ($Perm.isReadVar $k@1962 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@1962 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1957) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1957) $Perm.No)))
+(assert (< $k@1962 (+ (- (+ (- $k@1849 $k@1871) $k@1927) $k@1931) $k@1957)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 321] $t@1845 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 319] $t@1845 == Null
+(assert (= $t@1845 $Ref.null))
+(declare-const $k@1963 $Perm)
+(assert ($Perm.isValidVar $k@1963))
+(assert ($Perm.isReadVar $k@1963 $Perm.Write))
+(declare-const $t@1964 $Ref)
+(declare-const $k@1965 $Perm)
+(assert ($Perm.isValidVar $k@1965))
+(assert ($Perm.isReadVar $k@1965 $Perm.Write))
+(declare-const $t@1966 $Ref)
+(push) ; 4
+(declare-const $k@1967 $Perm)
+(assert ($Perm.isValidVar $k@1967))
+(assert ($Perm.isReadVar $k@1967 $Perm.Write))
+(declare-const $t@1968 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1967 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1967 $Perm.No)))
+(assert (not (= $t@1968 $Ref.null)))
+(declare-const $k@1969 $Perm)
+(assert ($Perm.isValidVar $k@1969))
+(assert ($Perm.isReadVar $k@1969 $Perm.Write))
+(declare-const $t@1970 Int)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@1969 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1969 $Perm.No)))
+(assert (> $t@1970 0))
+(declare-const $k@1971 $Perm)
+(assert ($Perm.isValidVar $k@1971))
+(assert ($Perm.isReadVar $k@1971 $Perm.Write))
+(declare-const $t@1972 $Ref)
+(push) ; 5
+(assert (not (not (= $k@1971 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@1971 $Perm.No)))
+(assert (not (= $t@1972 $Ref.null)))
+(declare-const $t@1973 Int)
+(declare-const $t@1974 $Ref)
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@1974 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@1974 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 331] $t@1974 != Null
+(assert (not (= $t@1974 $Ref.null)))
+(declare-const $t@1975 $Snap)
+(declare-const $k@1976 $Perm)
+(assert ($Perm.isValidVar $k@1976))
+(assert ($Perm.isReadVar $k@1976 $Perm.Write))
+(declare-const $t@1977 $Ref)
+(declare-const $k@1978 $Perm)
+(assert ($Perm.isValidVar $k@1978))
+(assert ($Perm.isReadVar $k@1978 $Perm.Write))
+(declare-const $t@1979 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 331] $t@1974 == Null
+(assert (= $t@1974 $Ref.null))
+(declare-const $k@1980 $Perm)
+(assert ($Perm.isValidVar $k@1980))
+(assert ($Perm.isReadVar $k@1980 $Perm.Write))
+(declare-const $t@1981 $Ref)
+(declare-const $k@1982 $Perm)
+(assert ($Perm.isValidVar $k@1982))
+(assert ($Perm.isReadVar $k@1982 $Perm.Write))
+(declare-const $t@1983 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_61 := BlockingQueue__offer(diz.LBQThread1b__queue, 2)
+; [eval] diz != null
+(declare-const $k@1984 $Perm)
+(assert ($Perm.isValidVar $k@1984))
+(assert ($Perm.isReadVar $k@1984 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1984 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1984 $k@1840))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@1985 $Perm)
+(assert ($Perm.isValidVar $k@1985))
+(assert ($Perm.isReadVar $k@1985 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@1985 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@1985 $k@1842))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@1845 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 332] $t@1845 != Null
+(push) ; 5
+; [else-branch 332] $t@1845 == Null
+(declare-const $k@1986 $Perm)
+(assert ($Perm.isValidVar $k@1986))
+(assert ($Perm.isReadVar $k@1986 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1986 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1963 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1963 $Perm.No)))
+(assert (< $k@1986 $k@1963))
+(declare-const $k@1987 $Perm)
+(assert ($Perm.isValidVar $k@1987))
+(assert ($Perm.isReadVar $k@1987 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@1987 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@1965 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@1965 $Perm.No)))
+(assert (< $k@1987 $k@1965))
+(declare-const sys__result@1988 Bool)
+(declare-const $t@1989 $Snap)
+(declare-const $t@1990 $Snap)
+(declare-const $t@1991 $Ref)
+(assert (= $t@1989 ($Snap.combine $t@1990 ($SortWrappers.$RefTo$Snap $t@1991))))
+(declare-const $t@1992 $Snap)
+(declare-const $t@1993 $Ref)
+(assert (= $t@1990 ($Snap.combine $t@1992 ($SortWrappers.$RefTo$Snap $t@1993))))
+(declare-const $t@1994 $Snap)
+(declare-const $t@1995 $Snap)
+(assert (= $t@1992 ($Snap.combine $t@1994 $t@1995)))
+(declare-const $t@1996 $Snap)
+(declare-const $t@1997 $Ref)
+(assert (= $t@1994 ($Snap.combine $t@1996 ($SortWrappers.$RefTo$Snap $t@1997))))
+(declare-const $t@1998 $Snap)
+(declare-const $t@1999 Int)
+(assert (= $t@1996 ($Snap.combine $t@1998 ($SortWrappers.IntTo$Snap $t@1999))))
+(declare-const $t@2000 Int)
+(declare-const $t@2001 $Ref)
+(assert (=
+  $t@1998
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2000)
+    ($SortWrappers.$RefTo$Snap $t@2001))))
+(declare-const $t@2002 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2000)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2002) $Snap.unit)))
+(declare-const $k@2003 $Perm)
+(assert ($Perm.isValidVar $k@2003))
+(assert ($Perm.isReadVar $k@2003 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1840 $k@1984)) (= $t@2002 $t@1841)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@1840 $k@1984) $k@2003) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1840 $k@1984) $k@2003) $Perm.No)))
+(assert (> $t@2002 0))
+(declare-const $k@2004 $Perm)
+(assert ($Perm.isValidVar $k@2004))
+(assert ($Perm.isReadVar $k@2004 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1842 $k@1985)) (= $t@2001 $t@1843)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@1842 $k@1985) $k@2004) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@1842 $k@1985) $k@2004) $Perm.No)))
+(assert (not (= $t@2001 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@1997 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@1997 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 333] $t@1997 != Null
+(assert (not (= $t@1997 $Ref.null)))
+(declare-const $k@2005 $Perm)
+(assert ($Perm.isValidVar $k@2005))
+(assert ($Perm.isReadVar $k@2005 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1963 $k@1986)) (= $t@1993 $t@1964)))
+(declare-const $k@2006 $Perm)
+(assert ($Perm.isValidVar $k@2006))
+(assert ($Perm.isReadVar $k@2006 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1965 $k@1987)) (= $t@1991 $t@1966)))
+; [exec]
+; b := __flatten_61
+; [exec]
+; __flatten_62 := BlockingQueue__peek(diz.LBQThread1b__queue)
+; [eval] diz != null
+(declare-const $k@2007 $Perm)
+(assert ($Perm.isValidVar $k@2007))
+(assert ($Perm.isReadVar $k@2007 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2007 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2007 (+ (- $k@1840 $k@1984) $k@2003)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2008 $Perm)
+(assert ($Perm.isValidVar $k@2008))
+(assert ($Perm.isReadVar $k@2008 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2008 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2008 (+ (- $k@1842 $k@1985) $k@2004)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@1997 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 334] $t@1997 != Null
+(declare-const $k@2009 $Perm)
+(assert ($Perm.isValidVar $k@2009))
+(assert ($Perm.isReadVar $k@2009 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2009 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1963 $k@1986) $k@2005) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1963 $k@1986) $k@2005) $Perm.No)))
+(assert (< $k@2009 (+ (- $k@1963 $k@1986) $k@2005)))
+(declare-const $k@2010 $Perm)
+(assert ($Perm.isValidVar $k@2010))
+(assert ($Perm.isReadVar $k@2010 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2010 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1965 $k@1987) $k@2006) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1965 $k@1987) $k@2006) $Perm.No)))
+(assert (< $k@2010 (+ (- $k@1965 $k@1987) $k@2006)))
+(declare-const sys__result@2011 $Ref)
+(declare-const $t@2012 $Snap)
+(declare-const $t@2013 $Snap)
+(declare-const $t@2014 $Ref)
+(assert (= $t@2012 ($Snap.combine $t@2013 ($SortWrappers.$RefTo$Snap $t@2014))))
+(declare-const $t@2015 $Snap)
+(declare-const $t@2016 $Ref)
+(assert (= $t@2013 ($Snap.combine $t@2015 ($SortWrappers.$RefTo$Snap $t@2016))))
+(declare-const $t@2017 $Snap)
+(declare-const $t@2018 $Snap)
+(assert (= $t@2015 ($Snap.combine $t@2017 $t@2018)))
+(declare-const $t@2019 $Snap)
+(declare-const $t@2020 $Ref)
+(assert (= $t@2017 ($Snap.combine $t@2019 ($SortWrappers.$RefTo$Snap $t@2020))))
+(declare-const $t@2021 $Snap)
+(declare-const $t@2022 Int)
+(assert (= $t@2019 ($Snap.combine $t@2021 ($SortWrappers.IntTo$Snap $t@2022))))
+(declare-const $t@2023 Int)
+(declare-const $t@2024 $Ref)
+(assert (=
+  $t@2021
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2023)
+    ($SortWrappers.$RefTo$Snap $t@2024))))
+(declare-const $t@2025 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2023)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2025) $Snap.unit)))
+(declare-const $k@2026 $Perm)
+(assert ($Perm.isValidVar $k@2026))
+(assert ($Perm.isReadVar $k@2026 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1840 $k@1984) $k@2003) $k@2007))
+  (= $t@2025 $t@2002)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2007) $k@2026) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2007) $k@2026) $Perm.No)))
+(assert (> $t@2025 0))
+(declare-const $k@2027 $Perm)
+(assert ($Perm.isValidVar $k@2027))
+(assert ($Perm.isReadVar $k@2027 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1842 $k@1985) $k@2004) $k@2008))
+  (= $t@2024 $t@2001)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2008) $k@2027) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2008) $k@2027) $Perm.No)))
+(assert (not (= $t@2024 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2020 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2020 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 335] $t@2020 != Null
+(assert (not (= $t@2020 $Ref.null)))
+(declare-const $k@2028 $Perm)
+(assert ($Perm.isValidVar $k@2028))
+(assert ($Perm.isReadVar $k@2028 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009))
+  (= $t@2016 $t@1993)))
+(declare-const $k@2029 $Perm)
+(assert ($Perm.isValidVar $k@2029))
+(assert ($Perm.isReadVar $k@2029 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010))
+  (= $t@2014 $t@1991)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@2030 $Perm)
+(assert ($Perm.isValidVar $k@2030))
+(assert ($Perm.isReadVar $k@2030 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2030 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2030 $k@1838))
+(declare-const $k@2031 $Perm)
+(assert ($Perm.isValidVar $k@2031))
+(assert ($Perm.isReadVar $k@2031 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2031 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2031 (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2007) $k@2026)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2032 $Perm)
+(assert ($Perm.isValidVar $k@2032))
+(assert ($Perm.isReadVar $k@2032 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2032 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2032 (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2008) $k@2027)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2020 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 336] $t@2020 != Null
+(declare-const $k@2033 $Perm)
+(assert ($Perm.isValidVar $k@2033))
+(assert ($Perm.isReadVar $k@2033 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2033 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2028) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2028) $Perm.No)))
+(assert (< $k@2033 (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2028)))
+(declare-const $k@2034 $Perm)
+(assert ($Perm.isValidVar $k@2034))
+(assert ($Perm.isReadVar $k@2034 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2034 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2029) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2029) $Perm.No)))
+(assert (< $k@2034 (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2029)))
+(pop) ; 9
+; [dead else-branch 336] $t@2020 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 335] $t@2020 == Null
+(assert (= $t@2020 $Ref.null))
+(declare-const $k@2035 $Perm)
+(assert ($Perm.isValidVar $k@2035))
+(assert ($Perm.isReadVar $k@2035 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009))
+  (= $t@2016 $t@1993)))
+(declare-const $k@2036 $Perm)
+(assert ($Perm.isValidVar $k@2036))
+(assert ($Perm.isReadVar $k@2036 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010))
+  (= $t@2014 $t@1991)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@2037 $Perm)
+(assert ($Perm.isValidVar $k@2037))
+(assert ($Perm.isReadVar $k@2037 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2037 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2037 $k@1838))
+(declare-const $k@2038 $Perm)
+(assert ($Perm.isValidVar $k@2038))
+(assert ($Perm.isReadVar $k@2038 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2038 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2038 (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2007) $k@2026)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2039 $Perm)
+(assert ($Perm.isValidVar $k@2039))
+(assert ($Perm.isReadVar $k@2039 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2039 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2039 (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2008) $k@2027)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2020 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 337] $t@2020 != Null
+(push) ; 9
+; [else-branch 337] $t@2020 == Null
+(declare-const $k@2040 $Perm)
+(assert ($Perm.isValidVar $k@2040))
+(assert ($Perm.isReadVar $k@2040 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2040 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2035) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2035) $Perm.No)))
+(assert (< $k@2040 (+ (- (+ (- $k@1963 $k@1986) $k@2005) $k@2009) $k@2035)))
+(declare-const $k@2041 $Perm)
+(assert ($Perm.isValidVar $k@2041))
+(assert ($Perm.isReadVar $k@2041 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2041 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2036) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2036) $Perm.No)))
+(assert (< $k@2041 (+ (- (+ (- $k@1965 $k@1987) $k@2006) $k@2010) $k@2036)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 334] $t@1997 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 333] $t@1997 == Null
+(assert (= $t@1997 $Ref.null))
+(declare-const $k@2042 $Perm)
+(assert ($Perm.isValidVar $k@2042))
+(assert ($Perm.isReadVar $k@2042 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1963 $k@1986)) (= $t@1993 $t@1964)))
+(declare-const $k@2043 $Perm)
+(assert ($Perm.isValidVar $k@2043))
+(assert ($Perm.isReadVar $k@2043 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@1965 $k@1987)) (= $t@1991 $t@1966)))
+; [exec]
+; b := __flatten_61
+; [exec]
+; __flatten_62 := BlockingQueue__peek(diz.LBQThread1b__queue)
+; [eval] diz != null
+(declare-const $k@2044 $Perm)
+(assert ($Perm.isValidVar $k@2044))
+(assert ($Perm.isReadVar $k@2044 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2044 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2044 (+ (- $k@1840 $k@1984) $k@2003)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2045 $Perm)
+(assert ($Perm.isValidVar $k@2045))
+(assert ($Perm.isReadVar $k@2045 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2045 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2045 (+ (- $k@1842 $k@1985) $k@2004)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@1997 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 338] $t@1997 != Null
+(push) ; 7
+; [else-branch 338] $t@1997 == Null
+(declare-const $k@2046 $Perm)
+(assert ($Perm.isValidVar $k@2046))
+(assert ($Perm.isReadVar $k@2046 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2046 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1963 $k@1986) $k@2042) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1963 $k@1986) $k@2042) $Perm.No)))
+(assert (< $k@2046 (+ (- $k@1963 $k@1986) $k@2042)))
+(declare-const $k@2047 $Perm)
+(assert ($Perm.isValidVar $k@2047))
+(assert ($Perm.isReadVar $k@2047 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2047 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@1965 $k@1987) $k@2043) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@1965 $k@1987) $k@2043) $Perm.No)))
+(assert (< $k@2047 (+ (- $k@1965 $k@1987) $k@2043)))
+(declare-const sys__result@2048 $Ref)
+(declare-const $t@2049 $Snap)
+(declare-const $t@2050 $Snap)
+(declare-const $t@2051 $Ref)
+(assert (= $t@2049 ($Snap.combine $t@2050 ($SortWrappers.$RefTo$Snap $t@2051))))
+(declare-const $t@2052 $Snap)
+(declare-const $t@2053 $Ref)
+(assert (= $t@2050 ($Snap.combine $t@2052 ($SortWrappers.$RefTo$Snap $t@2053))))
+(declare-const $t@2054 $Snap)
+(declare-const $t@2055 $Snap)
+(assert (= $t@2052 ($Snap.combine $t@2054 $t@2055)))
+(declare-const $t@2056 $Snap)
+(declare-const $t@2057 $Ref)
+(assert (= $t@2054 ($Snap.combine $t@2056 ($SortWrappers.$RefTo$Snap $t@2057))))
+(declare-const $t@2058 $Snap)
+(declare-const $t@2059 Int)
+(assert (= $t@2056 ($Snap.combine $t@2058 ($SortWrappers.IntTo$Snap $t@2059))))
+(declare-const $t@2060 Int)
+(declare-const $t@2061 $Ref)
+(assert (=
+  $t@2058
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2060)
+    ($SortWrappers.$RefTo$Snap $t@2061))))
+(declare-const $t@2062 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2060)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2062) $Snap.unit)))
+(declare-const $k@2063 $Perm)
+(assert ($Perm.isValidVar $k@2063))
+(assert ($Perm.isReadVar $k@2063 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1840 $k@1984) $k@2003) $k@2044))
+  (= $t@2062 $t@2002)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2044) $k@2063) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2044) $k@2063) $Perm.No)))
+(assert (> $t@2062 0))
+(declare-const $k@2064 $Perm)
+(assert ($Perm.isValidVar $k@2064))
+(assert ($Perm.isReadVar $k@2064 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1842 $k@1985) $k@2004) $k@2045))
+  (= $t@2061 $t@2001)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2045) $k@2064) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2045) $k@2064) $Perm.No)))
+(assert (not (= $t@2061 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2057 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2057 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 339] $t@2057 != Null
+(assert (not (= $t@2057 $Ref.null)))
+(declare-const $k@2065 $Perm)
+(assert ($Perm.isValidVar $k@2065))
+(assert ($Perm.isReadVar $k@2065 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046))
+  (= $t@2053 $t@1993)))
+(declare-const $k@2066 $Perm)
+(assert ($Perm.isValidVar $k@2066))
+(assert ($Perm.isReadVar $k@2066 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047))
+  (= $t@2051 $t@1991)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@2067 $Perm)
+(assert ($Perm.isValidVar $k@2067))
+(assert ($Perm.isReadVar $k@2067 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2067 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2067 $k@1838))
+(declare-const $k@2068 $Perm)
+(assert ($Perm.isValidVar $k@2068))
+(assert ($Perm.isReadVar $k@2068 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2068 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2068 (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2044) $k@2063)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2069 $Perm)
+(assert ($Perm.isValidVar $k@2069))
+(assert ($Perm.isReadVar $k@2069 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2069 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2069 (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2045) $k@2064)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2057 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 340] $t@2057 != Null
+(declare-const $k@2070 $Perm)
+(assert ($Perm.isValidVar $k@2070))
+(assert ($Perm.isReadVar $k@2070 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2070 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2065) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2065) $Perm.No)))
+(assert (< $k@2070 (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2065)))
+(declare-const $k@2071 $Perm)
+(assert ($Perm.isValidVar $k@2071))
+(assert ($Perm.isReadVar $k@2071 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2071 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2066) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2066) $Perm.No)))
+(assert (< $k@2071 (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2066)))
+(pop) ; 9
+; [dead else-branch 340] $t@2057 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 339] $t@2057 == Null
+(assert (= $t@2057 $Ref.null))
+(declare-const $k@2072 $Perm)
+(assert ($Perm.isValidVar $k@2072))
+(assert ($Perm.isReadVar $k@2072 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046))
+  (= $t@2053 $t@1993)))
+(declare-const $k@2073 $Perm)
+(assert ($Perm.isValidVar $k@2073))
+(assert ($Perm.isReadVar $k@2073 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047))
+  (= $t@2051 $t@1991)))
+; [exec]
+; i := __flatten_62
+(declare-const $k@2074 $Perm)
+(assert ($Perm.isValidVar $k@2074))
+(assert ($Perm.isReadVar $k@2074 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2074 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2074 $k@1838))
+(declare-const $k@2075 $Perm)
+(assert ($Perm.isValidVar $k@2075))
+(assert ($Perm.isReadVar $k@2075 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2075 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2075 (+ (- (+ (- $k@1840 $k@1984) $k@2003) $k@2044) $k@2063)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2076 $Perm)
+(assert ($Perm.isValidVar $k@2076))
+(assert ($Perm.isReadVar $k@2076 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2076 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2076 (+ (- (+ (- $k@1842 $k@1985) $k@2004) $k@2045) $k@2064)))
+; [eval] diz.LBQThread1b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2057 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 341] $t@2057 != Null
+(push) ; 9
+; [else-branch 341] $t@2057 == Null
+(declare-const $k@2077 $Perm)
+(assert ($Perm.isValidVar $k@2077))
+(assert ($Perm.isReadVar $k@2077 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2077 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2072) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2072) $Perm.No)))
+(assert (< $k@2077 (+ (- (+ (- $k@1963 $k@1986) $k@2042) $k@2046) $k@2072)))
+(declare-const $k@2078 $Perm)
+(assert ($Perm.isValidVar $k@2078))
+(assert ($Perm.isReadVar $k@2078 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2078 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2073) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2073) $Perm.No)))
+(assert (< $k@2078 (+ (- (+ (- $k@1965 $k@1987) $k@2043) $k@2047) $k@2073)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread2a__LBQThread1a ----------
+(declare-const queue@2079 $Ref)
+(declare-const sys__result@2080 $Ref)
+(declare-const diz@2081 $Ref)
+(declare-const __flatten_63@2082 $Ref)
+(declare-const __flatten_123@2083 $Ref)
+(push) ; 2
+(assert (not (= queue@2079 $Ref.null)))
+(declare-const $k@2084 $Perm)
+(assert ($Perm.isValidVar $k@2084))
+(assert ($Perm.isReadVar $k@2084 $Perm.Write))
+(declare-const $t@2085 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2084 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2084 $Perm.No)))
+(assert (> $t@2085 0))
+(declare-const $k@2086 $Perm)
+(assert ($Perm.isValidVar $k@2086))
+(assert ($Perm.isReadVar $k@2086 $Perm.Write))
+(declare-const $t@2087 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2086 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2086 $Perm.No)))
+(assert (not (= $t@2087 $Ref.null)))
+(declare-const $t@2088 Int)
+(declare-const $t@2089 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2089 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2089 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 342] $t@2089 != Null
+(assert (not (= $t@2089 $Ref.null)))
+(declare-const $t@2090 $Snap)
+(declare-const $k@2091 $Perm)
+(assert ($Perm.isValidVar $k@2091))
+(assert ($Perm.isReadVar $k@2091 $Perm.Write))
+(declare-const $t@2092 $Ref)
+(declare-const $k@2093 $Perm)
+(assert ($Perm.isValidVar $k@2093))
+(assert ($Perm.isReadVar $k@2093 $Perm.Write))
+(declare-const $t@2094 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2080 $Ref.null)))
+(declare-const $k@2095 $Perm)
+(assert ($Perm.isValidVar $k@2095))
+(assert ($Perm.isReadVar $k@2095 $Perm.Write))
+(declare-const $t@2096 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2095 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2095 $Perm.No)))
+(assert (not (= $t@2096 $Ref.null)))
+(declare-const $k@2097 $Perm)
+(assert ($Perm.isValidVar $k@2097))
+(assert ($Perm.isReadVar $k@2097 $Perm.Write))
+(declare-const $t@2098 Int)
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2097 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2097 $Perm.No)))
+(assert (> $t@2098 0))
+(declare-const $k@2099 $Perm)
+(assert ($Perm.isValidVar $k@2099))
+(assert ($Perm.isReadVar $k@2099 $Perm.Write))
+(declare-const $t@2100 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2099 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2099 $Perm.No)))
+(assert (not (= $t@2100 $Ref.null)))
+(declare-const $t@2101 Int)
+(declare-const $t@2102 $Ref)
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2102 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2102 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 343] $t@2102 != Null
+(assert (not (= $t@2102 $Ref.null)))
+(declare-const $t@2103 $Snap)
+(declare-const $k@2104 $Perm)
+(assert ($Perm.isValidVar $k@2104))
+(assert ($Perm.isReadVar $k@2104 $Perm.Write))
+(declare-const $t@2105 $Ref)
+(declare-const $k@2106 $Perm)
+(assert ($Perm.isValidVar $k@2106))
+(assert ($Perm.isReadVar $k@2106 $Perm.Write))
+(declare-const $t@2107 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 343] $t@2102 == Null
+(assert (= $t@2102 $Ref.null))
+(declare-const $k@2108 $Perm)
+(assert ($Perm.isValidVar $k@2108))
+(assert ($Perm.isReadVar $k@2108 $Perm.Write))
+(declare-const $t@2109 $Ref)
+(declare-const $k@2110 $Perm)
+(assert ($Perm.isValidVar $k@2110))
+(assert ($Perm.isReadVar $k@2110 $Perm.Write))
+(declare-const $t@2111 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread2a__queue)
+(declare-const diz@2112 $Ref)
+(assert (not (= diz@2112 $Ref.null)))
+(declare-const LBQThread2a__queue@2113 $Ref)
+(assert (and
+  (not (= queue@2079 diz@2112))
+  (not (= sys__result@2080 diz@2112))
+  (not (= __flatten_63@2082 diz@2112))
+  (not (= __flatten_123@2083 diz@2112))
+  (not (= $t@2087 diz@2112))
+  (not (= $t@2089 diz@2112))
+  (not (= LBQThread2a__queue@2113 diz@2112))
+  (not (= $t@2092 diz@2112))
+  (not (= $t@2094 diz@2112))))
+; [exec]
+; __flatten_63 := queue
+; [exec]
+; __flatten_123 := __flatten_63
+; [exec]
+; diz.LBQThread2a__queue := __flatten_123
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread2a__queue, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread2a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread2a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread2a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread2a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread2a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2114 $Perm)
+(assert ($Perm.isValidVar $k@2114))
+(assert ($Perm.isReadVar $k@2114 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2114 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2114 $Perm.Write))
+(declare-const $k@2115 $Perm)
+(assert ($Perm.isValidVar $k@2115))
+(assert ($Perm.isReadVar $k@2115 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2115 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2115 $k@2084))
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2116 $Perm)
+(assert ($Perm.isValidVar $k@2116))
+(assert ($Perm.isReadVar $k@2116 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2116 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2116 $k@2086))
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2089 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 344] $t@2089 != Null
+(declare-const $k@2117 $Perm)
+(assert ($Perm.isValidVar $k@2117))
+(assert ($Perm.isReadVar $k@2117 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2117 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2091 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2091 $Perm.No)))
+(assert (< $k@2117 $k@2091))
+(declare-const $k@2118 $Perm)
+(assert ($Perm.isValidVar $k@2118))
+(assert ($Perm.isReadVar $k@2118 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2118 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2093 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2093 $Perm.No)))
+(assert (< $k@2118 $k@2093))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 344] $t@2089 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 342] $t@2089 == Null
+(assert (= $t@2089 $Ref.null))
+(declare-const $k@2119 $Perm)
+(assert ($Perm.isValidVar $k@2119))
+(assert ($Perm.isReadVar $k@2119 $Perm.Write))
+(declare-const $t@2120 $Ref)
+(declare-const $k@2121 $Perm)
+(assert ($Perm.isValidVar $k@2121))
+(assert ($Perm.isReadVar $k@2121 $Perm.Write))
+(declare-const $t@2122 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2080 $Ref.null)))
+(declare-const $k@2123 $Perm)
+(assert ($Perm.isValidVar $k@2123))
+(assert ($Perm.isReadVar $k@2123 $Perm.Write))
+(declare-const $t@2124 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2123 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2123 $Perm.No)))
+(assert (not (= $t@2124 $Ref.null)))
+(declare-const $k@2125 $Perm)
+(assert ($Perm.isValidVar $k@2125))
+(assert ($Perm.isReadVar $k@2125 $Perm.Write))
+(declare-const $t@2126 Int)
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2125 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2125 $Perm.No)))
+(assert (> $t@2126 0))
+(declare-const $k@2127 $Perm)
+(assert ($Perm.isValidVar $k@2127))
+(assert ($Perm.isReadVar $k@2127 $Perm.Write))
+(declare-const $t@2128 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2127 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2127 $Perm.No)))
+(assert (not (= $t@2128 $Ref.null)))
+(declare-const $t@2129 Int)
+(declare-const $t@2130 $Ref)
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2130 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2130 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 345] $t@2130 != Null
+(assert (not (= $t@2130 $Ref.null)))
+(declare-const $t@2131 $Snap)
+(declare-const $k@2132 $Perm)
+(assert ($Perm.isValidVar $k@2132))
+(assert ($Perm.isReadVar $k@2132 $Perm.Write))
+(declare-const $t@2133 $Ref)
+(declare-const $k@2134 $Perm)
+(assert ($Perm.isValidVar $k@2134))
+(assert ($Perm.isReadVar $k@2134 $Perm.Write))
+(declare-const $t@2135 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 345] $t@2130 == Null
+(assert (= $t@2130 $Ref.null))
+(declare-const $k@2136 $Perm)
+(assert ($Perm.isValidVar $k@2136))
+(assert ($Perm.isReadVar $k@2136 $Perm.Write))
+(declare-const $t@2137 $Ref)
+(declare-const $k@2138 $Perm)
+(assert ($Perm.isValidVar $k@2138))
+(assert ($Perm.isReadVar $k@2138 $Perm.Write))
+(declare-const $t@2139 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread2a__queue)
+(declare-const diz@2140 $Ref)
+(assert (not (= diz@2140 $Ref.null)))
+(declare-const LBQThread2a__queue@2141 $Ref)
+(assert (and
+  (not (= queue@2079 diz@2140))
+  (not (= sys__result@2080 diz@2140))
+  (not (= __flatten_63@2082 diz@2140))
+  (not (= __flatten_123@2083 diz@2140))
+  (not (= $t@2087 diz@2140))
+  (not (= LBQThread2a__queue@2141 diz@2140))
+  (not (= $t@2089 diz@2140))
+  (not (= $t@2120 diz@2140))
+  (not (= $t@2122 diz@2140))))
+; [exec]
+; __flatten_63 := queue
+; [exec]
+; __flatten_123 := __flatten_63
+; [exec]
+; diz.LBQThread2a__queue := __flatten_123
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread2a__queue, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread2a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread2a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread2a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread2a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread2a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread2a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2142 $Perm)
+(assert ($Perm.isValidVar $k@2142))
+(assert ($Perm.isReadVar $k@2142 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2142 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2142 $Perm.Write))
+(declare-const $k@2143 $Perm)
+(assert ($Perm.isValidVar $k@2143))
+(assert ($Perm.isReadVar $k@2143 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2143 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2143 $k@2084))
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2144 $Perm)
+(assert ($Perm.isValidVar $k@2144))
+(assert ($Perm.isReadVar $k@2144 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2144 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2144 $k@2086))
+; [eval] sys__result.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2089 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 346] $t@2089 != Null
+(push) ; 5
+; [else-branch 346] $t@2089 == Null
+(declare-const $k@2145 $Perm)
+(assert ($Perm.isValidVar $k@2145))
+(assert ($Perm.isReadVar $k@2145 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2145 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2119 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2119 $Perm.No)))
+(assert (< $k@2145 $k@2119))
+(declare-const $k@2146 $Perm)
+(assert ($Perm.isValidVar $k@2146))
+(assert ($Perm.isReadVar $k@2146 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2146 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2121 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2121 $Perm.No)))
+(assert (< $k@2146 $k@2121))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread2a__run ----------
+(declare-const diz@2147 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@2147 $Ref.null)))
+(declare-const $k@2148 $Perm)
+(assert ($Perm.isValidVar $k@2148))
+(assert ($Perm.isReadVar $k@2148 $Perm.Write))
+(declare-const $t@2149 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2148 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2148 $Perm.No)))
+(assert (not (= $t@2149 $Ref.null)))
+(declare-const $k@2150 $Perm)
+(assert ($Perm.isValidVar $k@2150))
+(assert ($Perm.isReadVar $k@2150 $Perm.Write))
+(declare-const $t@2151 Int)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2150 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2150 $Perm.No)))
+(assert (> $t@2151 0))
+(declare-const $k@2152 $Perm)
+(assert ($Perm.isValidVar $k@2152))
+(assert ($Perm.isReadVar $k@2152 $Perm.Write))
+(declare-const $t@2153 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2152 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2152 $Perm.No)))
+(assert (not (= $t@2153 $Ref.null)))
+(declare-const $t@2154 Int)
+(declare-const $t@2155 $Ref)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2155 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2155 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 347] $t@2155 != Null
+(assert (not (= $t@2155 $Ref.null)))
+(declare-const $t@2156 $Snap)
+(declare-const $k@2157 $Perm)
+(assert ($Perm.isValidVar $k@2157))
+(assert ($Perm.isReadVar $k@2157 $Perm.Write))
+(declare-const $t@2158 $Ref)
+(declare-const $k@2159 $Perm)
+(assert ($Perm.isValidVar $k@2159))
+(assert ($Perm.isReadVar $k@2159 $Perm.Write))
+(declare-const $t@2160 $Ref)
+(push) ; 4
+(declare-const $k@2161 $Perm)
+(assert ($Perm.isValidVar $k@2161))
+(assert ($Perm.isReadVar $k@2161 $Perm.Write))
+(declare-const $t@2162 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2161 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2161 $Perm.No)))
+(assert (not (= $t@2162 $Ref.null)))
+(declare-const $k@2163 $Perm)
+(assert ($Perm.isValidVar $k@2163))
+(assert ($Perm.isReadVar $k@2163 $Perm.Write))
+(declare-const $t@2164 Int)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2163 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2163 $Perm.No)))
+(assert (> $t@2164 0))
+(declare-const $k@2165 $Perm)
+(assert ($Perm.isValidVar $k@2165))
+(assert ($Perm.isReadVar $k@2165 $Perm.Write))
+(declare-const $t@2166 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2165 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2165 $Perm.No)))
+(assert (not (= $t@2166 $Ref.null)))
+(declare-const $t@2167 Int)
+(declare-const $t@2168 $Ref)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2168 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2168 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 348] $t@2168 != Null
+(assert (not (= $t@2168 $Ref.null)))
+(declare-const $t@2169 $Snap)
+(declare-const $k@2170 $Perm)
+(assert ($Perm.isValidVar $k@2170))
+(assert ($Perm.isReadVar $k@2170 $Perm.Write))
+(declare-const $t@2171 $Ref)
+(declare-const $k@2172 $Perm)
+(assert ($Perm.isValidVar $k@2172))
+(assert ($Perm.isReadVar $k@2172 $Perm.Write))
+(declare-const $t@2173 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 348] $t@2168 == Null
+(assert (= $t@2168 $Ref.null))
+(declare-const $k@2174 $Perm)
+(assert ($Perm.isValidVar $k@2174))
+(assert ($Perm.isReadVar $k@2174 $Perm.Write))
+(declare-const $t@2175 $Ref)
+(declare-const $k@2176 $Perm)
+(assert ($Perm.isValidVar $k@2176))
+(assert ($Perm.isReadVar $k@2176 $Perm.Write))
+(declare-const $t@2177 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread2a__queue, 1)
+; [eval] diz != null
+(declare-const $k@2178 $Perm)
+(assert ($Perm.isValidVar $k@2178))
+(assert ($Perm.isReadVar $k@2178 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2178 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2178 $k@2150))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2179 $Perm)
+(assert ($Perm.isValidVar $k@2179))
+(assert ($Perm.isReadVar $k@2179 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2179 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2179 $k@2152))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2155 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 349] $t@2155 != Null
+(declare-const $k@2180 $Perm)
+(assert ($Perm.isValidVar $k@2180))
+(assert ($Perm.isReadVar $k@2180 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2180 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2157 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2157 $Perm.No)))
+(assert (< $k@2180 $k@2157))
+(declare-const $k@2181 $Perm)
+(assert ($Perm.isValidVar $k@2181))
+(assert ($Perm.isReadVar $k@2181 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2181 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2159 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2159 $Perm.No)))
+(assert (< $k@2181 $k@2159))
+(declare-const $t@2182 $Snap)
+(declare-const $t@2183 $Snap)
+(declare-const $t@2184 $Ref)
+(assert (= $t@2182 ($Snap.combine $t@2183 ($SortWrappers.$RefTo$Snap $t@2184))))
+(declare-const $t@2185 $Snap)
+(declare-const $t@2186 $Ref)
+(assert (= $t@2183 ($Snap.combine $t@2185 ($SortWrappers.$RefTo$Snap $t@2186))))
+(declare-const $t@2187 $Snap)
+(declare-const $t@2188 $Snap)
+(assert (= $t@2185 ($Snap.combine $t@2187 $t@2188)))
+(declare-const $t@2189 $Snap)
+(declare-const $t@2190 $Ref)
+(assert (= $t@2187 ($Snap.combine $t@2189 ($SortWrappers.$RefTo$Snap $t@2190))))
+(declare-const $t@2191 $Snap)
+(declare-const $t@2192 Int)
+(assert (= $t@2189 ($Snap.combine $t@2191 ($SortWrappers.IntTo$Snap $t@2192))))
+(declare-const $t@2193 Int)
+(declare-const $t@2194 $Ref)
+(assert (=
+  $t@2191
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2193)
+    ($SortWrappers.$RefTo$Snap $t@2194))))
+(declare-const $t@2195 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2193)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2195) $Snap.unit)))
+(declare-const $k@2196 $Perm)
+(assert ($Perm.isValidVar $k@2196))
+(assert ($Perm.isReadVar $k@2196 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2150 $k@2178)) (= $t@2195 $t@2151)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2150 $k@2178) $k@2196) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2150 $k@2178) $k@2196) $Perm.No)))
+(assert (> $t@2195 0))
+(declare-const $k@2197 $Perm)
+(assert ($Perm.isValidVar $k@2197))
+(assert ($Perm.isReadVar $k@2197 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2152 $k@2179)) (= $t@2194 $t@2153)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2152 $k@2179) $k@2197) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2152 $k@2179) $k@2197) $Perm.No)))
+(assert (not (= $t@2194 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2190 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2190 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 350] $t@2190 != Null
+(assert (not (= $t@2190 $Ref.null)))
+(declare-const $k@2198 $Perm)
+(assert ($Perm.isValidVar $k@2198))
+(assert ($Perm.isReadVar $k@2198 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2157 $k@2180)) (= $t@2186 $t@2158)))
+(declare-const $k@2199 $Perm)
+(assert ($Perm.isValidVar $k@2199))
+(assert ($Perm.isReadVar $k@2199 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2159 $k@2181)) (= $t@2184 $t@2160)))
+(declare-const $k@2200 $Perm)
+(assert ($Perm.isValidVar $k@2200))
+(assert ($Perm.isReadVar $k@2200 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2200 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2200 $k@2148))
+(declare-const $k@2201 $Perm)
+(assert ($Perm.isValidVar $k@2201))
+(assert ($Perm.isReadVar $k@2201 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2201 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2201 (+ (- $k@2150 $k@2178) $k@2196)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2202 $Perm)
+(assert ($Perm.isValidVar $k@2202))
+(assert ($Perm.isReadVar $k@2202 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2202 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2202 (+ (- $k@2152 $k@2179) $k@2197)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2190 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 351] $t@2190 != Null
+(declare-const $k@2203 $Perm)
+(assert ($Perm.isValidVar $k@2203))
+(assert ($Perm.isReadVar $k@2203 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2203 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2157 $k@2180) $k@2198) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2157 $k@2180) $k@2198) $Perm.No)))
+(assert (< $k@2203 (+ (- $k@2157 $k@2180) $k@2198)))
+(declare-const $k@2204 $Perm)
+(assert ($Perm.isValidVar $k@2204))
+(assert ($Perm.isReadVar $k@2204 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2204 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2159 $k@2181) $k@2199) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2159 $k@2181) $k@2199) $Perm.No)))
+(assert (< $k@2204 (+ (- $k@2159 $k@2181) $k@2199)))
+(pop) ; 7
+; [dead else-branch 351] $t@2190 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 350] $t@2190 == Null
+(assert (= $t@2190 $Ref.null))
+(declare-const $k@2205 $Perm)
+(assert ($Perm.isValidVar $k@2205))
+(assert ($Perm.isReadVar $k@2205 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2157 $k@2180)) (= $t@2186 $t@2158)))
+(declare-const $k@2206 $Perm)
+(assert ($Perm.isValidVar $k@2206))
+(assert ($Perm.isReadVar $k@2206 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2159 $k@2181)) (= $t@2184 $t@2160)))
+(declare-const $k@2207 $Perm)
+(assert ($Perm.isValidVar $k@2207))
+(assert ($Perm.isReadVar $k@2207 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2207 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2207 $k@2148))
+(declare-const $k@2208 $Perm)
+(assert ($Perm.isValidVar $k@2208))
+(assert ($Perm.isReadVar $k@2208 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2208 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2208 (+ (- $k@2150 $k@2178) $k@2196)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2209 $Perm)
+(assert ($Perm.isValidVar $k@2209))
+(assert ($Perm.isReadVar $k@2209 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2209 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2209 (+ (- $k@2152 $k@2179) $k@2197)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2190 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 352] $t@2190 != Null
+(push) ; 7
+; [else-branch 352] $t@2190 == Null
+(declare-const $k@2210 $Perm)
+(assert ($Perm.isValidVar $k@2210))
+(assert ($Perm.isReadVar $k@2210 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2210 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2157 $k@2180) $k@2205) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2157 $k@2180) $k@2205) $Perm.No)))
+(assert (< $k@2210 (+ (- $k@2157 $k@2180) $k@2205)))
+(declare-const $k@2211 $Perm)
+(assert ($Perm.isValidVar $k@2211))
+(assert ($Perm.isReadVar $k@2211 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2211 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2159 $k@2181) $k@2206) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2159 $k@2181) $k@2206) $Perm.No)))
+(assert (< $k@2211 (+ (- $k@2159 $k@2181) $k@2206)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 349] $t@2155 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 347] $t@2155 == Null
+(assert (= $t@2155 $Ref.null))
+(declare-const $k@2212 $Perm)
+(assert ($Perm.isValidVar $k@2212))
+(assert ($Perm.isReadVar $k@2212 $Perm.Write))
+(declare-const $t@2213 $Ref)
+(declare-const $k@2214 $Perm)
+(assert ($Perm.isValidVar $k@2214))
+(assert ($Perm.isReadVar $k@2214 $Perm.Write))
+(declare-const $t@2215 $Ref)
+(push) ; 4
+(declare-const $k@2216 $Perm)
+(assert ($Perm.isValidVar $k@2216))
+(assert ($Perm.isReadVar $k@2216 $Perm.Write))
+(declare-const $t@2217 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2216 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2216 $Perm.No)))
+(assert (not (= $t@2217 $Ref.null)))
+(declare-const $k@2218 $Perm)
+(assert ($Perm.isValidVar $k@2218))
+(assert ($Perm.isReadVar $k@2218 $Perm.Write))
+(declare-const $t@2219 Int)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2218 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2218 $Perm.No)))
+(assert (> $t@2219 0))
+(declare-const $k@2220 $Perm)
+(assert ($Perm.isValidVar $k@2220))
+(assert ($Perm.isReadVar $k@2220 $Perm.Write))
+(declare-const $t@2221 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2220 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2220 $Perm.No)))
+(assert (not (= $t@2221 $Ref.null)))
+(declare-const $t@2222 Int)
+(declare-const $t@2223 $Ref)
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2223 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2223 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 353] $t@2223 != Null
+(assert (not (= $t@2223 $Ref.null)))
+(declare-const $t@2224 $Snap)
+(declare-const $k@2225 $Perm)
+(assert ($Perm.isValidVar $k@2225))
+(assert ($Perm.isReadVar $k@2225 $Perm.Write))
+(declare-const $t@2226 $Ref)
+(declare-const $k@2227 $Perm)
+(assert ($Perm.isValidVar $k@2227))
+(assert ($Perm.isReadVar $k@2227 $Perm.Write))
+(declare-const $t@2228 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 353] $t@2223 == Null
+(assert (= $t@2223 $Ref.null))
+(declare-const $k@2229 $Perm)
+(assert ($Perm.isValidVar $k@2229))
+(assert ($Perm.isReadVar $k@2229 $Perm.Write))
+(declare-const $t@2230 $Ref)
+(declare-const $k@2231 $Perm)
+(assert ($Perm.isValidVar $k@2231))
+(assert ($Perm.isReadVar $k@2231 $Perm.Write))
+(declare-const $t@2232 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread2a__queue, 1)
+; [eval] diz != null
+(declare-const $k@2233 $Perm)
+(assert ($Perm.isValidVar $k@2233))
+(assert ($Perm.isReadVar $k@2233 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2233 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2233 $k@2150))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2234 $Perm)
+(assert ($Perm.isValidVar $k@2234))
+(assert ($Perm.isReadVar $k@2234 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2234 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2234 $k@2152))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2155 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 354] $t@2155 != Null
+(push) ; 5
+; [else-branch 354] $t@2155 == Null
+(declare-const $k@2235 $Perm)
+(assert ($Perm.isValidVar $k@2235))
+(assert ($Perm.isReadVar $k@2235 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2235 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2212 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2212 $Perm.No)))
+(assert (< $k@2235 $k@2212))
+(declare-const $k@2236 $Perm)
+(assert ($Perm.isValidVar $k@2236))
+(assert ($Perm.isReadVar $k@2236 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2236 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2214 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2214 $Perm.No)))
+(assert (< $k@2236 $k@2214))
+(declare-const $t@2237 $Snap)
+(declare-const $t@2238 $Snap)
+(declare-const $t@2239 $Ref)
+(assert (= $t@2237 ($Snap.combine $t@2238 ($SortWrappers.$RefTo$Snap $t@2239))))
+(declare-const $t@2240 $Snap)
+(declare-const $t@2241 $Ref)
+(assert (= $t@2238 ($Snap.combine $t@2240 ($SortWrappers.$RefTo$Snap $t@2241))))
+(declare-const $t@2242 $Snap)
+(declare-const $t@2243 $Snap)
+(assert (= $t@2240 ($Snap.combine $t@2242 $t@2243)))
+(declare-const $t@2244 $Snap)
+(declare-const $t@2245 $Ref)
+(assert (= $t@2242 ($Snap.combine $t@2244 ($SortWrappers.$RefTo$Snap $t@2245))))
+(declare-const $t@2246 $Snap)
+(declare-const $t@2247 Int)
+(assert (= $t@2244 ($Snap.combine $t@2246 ($SortWrappers.IntTo$Snap $t@2247))))
+(declare-const $t@2248 Int)
+(declare-const $t@2249 $Ref)
+(assert (=
+  $t@2246
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2248)
+    ($SortWrappers.$RefTo$Snap $t@2249))))
+(declare-const $t@2250 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2248)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2250) $Snap.unit)))
+(declare-const $k@2251 $Perm)
+(assert ($Perm.isValidVar $k@2251))
+(assert ($Perm.isReadVar $k@2251 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2150 $k@2233)) (= $t@2250 $t@2151)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2150 $k@2233) $k@2251) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2150 $k@2233) $k@2251) $Perm.No)))
+(assert (> $t@2250 0))
+(declare-const $k@2252 $Perm)
+(assert ($Perm.isValidVar $k@2252))
+(assert ($Perm.isReadVar $k@2252 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2152 $k@2234)) (= $t@2249 $t@2153)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2152 $k@2234) $k@2252) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2152 $k@2234) $k@2252) $Perm.No)))
+(assert (not (= $t@2249 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2245 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2245 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 355] $t@2245 != Null
+(assert (not (= $t@2245 $Ref.null)))
+(declare-const $k@2253 $Perm)
+(assert ($Perm.isValidVar $k@2253))
+(assert ($Perm.isReadVar $k@2253 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2212 $k@2235)) (= $t@2241 $t@2213)))
+(declare-const $k@2254 $Perm)
+(assert ($Perm.isValidVar $k@2254))
+(assert ($Perm.isReadVar $k@2254 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2214 $k@2236)) (= $t@2239 $t@2215)))
+(declare-const $k@2255 $Perm)
+(assert ($Perm.isValidVar $k@2255))
+(assert ($Perm.isReadVar $k@2255 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2255 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2255 $k@2148))
+(declare-const $k@2256 $Perm)
+(assert ($Perm.isValidVar $k@2256))
+(assert ($Perm.isReadVar $k@2256 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2256 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2256 (+ (- $k@2150 $k@2233) $k@2251)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2257 $Perm)
+(assert ($Perm.isValidVar $k@2257))
+(assert ($Perm.isReadVar $k@2257 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2257 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2257 (+ (- $k@2152 $k@2234) $k@2252)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2245 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 356] $t@2245 != Null
+(declare-const $k@2258 $Perm)
+(assert ($Perm.isValidVar $k@2258))
+(assert ($Perm.isReadVar $k@2258 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2258 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2212 $k@2235) $k@2253) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2212 $k@2235) $k@2253) $Perm.No)))
+(assert (< $k@2258 (+ (- $k@2212 $k@2235) $k@2253)))
+(declare-const $k@2259 $Perm)
+(assert ($Perm.isValidVar $k@2259))
+(assert ($Perm.isReadVar $k@2259 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2259 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2214 $k@2236) $k@2254) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2214 $k@2236) $k@2254) $Perm.No)))
+(assert (< $k@2259 (+ (- $k@2214 $k@2236) $k@2254)))
+(pop) ; 7
+; [dead else-branch 356] $t@2245 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 355] $t@2245 == Null
+(assert (= $t@2245 $Ref.null))
+(declare-const $k@2260 $Perm)
+(assert ($Perm.isValidVar $k@2260))
+(assert ($Perm.isReadVar $k@2260 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2212 $k@2235)) (= $t@2241 $t@2213)))
+(declare-const $k@2261 $Perm)
+(assert ($Perm.isValidVar $k@2261))
+(assert ($Perm.isReadVar $k@2261 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2214 $k@2236)) (= $t@2239 $t@2215)))
+(declare-const $k@2262 $Perm)
+(assert ($Perm.isValidVar $k@2262))
+(assert ($Perm.isReadVar $k@2262 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2262 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2262 $k@2148))
+(declare-const $k@2263 $Perm)
+(assert ($Perm.isValidVar $k@2263))
+(assert ($Perm.isReadVar $k@2263 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2263 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2263 (+ (- $k@2150 $k@2233) $k@2251)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2264 $Perm)
+(assert ($Perm.isValidVar $k@2264))
+(assert ($Perm.isReadVar $k@2264 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2264 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2264 (+ (- $k@2152 $k@2234) $k@2252)))
+; [eval] diz.LBQThread2a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2245 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 357] $t@2245 != Null
+(push) ; 7
+; [else-branch 357] $t@2245 == Null
+(declare-const $k@2265 $Perm)
+(assert ($Perm.isValidVar $k@2265))
+(assert ($Perm.isReadVar $k@2265 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2265 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2212 $k@2235) $k@2260) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2212 $k@2235) $k@2260) $Perm.No)))
+(assert (< $k@2265 (+ (- $k@2212 $k@2235) $k@2260)))
+(declare-const $k@2266 $Perm)
+(assert ($Perm.isValidVar $k@2266))
+(assert ($Perm.isReadVar $k@2266 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2266 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2214 $k@2236) $k@2261) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2214 $k@2236) $k@2261) $Perm.No)))
+(assert (< $k@2266 (+ (- $k@2214 $k@2236) $k@2261)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread2b__LBQThread1a ----------
+(declare-const queue@2267 $Ref)
+(declare-const sys__result@2268 $Ref)
+(declare-const diz@2269 $Ref)
+(declare-const __flatten_65@2270 $Ref)
+(declare-const __flatten_125@2271 $Ref)
+(push) ; 2
+(assert (not (= queue@2267 $Ref.null)))
+(declare-const $k@2272 $Perm)
+(assert ($Perm.isValidVar $k@2272))
+(assert ($Perm.isReadVar $k@2272 $Perm.Write))
+(declare-const $t@2273 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2272 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2272 $Perm.No)))
+(assert (> $t@2273 0))
+(declare-const $k@2274 $Perm)
+(assert ($Perm.isValidVar $k@2274))
+(assert ($Perm.isReadVar $k@2274 $Perm.Write))
+(declare-const $t@2275 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2274 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2274 $Perm.No)))
+(assert (not (= $t@2275 $Ref.null)))
+(declare-const $t@2276 Int)
+(declare-const $t@2277 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2277 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2277 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 358] $t@2277 != Null
+(assert (not (= $t@2277 $Ref.null)))
+(declare-const $t@2278 $Snap)
+(declare-const $k@2279 $Perm)
+(assert ($Perm.isValidVar $k@2279))
+(assert ($Perm.isReadVar $k@2279 $Perm.Write))
+(declare-const $t@2280 $Ref)
+(declare-const $k@2281 $Perm)
+(assert ($Perm.isValidVar $k@2281))
+(assert ($Perm.isReadVar $k@2281 $Perm.Write))
+(declare-const $t@2282 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2268 $Ref.null)))
+(declare-const $k@2283 $Perm)
+(assert ($Perm.isValidVar $k@2283))
+(assert ($Perm.isReadVar $k@2283 $Perm.Write))
+(declare-const $t@2284 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2283 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2283 $Perm.No)))
+(assert (not (= $t@2284 $Ref.null)))
+(declare-const $k@2285 $Perm)
+(assert ($Perm.isValidVar $k@2285))
+(assert ($Perm.isReadVar $k@2285 $Perm.Write))
+(declare-const $t@2286 Int)
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2285 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2285 $Perm.No)))
+(assert (> $t@2286 0))
+(declare-const $k@2287 $Perm)
+(assert ($Perm.isValidVar $k@2287))
+(assert ($Perm.isReadVar $k@2287 $Perm.Write))
+(declare-const $t@2288 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2287 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2287 $Perm.No)))
+(assert (not (= $t@2288 $Ref.null)))
+(declare-const $t@2289 Int)
+(declare-const $t@2290 $Ref)
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2290 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2290 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 359] $t@2290 != Null
+(assert (not (= $t@2290 $Ref.null)))
+(declare-const $t@2291 $Snap)
+(declare-const $k@2292 $Perm)
+(assert ($Perm.isValidVar $k@2292))
+(assert ($Perm.isReadVar $k@2292 $Perm.Write))
+(declare-const $t@2293 $Ref)
+(declare-const $k@2294 $Perm)
+(assert ($Perm.isValidVar $k@2294))
+(assert ($Perm.isReadVar $k@2294 $Perm.Write))
+(declare-const $t@2295 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 359] $t@2290 == Null
+(assert (= $t@2290 $Ref.null))
+(declare-const $k@2296 $Perm)
+(assert ($Perm.isValidVar $k@2296))
+(assert ($Perm.isReadVar $k@2296 $Perm.Write))
+(declare-const $t@2297 $Ref)
+(declare-const $k@2298 $Perm)
+(assert ($Perm.isValidVar $k@2298))
+(assert ($Perm.isReadVar $k@2298 $Perm.Write))
+(declare-const $t@2299 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread2b__queue)
+(declare-const diz@2300 $Ref)
+(assert (not (= diz@2300 $Ref.null)))
+(declare-const LBQThread2b__queue@2301 $Ref)
+(assert (and
+  (not (= queue@2267 diz@2300))
+  (not (= sys__result@2268 diz@2300))
+  (not (= __flatten_65@2270 diz@2300))
+  (not (= __flatten_125@2271 diz@2300))
+  (not (= $t@2275 diz@2300))
+  (not (= $t@2277 diz@2300))
+  (not (= LBQThread2b__queue@2301 diz@2300))
+  (not (= $t@2280 diz@2300))
+  (not (= $t@2282 diz@2300))))
+; [exec]
+; __flatten_65 := queue
+; [exec]
+; __flatten_125 := __flatten_65
+; [exec]
+; diz.LBQThread2b__queue := __flatten_125
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread2b__queue, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread2b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread2b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread2b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread2b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread2b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2302 $Perm)
+(assert ($Perm.isValidVar $k@2302))
+(assert ($Perm.isReadVar $k@2302 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2302 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2302 $Perm.Write))
+(declare-const $k@2303 $Perm)
+(assert ($Perm.isValidVar $k@2303))
+(assert ($Perm.isReadVar $k@2303 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2303 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2303 $k@2272))
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2304 $Perm)
+(assert ($Perm.isValidVar $k@2304))
+(assert ($Perm.isReadVar $k@2304 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2304 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2304 $k@2274))
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2277 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 360] $t@2277 != Null
+(declare-const $k@2305 $Perm)
+(assert ($Perm.isValidVar $k@2305))
+(assert ($Perm.isReadVar $k@2305 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2305 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2279 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2279 $Perm.No)))
+(assert (< $k@2305 $k@2279))
+(declare-const $k@2306 $Perm)
+(assert ($Perm.isValidVar $k@2306))
+(assert ($Perm.isReadVar $k@2306 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2306 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2281 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2281 $Perm.No)))
+(assert (< $k@2306 $k@2281))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 360] $t@2277 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 358] $t@2277 == Null
+(assert (= $t@2277 $Ref.null))
+(declare-const $k@2307 $Perm)
+(assert ($Perm.isValidVar $k@2307))
+(assert ($Perm.isReadVar $k@2307 $Perm.Write))
+(declare-const $t@2308 $Ref)
+(declare-const $k@2309 $Perm)
+(assert ($Perm.isValidVar $k@2309))
+(assert ($Perm.isReadVar $k@2309 $Perm.Write))
+(declare-const $t@2310 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2268 $Ref.null)))
+(declare-const $k@2311 $Perm)
+(assert ($Perm.isValidVar $k@2311))
+(assert ($Perm.isReadVar $k@2311 $Perm.Write))
+(declare-const $t@2312 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2311 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2311 $Perm.No)))
+(assert (not (= $t@2312 $Ref.null)))
+(declare-const $k@2313 $Perm)
+(assert ($Perm.isValidVar $k@2313))
+(assert ($Perm.isReadVar $k@2313 $Perm.Write))
+(declare-const $t@2314 Int)
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2313 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2313 $Perm.No)))
+(assert (> $t@2314 0))
+(declare-const $k@2315 $Perm)
+(assert ($Perm.isValidVar $k@2315))
+(assert ($Perm.isReadVar $k@2315 $Perm.Write))
+(declare-const $t@2316 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2315 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2315 $Perm.No)))
+(assert (not (= $t@2316 $Ref.null)))
+(declare-const $t@2317 Int)
+(declare-const $t@2318 $Ref)
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2318 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2318 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 361] $t@2318 != Null
+(assert (not (= $t@2318 $Ref.null)))
+(declare-const $t@2319 $Snap)
+(declare-const $k@2320 $Perm)
+(assert ($Perm.isValidVar $k@2320))
+(assert ($Perm.isReadVar $k@2320 $Perm.Write))
+(declare-const $t@2321 $Ref)
+(declare-const $k@2322 $Perm)
+(assert ($Perm.isValidVar $k@2322))
+(assert ($Perm.isReadVar $k@2322 $Perm.Write))
+(declare-const $t@2323 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 361] $t@2318 == Null
+(assert (= $t@2318 $Ref.null))
+(declare-const $k@2324 $Perm)
+(assert ($Perm.isValidVar $k@2324))
+(assert ($Perm.isReadVar $k@2324 $Perm.Write))
+(declare-const $t@2325 $Ref)
+(declare-const $k@2326 $Perm)
+(assert ($Perm.isValidVar $k@2326))
+(assert ($Perm.isReadVar $k@2326 $Perm.Write))
+(declare-const $t@2327 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread2b__queue)
+(declare-const diz@2328 $Ref)
+(assert (not (= diz@2328 $Ref.null)))
+(declare-const LBQThread2b__queue@2329 $Ref)
+(assert (and
+  (not (= queue@2267 diz@2328))
+  (not (= sys__result@2268 diz@2328))
+  (not (= __flatten_65@2270 diz@2328))
+  (not (= __flatten_125@2271 diz@2328))
+  (not (= $t@2275 diz@2328))
+  (not (= LBQThread2b__queue@2329 diz@2328))
+  (not (= $t@2277 diz@2328))
+  (not (= $t@2308 diz@2328))
+  (not (= $t@2310 diz@2328))))
+; [exec]
+; __flatten_65 := queue
+; [exec]
+; __flatten_125 := __flatten_65
+; [exec]
+; diz.LBQThread2b__queue := __flatten_125
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread2b__queue, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread2b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread2b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread2b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread2b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread2b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread2b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2330 $Perm)
+(assert ($Perm.isValidVar $k@2330))
+(assert ($Perm.isReadVar $k@2330 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2330 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2330 $Perm.Write))
+(declare-const $k@2331 $Perm)
+(assert ($Perm.isValidVar $k@2331))
+(assert ($Perm.isReadVar $k@2331 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2331 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2331 $k@2272))
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2332 $Perm)
+(assert ($Perm.isValidVar $k@2332))
+(assert ($Perm.isReadVar $k@2332 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2332 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2332 $k@2274))
+; [eval] sys__result.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2277 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 362] $t@2277 != Null
+(push) ; 5
+; [else-branch 362] $t@2277 == Null
+(declare-const $k@2333 $Perm)
+(assert ($Perm.isValidVar $k@2333))
+(assert ($Perm.isReadVar $k@2333 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2333 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2307 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2307 $Perm.No)))
+(assert (< $k@2333 $k@2307))
+(declare-const $k@2334 $Perm)
+(assert ($Perm.isValidVar $k@2334))
+(assert ($Perm.isReadVar $k@2334 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2334 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2309 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2309 $Perm.No)))
+(assert (< $k@2334 $k@2309))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread2b__run ----------
+(declare-const diz@2335 $Ref)
+(declare-const i@2336 $Ref)
+(declare-const __flatten_67@2337 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@2335 $Ref.null)))
+(declare-const $k@2338 $Perm)
+(assert ($Perm.isValidVar $k@2338))
+(assert ($Perm.isReadVar $k@2338 $Perm.Write))
+(declare-const $t@2339 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2338 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2338 $Perm.No)))
+(assert (not (= $t@2339 $Ref.null)))
+(declare-const $k@2340 $Perm)
+(assert ($Perm.isValidVar $k@2340))
+(assert ($Perm.isReadVar $k@2340 $Perm.Write))
+(declare-const $t@2341 Int)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2340 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2340 $Perm.No)))
+(assert (> $t@2341 0))
+(declare-const $k@2342 $Perm)
+(assert ($Perm.isValidVar $k@2342))
+(assert ($Perm.isReadVar $k@2342 $Perm.Write))
+(declare-const $t@2343 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2342 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2342 $Perm.No)))
+(assert (not (= $t@2343 $Ref.null)))
+(declare-const $t@2344 Int)
+(declare-const $t@2345 $Ref)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2345 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2345 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 363] $t@2345 != Null
+(assert (not (= $t@2345 $Ref.null)))
+(declare-const $t@2346 $Snap)
+(declare-const $k@2347 $Perm)
+(assert ($Perm.isValidVar $k@2347))
+(assert ($Perm.isReadVar $k@2347 $Perm.Write))
+(declare-const $t@2348 $Ref)
+(declare-const $k@2349 $Perm)
+(assert ($Perm.isValidVar $k@2349))
+(assert ($Perm.isReadVar $k@2349 $Perm.Write))
+(declare-const $t@2350 $Ref)
+(push) ; 4
+(declare-const $k@2351 $Perm)
+(assert ($Perm.isValidVar $k@2351))
+(assert ($Perm.isReadVar $k@2351 $Perm.Write))
+(declare-const $t@2352 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2351 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2351 $Perm.No)))
+(assert (not (= $t@2352 $Ref.null)))
+(declare-const $k@2353 $Perm)
+(assert ($Perm.isValidVar $k@2353))
+(assert ($Perm.isReadVar $k@2353 $Perm.Write))
+(declare-const $t@2354 Int)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2353 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2353 $Perm.No)))
+(assert (> $t@2354 0))
+(declare-const $k@2355 $Perm)
+(assert ($Perm.isValidVar $k@2355))
+(assert ($Perm.isReadVar $k@2355 $Perm.Write))
+(declare-const $t@2356 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2355 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2355 $Perm.No)))
+(assert (not (= $t@2356 $Ref.null)))
+(declare-const $t@2357 Int)
+(declare-const $t@2358 $Ref)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2358 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2358 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 364] $t@2358 != Null
+(assert (not (= $t@2358 $Ref.null)))
+(declare-const $t@2359 $Snap)
+(declare-const $k@2360 $Perm)
+(assert ($Perm.isValidVar $k@2360))
+(assert ($Perm.isReadVar $k@2360 $Perm.Write))
+(declare-const $t@2361 $Ref)
+(declare-const $k@2362 $Perm)
+(assert ($Perm.isValidVar $k@2362))
+(assert ($Perm.isReadVar $k@2362 $Perm.Write))
+(declare-const $t@2363 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 364] $t@2358 == Null
+(assert (= $t@2358 $Ref.null))
+(declare-const $k@2364 $Perm)
+(assert ($Perm.isValidVar $k@2364))
+(assert ($Perm.isReadVar $k@2364 $Perm.Write))
+(declare-const $t@2365 $Ref)
+(declare-const $k@2366 $Perm)
+(assert ($Perm.isValidVar $k@2366))
+(assert ($Perm.isReadVar $k@2366 $Perm.Write))
+(declare-const $t@2367 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread2b__queue, 2)
+; [eval] diz != null
+(declare-const $k@2368 $Perm)
+(assert ($Perm.isValidVar $k@2368))
+(assert ($Perm.isReadVar $k@2368 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2368 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2368 $k@2340))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2369 $Perm)
+(assert ($Perm.isValidVar $k@2369))
+(assert ($Perm.isReadVar $k@2369 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2369 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2369 $k@2342))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2345 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 365] $t@2345 != Null
+(declare-const $k@2370 $Perm)
+(assert ($Perm.isValidVar $k@2370))
+(assert ($Perm.isReadVar $k@2370 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2370 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2347 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2347 $Perm.No)))
+(assert (< $k@2370 $k@2347))
+(declare-const $k@2371 $Perm)
+(assert ($Perm.isValidVar $k@2371))
+(assert ($Perm.isReadVar $k@2371 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2371 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2349 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2349 $Perm.No)))
+(assert (< $k@2371 $k@2349))
+(declare-const $t@2372 $Snap)
+(declare-const $t@2373 $Snap)
+(declare-const $t@2374 $Ref)
+(assert (= $t@2372 ($Snap.combine $t@2373 ($SortWrappers.$RefTo$Snap $t@2374))))
+(declare-const $t@2375 $Snap)
+(declare-const $t@2376 $Ref)
+(assert (= $t@2373 ($Snap.combine $t@2375 ($SortWrappers.$RefTo$Snap $t@2376))))
+(declare-const $t@2377 $Snap)
+(declare-const $t@2378 $Snap)
+(assert (= $t@2375 ($Snap.combine $t@2377 $t@2378)))
+(declare-const $t@2379 $Snap)
+(declare-const $t@2380 $Ref)
+(assert (= $t@2377 ($Snap.combine $t@2379 ($SortWrappers.$RefTo$Snap $t@2380))))
+(declare-const $t@2381 $Snap)
+(declare-const $t@2382 Int)
+(assert (= $t@2379 ($Snap.combine $t@2381 ($SortWrappers.IntTo$Snap $t@2382))))
+(declare-const $t@2383 Int)
+(declare-const $t@2384 $Ref)
+(assert (=
+  $t@2381
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2383)
+    ($SortWrappers.$RefTo$Snap $t@2384))))
+(declare-const $t@2385 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2383)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2385) $Snap.unit)))
+(declare-const $k@2386 $Perm)
+(assert ($Perm.isValidVar $k@2386))
+(assert ($Perm.isReadVar $k@2386 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2340 $k@2368)) (= $t@2385 $t@2341)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2340 $k@2368) $k@2386) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2340 $k@2368) $k@2386) $Perm.No)))
+(assert (> $t@2385 0))
+(declare-const $k@2387 $Perm)
+(assert ($Perm.isValidVar $k@2387))
+(assert ($Perm.isReadVar $k@2387 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2342 $k@2369)) (= $t@2384 $t@2343)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2342 $k@2369) $k@2387) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2342 $k@2369) $k@2387) $Perm.No)))
+(assert (not (= $t@2384 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2380 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2380 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 366] $t@2380 != Null
+(assert (not (= $t@2380 $Ref.null)))
+(declare-const $k@2388 $Perm)
+(assert ($Perm.isValidVar $k@2388))
+(assert ($Perm.isReadVar $k@2388 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2347 $k@2370)) (= $t@2376 $t@2348)))
+(declare-const $k@2389 $Perm)
+(assert ($Perm.isValidVar $k@2389))
+(assert ($Perm.isReadVar $k@2389 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2349 $k@2371)) (= $t@2374 $t@2350)))
+; [exec]
+; __flatten_67 := BlockingQueue__poll(diz.LBQThread2b__queue)
+; [eval] diz != null
+(declare-const $k@2390 $Perm)
+(assert ($Perm.isValidVar $k@2390))
+(assert ($Perm.isReadVar $k@2390 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2390 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2390 (+ (- $k@2340 $k@2368) $k@2386)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2391 $Perm)
+(assert ($Perm.isValidVar $k@2391))
+(assert ($Perm.isReadVar $k@2391 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2391 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2391 (+ (- $k@2342 $k@2369) $k@2387)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2380 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 367] $t@2380 != Null
+(declare-const $k@2392 $Perm)
+(assert ($Perm.isValidVar $k@2392))
+(assert ($Perm.isReadVar $k@2392 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2392 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2347 $k@2370) $k@2388) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2347 $k@2370) $k@2388) $Perm.No)))
+(assert (< $k@2392 (+ (- $k@2347 $k@2370) $k@2388)))
+(declare-const $k@2393 $Perm)
+(assert ($Perm.isValidVar $k@2393))
+(assert ($Perm.isReadVar $k@2393 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2393 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2349 $k@2371) $k@2389) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2349 $k@2371) $k@2389) $Perm.No)))
+(assert (< $k@2393 (+ (- $k@2349 $k@2371) $k@2389)))
+(declare-const sys__result@2394 $Ref)
+(declare-const $t@2395 $Snap)
+(declare-const $t@2396 $Snap)
+(declare-const $t@2397 $Ref)
+(assert (= $t@2395 ($Snap.combine $t@2396 ($SortWrappers.$RefTo$Snap $t@2397))))
+(declare-const $t@2398 $Snap)
+(declare-const $t@2399 $Ref)
+(assert (= $t@2396 ($Snap.combine $t@2398 ($SortWrappers.$RefTo$Snap $t@2399))))
+(declare-const $t@2400 $Snap)
+(declare-const $t@2401 $Snap)
+(assert (= $t@2398 ($Snap.combine $t@2400 $t@2401)))
+(declare-const $t@2402 $Snap)
+(declare-const $t@2403 $Ref)
+(assert (= $t@2400 ($Snap.combine $t@2402 ($SortWrappers.$RefTo$Snap $t@2403))))
+(declare-const $t@2404 $Snap)
+(declare-const $t@2405 Int)
+(assert (= $t@2402 ($Snap.combine $t@2404 ($SortWrappers.IntTo$Snap $t@2405))))
+(declare-const $t@2406 Int)
+(declare-const $t@2407 $Ref)
+(assert (=
+  $t@2404
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2406)
+    ($SortWrappers.$RefTo$Snap $t@2407))))
+(declare-const $t@2408 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2406)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2408) $Snap.unit)))
+(declare-const $k@2409 $Perm)
+(assert ($Perm.isValidVar $k@2409))
+(assert ($Perm.isReadVar $k@2409 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2340 $k@2368) $k@2386) $k@2390))
+  (= $t@2408 $t@2385)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2390) $k@2409) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2390) $k@2409) $Perm.No)))
+(assert (> $t@2408 0))
+(declare-const $k@2410 $Perm)
+(assert ($Perm.isValidVar $k@2410))
+(assert ($Perm.isReadVar $k@2410 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2342 $k@2369) $k@2387) $k@2391))
+  (= $t@2407 $t@2384)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2391) $k@2410) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2391) $k@2410) $Perm.No)))
+(assert (not (= $t@2407 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2403 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2403 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 368] $t@2403 != Null
+(assert (not (= $t@2403 $Ref.null)))
+(declare-const $k@2411 $Perm)
+(assert ($Perm.isValidVar $k@2411))
+(assert ($Perm.isReadVar $k@2411 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392))
+  (= $t@2399 $t@2376)))
+(declare-const $k@2412 $Perm)
+(assert ($Perm.isValidVar $k@2412))
+(assert ($Perm.isReadVar $k@2412 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393))
+  (= $t@2397 $t@2374)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2413 $Perm)
+(assert ($Perm.isValidVar $k@2413))
+(assert ($Perm.isReadVar $k@2413 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2413 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2413 $k@2338))
+(declare-const $k@2414 $Perm)
+(assert ($Perm.isValidVar $k@2414))
+(assert ($Perm.isReadVar $k@2414 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2414 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2414 (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2390) $k@2409)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2415 $Perm)
+(assert ($Perm.isValidVar $k@2415))
+(assert ($Perm.isReadVar $k@2415 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2415 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2415 (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2391) $k@2410)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2403 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 369] $t@2403 != Null
+(declare-const $k@2416 $Perm)
+(assert ($Perm.isValidVar $k@2416))
+(assert ($Perm.isReadVar $k@2416 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2416 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2411) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2411) $Perm.No)))
+(assert (< $k@2416 (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2411)))
+(declare-const $k@2417 $Perm)
+(assert ($Perm.isValidVar $k@2417))
+(assert ($Perm.isReadVar $k@2417 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2417 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2412) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2412) $Perm.No)))
+(assert (< $k@2417 (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2412)))
+(pop) ; 9
+; [dead else-branch 369] $t@2403 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 368] $t@2403 == Null
+(assert (= $t@2403 $Ref.null))
+(declare-const $k@2418 $Perm)
+(assert ($Perm.isValidVar $k@2418))
+(assert ($Perm.isReadVar $k@2418 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392))
+  (= $t@2399 $t@2376)))
+(declare-const $k@2419 $Perm)
+(assert ($Perm.isValidVar $k@2419))
+(assert ($Perm.isReadVar $k@2419 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393))
+  (= $t@2397 $t@2374)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2420 $Perm)
+(assert ($Perm.isValidVar $k@2420))
+(assert ($Perm.isReadVar $k@2420 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2420 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2420 $k@2338))
+(declare-const $k@2421 $Perm)
+(assert ($Perm.isValidVar $k@2421))
+(assert ($Perm.isReadVar $k@2421 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2421 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2421 (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2390) $k@2409)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2422 $Perm)
+(assert ($Perm.isValidVar $k@2422))
+(assert ($Perm.isReadVar $k@2422 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2422 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2422 (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2391) $k@2410)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2403 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 370] $t@2403 != Null
+(push) ; 9
+; [else-branch 370] $t@2403 == Null
+(declare-const $k@2423 $Perm)
+(assert ($Perm.isValidVar $k@2423))
+(assert ($Perm.isReadVar $k@2423 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2423 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2418) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2418) $Perm.No)))
+(assert (< $k@2423 (+ (- (+ (- $k@2347 $k@2370) $k@2388) $k@2392) $k@2418)))
+(declare-const $k@2424 $Perm)
+(assert ($Perm.isValidVar $k@2424))
+(assert ($Perm.isReadVar $k@2424 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2424 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2419) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2419) $Perm.No)))
+(assert (< $k@2424 (+ (- (+ (- $k@2349 $k@2371) $k@2389) $k@2393) $k@2419)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 367] $t@2380 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 366] $t@2380 == Null
+(assert (= $t@2380 $Ref.null))
+(declare-const $k@2425 $Perm)
+(assert ($Perm.isValidVar $k@2425))
+(assert ($Perm.isReadVar $k@2425 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2347 $k@2370)) (= $t@2376 $t@2348)))
+(declare-const $k@2426 $Perm)
+(assert ($Perm.isValidVar $k@2426))
+(assert ($Perm.isReadVar $k@2426 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2349 $k@2371)) (= $t@2374 $t@2350)))
+; [exec]
+; __flatten_67 := BlockingQueue__poll(diz.LBQThread2b__queue)
+; [eval] diz != null
+(declare-const $k@2427 $Perm)
+(assert ($Perm.isValidVar $k@2427))
+(assert ($Perm.isReadVar $k@2427 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2427 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2427 (+ (- $k@2340 $k@2368) $k@2386)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2428 $Perm)
+(assert ($Perm.isValidVar $k@2428))
+(assert ($Perm.isReadVar $k@2428 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2428 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2428 (+ (- $k@2342 $k@2369) $k@2387)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2380 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 371] $t@2380 != Null
+(push) ; 7
+; [else-branch 371] $t@2380 == Null
+(declare-const $k@2429 $Perm)
+(assert ($Perm.isValidVar $k@2429))
+(assert ($Perm.isReadVar $k@2429 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2429 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2347 $k@2370) $k@2425) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2347 $k@2370) $k@2425) $Perm.No)))
+(assert (< $k@2429 (+ (- $k@2347 $k@2370) $k@2425)))
+(declare-const $k@2430 $Perm)
+(assert ($Perm.isValidVar $k@2430))
+(assert ($Perm.isReadVar $k@2430 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2430 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2349 $k@2371) $k@2426) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2349 $k@2371) $k@2426) $Perm.No)))
+(assert (< $k@2430 (+ (- $k@2349 $k@2371) $k@2426)))
+(declare-const sys__result@2431 $Ref)
+(declare-const $t@2432 $Snap)
+(declare-const $t@2433 $Snap)
+(declare-const $t@2434 $Ref)
+(assert (= $t@2432 ($Snap.combine $t@2433 ($SortWrappers.$RefTo$Snap $t@2434))))
+(declare-const $t@2435 $Snap)
+(declare-const $t@2436 $Ref)
+(assert (= $t@2433 ($Snap.combine $t@2435 ($SortWrappers.$RefTo$Snap $t@2436))))
+(declare-const $t@2437 $Snap)
+(declare-const $t@2438 $Snap)
+(assert (= $t@2435 ($Snap.combine $t@2437 $t@2438)))
+(declare-const $t@2439 $Snap)
+(declare-const $t@2440 $Ref)
+(assert (= $t@2437 ($Snap.combine $t@2439 ($SortWrappers.$RefTo$Snap $t@2440))))
+(declare-const $t@2441 $Snap)
+(declare-const $t@2442 Int)
+(assert (= $t@2439 ($Snap.combine $t@2441 ($SortWrappers.IntTo$Snap $t@2442))))
+(declare-const $t@2443 Int)
+(declare-const $t@2444 $Ref)
+(assert (=
+  $t@2441
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2443)
+    ($SortWrappers.$RefTo$Snap $t@2444))))
+(declare-const $t@2445 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2443)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2445) $Snap.unit)))
+(declare-const $k@2446 $Perm)
+(assert ($Perm.isValidVar $k@2446))
+(assert ($Perm.isReadVar $k@2446 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2340 $k@2368) $k@2386) $k@2427))
+  (= $t@2445 $t@2385)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2427) $k@2446) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2427) $k@2446) $Perm.No)))
+(assert (> $t@2445 0))
+(declare-const $k@2447 $Perm)
+(assert ($Perm.isValidVar $k@2447))
+(assert ($Perm.isReadVar $k@2447 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2342 $k@2369) $k@2387) $k@2428))
+  (= $t@2444 $t@2384)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2428) $k@2447) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2428) $k@2447) $Perm.No)))
+(assert (not (= $t@2444 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2440 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2440 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 372] $t@2440 != Null
+(assert (not (= $t@2440 $Ref.null)))
+(declare-const $k@2448 $Perm)
+(assert ($Perm.isValidVar $k@2448))
+(assert ($Perm.isReadVar $k@2448 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429))
+  (= $t@2436 $t@2376)))
+(declare-const $k@2449 $Perm)
+(assert ($Perm.isValidVar $k@2449))
+(assert ($Perm.isReadVar $k@2449 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430))
+  (= $t@2434 $t@2374)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2450 $Perm)
+(assert ($Perm.isValidVar $k@2450))
+(assert ($Perm.isReadVar $k@2450 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2450 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2450 $k@2338))
+(declare-const $k@2451 $Perm)
+(assert ($Perm.isValidVar $k@2451))
+(assert ($Perm.isReadVar $k@2451 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2451 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2451 (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2427) $k@2446)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2452 $Perm)
+(assert ($Perm.isValidVar $k@2452))
+(assert ($Perm.isReadVar $k@2452 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2452 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2452 (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2428) $k@2447)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2440 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 373] $t@2440 != Null
+(declare-const $k@2453 $Perm)
+(assert ($Perm.isValidVar $k@2453))
+(assert ($Perm.isReadVar $k@2453 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2453 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2448) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2448) $Perm.No)))
+(assert (< $k@2453 (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2448)))
+(declare-const $k@2454 $Perm)
+(assert ($Perm.isValidVar $k@2454))
+(assert ($Perm.isReadVar $k@2454 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2454 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2449) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2449) $Perm.No)))
+(assert (< $k@2454 (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2449)))
+(pop) ; 9
+; [dead else-branch 373] $t@2440 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 372] $t@2440 == Null
+(assert (= $t@2440 $Ref.null))
+(declare-const $k@2455 $Perm)
+(assert ($Perm.isValidVar $k@2455))
+(assert ($Perm.isReadVar $k@2455 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429))
+  (= $t@2436 $t@2376)))
+(declare-const $k@2456 $Perm)
+(assert ($Perm.isValidVar $k@2456))
+(assert ($Perm.isReadVar $k@2456 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430))
+  (= $t@2434 $t@2374)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2457 $Perm)
+(assert ($Perm.isValidVar $k@2457))
+(assert ($Perm.isReadVar $k@2457 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2457 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2457 $k@2338))
+(declare-const $k@2458 $Perm)
+(assert ($Perm.isValidVar $k@2458))
+(assert ($Perm.isReadVar $k@2458 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2458 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2458 (+ (- (+ (- $k@2340 $k@2368) $k@2386) $k@2427) $k@2446)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2459 $Perm)
+(assert ($Perm.isValidVar $k@2459))
+(assert ($Perm.isReadVar $k@2459 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2459 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2459 (+ (- (+ (- $k@2342 $k@2369) $k@2387) $k@2428) $k@2447)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2440 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 374] $t@2440 != Null
+(push) ; 9
+; [else-branch 374] $t@2440 == Null
+(declare-const $k@2460 $Perm)
+(assert ($Perm.isValidVar $k@2460))
+(assert ($Perm.isReadVar $k@2460 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2460 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2455) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2455) $Perm.No)))
+(assert (< $k@2460 (+ (- (+ (- $k@2347 $k@2370) $k@2425) $k@2429) $k@2455)))
+(declare-const $k@2461 $Perm)
+(assert ($Perm.isValidVar $k@2461))
+(assert ($Perm.isReadVar $k@2461 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2461 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2456) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2456) $Perm.No)))
+(assert (< $k@2461 (+ (- (+ (- $k@2349 $k@2371) $k@2426) $k@2430) $k@2456)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 365] $t@2345 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 363] $t@2345 == Null
+(assert (= $t@2345 $Ref.null))
+(declare-const $k@2462 $Perm)
+(assert ($Perm.isValidVar $k@2462))
+(assert ($Perm.isReadVar $k@2462 $Perm.Write))
+(declare-const $t@2463 $Ref)
+(declare-const $k@2464 $Perm)
+(assert ($Perm.isValidVar $k@2464))
+(assert ($Perm.isReadVar $k@2464 $Perm.Write))
+(declare-const $t@2465 $Ref)
+(push) ; 4
+(declare-const $k@2466 $Perm)
+(assert ($Perm.isValidVar $k@2466))
+(assert ($Perm.isReadVar $k@2466 $Perm.Write))
+(declare-const $t@2467 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2466 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2466 $Perm.No)))
+(assert (not (= $t@2467 $Ref.null)))
+(declare-const $k@2468 $Perm)
+(assert ($Perm.isValidVar $k@2468))
+(assert ($Perm.isReadVar $k@2468 $Perm.Write))
+(declare-const $t@2469 Int)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2468 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2468 $Perm.No)))
+(assert (> $t@2469 0))
+(declare-const $k@2470 $Perm)
+(assert ($Perm.isValidVar $k@2470))
+(assert ($Perm.isReadVar $k@2470 $Perm.Write))
+(declare-const $t@2471 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2470 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2470 $Perm.No)))
+(assert (not (= $t@2471 $Ref.null)))
+(declare-const $t@2472 Int)
+(declare-const $t@2473 $Ref)
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2473 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2473 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 375] $t@2473 != Null
+(assert (not (= $t@2473 $Ref.null)))
+(declare-const $t@2474 $Snap)
+(declare-const $k@2475 $Perm)
+(assert ($Perm.isValidVar $k@2475))
+(assert ($Perm.isReadVar $k@2475 $Perm.Write))
+(declare-const $t@2476 $Ref)
+(declare-const $k@2477 $Perm)
+(assert ($Perm.isValidVar $k@2477))
+(assert ($Perm.isReadVar $k@2477 $Perm.Write))
+(declare-const $t@2478 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 375] $t@2473 == Null
+(assert (= $t@2473 $Ref.null))
+(declare-const $k@2479 $Perm)
+(assert ($Perm.isValidVar $k@2479))
+(assert ($Perm.isReadVar $k@2479 $Perm.Write))
+(declare-const $t@2480 $Ref)
+(declare-const $k@2481 $Perm)
+(assert ($Perm.isValidVar $k@2481))
+(assert ($Perm.isReadVar $k@2481 $Perm.Write))
+(declare-const $t@2482 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread2b__queue, 2)
+; [eval] diz != null
+(declare-const $k@2483 $Perm)
+(assert ($Perm.isValidVar $k@2483))
+(assert ($Perm.isReadVar $k@2483 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2483 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2483 $k@2340))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2484 $Perm)
+(assert ($Perm.isValidVar $k@2484))
+(assert ($Perm.isReadVar $k@2484 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2484 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2484 $k@2342))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2345 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 376] $t@2345 != Null
+(push) ; 5
+; [else-branch 376] $t@2345 == Null
+(declare-const $k@2485 $Perm)
+(assert ($Perm.isValidVar $k@2485))
+(assert ($Perm.isReadVar $k@2485 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2485 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2462 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2462 $Perm.No)))
+(assert (< $k@2485 $k@2462))
+(declare-const $k@2486 $Perm)
+(assert ($Perm.isValidVar $k@2486))
+(assert ($Perm.isReadVar $k@2486 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2486 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2464 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2464 $Perm.No)))
+(assert (< $k@2486 $k@2464))
+(declare-const $t@2487 $Snap)
+(declare-const $t@2488 $Snap)
+(declare-const $t@2489 $Ref)
+(assert (= $t@2487 ($Snap.combine $t@2488 ($SortWrappers.$RefTo$Snap $t@2489))))
+(declare-const $t@2490 $Snap)
+(declare-const $t@2491 $Ref)
+(assert (= $t@2488 ($Snap.combine $t@2490 ($SortWrappers.$RefTo$Snap $t@2491))))
+(declare-const $t@2492 $Snap)
+(declare-const $t@2493 $Snap)
+(assert (= $t@2490 ($Snap.combine $t@2492 $t@2493)))
+(declare-const $t@2494 $Snap)
+(declare-const $t@2495 $Ref)
+(assert (= $t@2492 ($Snap.combine $t@2494 ($SortWrappers.$RefTo$Snap $t@2495))))
+(declare-const $t@2496 $Snap)
+(declare-const $t@2497 Int)
+(assert (= $t@2494 ($Snap.combine $t@2496 ($SortWrappers.IntTo$Snap $t@2497))))
+(declare-const $t@2498 Int)
+(declare-const $t@2499 $Ref)
+(assert (=
+  $t@2496
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2498)
+    ($SortWrappers.$RefTo$Snap $t@2499))))
+(declare-const $t@2500 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2498)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2500) $Snap.unit)))
+(declare-const $k@2501 $Perm)
+(assert ($Perm.isValidVar $k@2501))
+(assert ($Perm.isReadVar $k@2501 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2340 $k@2483)) (= $t@2500 $t@2341)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2340 $k@2483) $k@2501) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2340 $k@2483) $k@2501) $Perm.No)))
+(assert (> $t@2500 0))
+(declare-const $k@2502 $Perm)
+(assert ($Perm.isValidVar $k@2502))
+(assert ($Perm.isReadVar $k@2502 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2342 $k@2484)) (= $t@2499 $t@2343)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2342 $k@2484) $k@2502) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2342 $k@2484) $k@2502) $Perm.No)))
+(assert (not (= $t@2499 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2495 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2495 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 377] $t@2495 != Null
+(assert (not (= $t@2495 $Ref.null)))
+(declare-const $k@2503 $Perm)
+(assert ($Perm.isValidVar $k@2503))
+(assert ($Perm.isReadVar $k@2503 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2462 $k@2485)) (= $t@2491 $t@2463)))
+(declare-const $k@2504 $Perm)
+(assert ($Perm.isValidVar $k@2504))
+(assert ($Perm.isReadVar $k@2504 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2464 $k@2486)) (= $t@2489 $t@2465)))
+; [exec]
+; __flatten_67 := BlockingQueue__poll(diz.LBQThread2b__queue)
+; [eval] diz != null
+(declare-const $k@2505 $Perm)
+(assert ($Perm.isValidVar $k@2505))
+(assert ($Perm.isReadVar $k@2505 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2505 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2505 (+ (- $k@2340 $k@2483) $k@2501)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2506 $Perm)
+(assert ($Perm.isValidVar $k@2506))
+(assert ($Perm.isReadVar $k@2506 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2506 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2506 (+ (- $k@2342 $k@2484) $k@2502)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2495 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 378] $t@2495 != Null
+(declare-const $k@2507 $Perm)
+(assert ($Perm.isValidVar $k@2507))
+(assert ($Perm.isReadVar $k@2507 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2507 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2462 $k@2485) $k@2503) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2462 $k@2485) $k@2503) $Perm.No)))
+(assert (< $k@2507 (+ (- $k@2462 $k@2485) $k@2503)))
+(declare-const $k@2508 $Perm)
+(assert ($Perm.isValidVar $k@2508))
+(assert ($Perm.isReadVar $k@2508 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2508 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2464 $k@2486) $k@2504) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2464 $k@2486) $k@2504) $Perm.No)))
+(assert (< $k@2508 (+ (- $k@2464 $k@2486) $k@2504)))
+(declare-const sys__result@2509 $Ref)
+(declare-const $t@2510 $Snap)
+(declare-const $t@2511 $Snap)
+(declare-const $t@2512 $Ref)
+(assert (= $t@2510 ($Snap.combine $t@2511 ($SortWrappers.$RefTo$Snap $t@2512))))
+(declare-const $t@2513 $Snap)
+(declare-const $t@2514 $Ref)
+(assert (= $t@2511 ($Snap.combine $t@2513 ($SortWrappers.$RefTo$Snap $t@2514))))
+(declare-const $t@2515 $Snap)
+(declare-const $t@2516 $Snap)
+(assert (= $t@2513 ($Snap.combine $t@2515 $t@2516)))
+(declare-const $t@2517 $Snap)
+(declare-const $t@2518 $Ref)
+(assert (= $t@2515 ($Snap.combine $t@2517 ($SortWrappers.$RefTo$Snap $t@2518))))
+(declare-const $t@2519 $Snap)
+(declare-const $t@2520 Int)
+(assert (= $t@2517 ($Snap.combine $t@2519 ($SortWrappers.IntTo$Snap $t@2520))))
+(declare-const $t@2521 Int)
+(declare-const $t@2522 $Ref)
+(assert (=
+  $t@2519
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2521)
+    ($SortWrappers.$RefTo$Snap $t@2522))))
+(declare-const $t@2523 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2521)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2523) $Snap.unit)))
+(declare-const $k@2524 $Perm)
+(assert ($Perm.isValidVar $k@2524))
+(assert ($Perm.isReadVar $k@2524 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2340 $k@2483) $k@2501) $k@2505))
+  (= $t@2523 $t@2500)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2505) $k@2524) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2505) $k@2524) $Perm.No)))
+(assert (> $t@2523 0))
+(declare-const $k@2525 $Perm)
+(assert ($Perm.isValidVar $k@2525))
+(assert ($Perm.isReadVar $k@2525 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2342 $k@2484) $k@2502) $k@2506))
+  (= $t@2522 $t@2499)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2506) $k@2525) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2506) $k@2525) $Perm.No)))
+(assert (not (= $t@2522 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2518 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2518 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 379] $t@2518 != Null
+(assert (not (= $t@2518 $Ref.null)))
+(declare-const $k@2526 $Perm)
+(assert ($Perm.isValidVar $k@2526))
+(assert ($Perm.isReadVar $k@2526 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507))
+  (= $t@2514 $t@2491)))
+(declare-const $k@2527 $Perm)
+(assert ($Perm.isValidVar $k@2527))
+(assert ($Perm.isReadVar $k@2527 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508))
+  (= $t@2512 $t@2489)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2528 $Perm)
+(assert ($Perm.isValidVar $k@2528))
+(assert ($Perm.isReadVar $k@2528 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2528 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2528 $k@2338))
+(declare-const $k@2529 $Perm)
+(assert ($Perm.isValidVar $k@2529))
+(assert ($Perm.isReadVar $k@2529 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2529 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2529 (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2505) $k@2524)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2530 $Perm)
+(assert ($Perm.isValidVar $k@2530))
+(assert ($Perm.isReadVar $k@2530 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2530 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2530 (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2506) $k@2525)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2518 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 380] $t@2518 != Null
+(declare-const $k@2531 $Perm)
+(assert ($Perm.isValidVar $k@2531))
+(assert ($Perm.isReadVar $k@2531 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2531 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2526) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2526) $Perm.No)))
+(assert (< $k@2531 (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2526)))
+(declare-const $k@2532 $Perm)
+(assert ($Perm.isValidVar $k@2532))
+(assert ($Perm.isReadVar $k@2532 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2532 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2527) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2527) $Perm.No)))
+(assert (< $k@2532 (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2527)))
+(pop) ; 9
+; [dead else-branch 380] $t@2518 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 379] $t@2518 == Null
+(assert (= $t@2518 $Ref.null))
+(declare-const $k@2533 $Perm)
+(assert ($Perm.isValidVar $k@2533))
+(assert ($Perm.isReadVar $k@2533 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507))
+  (= $t@2514 $t@2491)))
+(declare-const $k@2534 $Perm)
+(assert ($Perm.isValidVar $k@2534))
+(assert ($Perm.isReadVar $k@2534 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508))
+  (= $t@2512 $t@2489)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2535 $Perm)
+(assert ($Perm.isValidVar $k@2535))
+(assert ($Perm.isReadVar $k@2535 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2535 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2535 $k@2338))
+(declare-const $k@2536 $Perm)
+(assert ($Perm.isValidVar $k@2536))
+(assert ($Perm.isReadVar $k@2536 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2536 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2536 (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2505) $k@2524)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2537 $Perm)
+(assert ($Perm.isValidVar $k@2537))
+(assert ($Perm.isReadVar $k@2537 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2537 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2537 (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2506) $k@2525)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2518 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 381] $t@2518 != Null
+(push) ; 9
+; [else-branch 381] $t@2518 == Null
+(declare-const $k@2538 $Perm)
+(assert ($Perm.isValidVar $k@2538))
+(assert ($Perm.isReadVar $k@2538 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2538 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2533) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2533) $Perm.No)))
+(assert (< $k@2538 (+ (- (+ (- $k@2462 $k@2485) $k@2503) $k@2507) $k@2533)))
+(declare-const $k@2539 $Perm)
+(assert ($Perm.isValidVar $k@2539))
+(assert ($Perm.isReadVar $k@2539 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2539 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2534) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2534) $Perm.No)))
+(assert (< $k@2539 (+ (- (+ (- $k@2464 $k@2486) $k@2504) $k@2508) $k@2534)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+; [dead else-branch 378] $t@2495 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 377] $t@2495 == Null
+(assert (= $t@2495 $Ref.null))
+(declare-const $k@2540 $Perm)
+(assert ($Perm.isValidVar $k@2540))
+(assert ($Perm.isReadVar $k@2540 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2462 $k@2485)) (= $t@2491 $t@2463)))
+(declare-const $k@2541 $Perm)
+(assert ($Perm.isValidVar $k@2541))
+(assert ($Perm.isReadVar $k@2541 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2464 $k@2486)) (= $t@2489 $t@2465)))
+; [exec]
+; __flatten_67 := BlockingQueue__poll(diz.LBQThread2b__queue)
+; [eval] diz != null
+(declare-const $k@2542 $Perm)
+(assert ($Perm.isValidVar $k@2542))
+(assert ($Perm.isReadVar $k@2542 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2542 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2542 (+ (- $k@2340 $k@2483) $k@2501)))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2543 $Perm)
+(assert ($Perm.isValidVar $k@2543))
+(assert ($Perm.isReadVar $k@2543 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2543 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2543 (+ (- $k@2342 $k@2484) $k@2502)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2495 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 382] $t@2495 != Null
+(push) ; 7
+; [else-branch 382] $t@2495 == Null
+(declare-const $k@2544 $Perm)
+(assert ($Perm.isValidVar $k@2544))
+(assert ($Perm.isReadVar $k@2544 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2544 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2462 $k@2485) $k@2540) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2462 $k@2485) $k@2540) $Perm.No)))
+(assert (< $k@2544 (+ (- $k@2462 $k@2485) $k@2540)))
+(declare-const $k@2545 $Perm)
+(assert ($Perm.isValidVar $k@2545))
+(assert ($Perm.isReadVar $k@2545 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2545 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2464 $k@2486) $k@2541) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2464 $k@2486) $k@2541) $Perm.No)))
+(assert (< $k@2545 (+ (- $k@2464 $k@2486) $k@2541)))
+(declare-const sys__result@2546 $Ref)
+(declare-const $t@2547 $Snap)
+(declare-const $t@2548 $Snap)
+(declare-const $t@2549 $Ref)
+(assert (= $t@2547 ($Snap.combine $t@2548 ($SortWrappers.$RefTo$Snap $t@2549))))
+(declare-const $t@2550 $Snap)
+(declare-const $t@2551 $Ref)
+(assert (= $t@2548 ($Snap.combine $t@2550 ($SortWrappers.$RefTo$Snap $t@2551))))
+(declare-const $t@2552 $Snap)
+(declare-const $t@2553 $Snap)
+(assert (= $t@2550 ($Snap.combine $t@2552 $t@2553)))
+(declare-const $t@2554 $Snap)
+(declare-const $t@2555 $Ref)
+(assert (= $t@2552 ($Snap.combine $t@2554 ($SortWrappers.$RefTo$Snap $t@2555))))
+(declare-const $t@2556 $Snap)
+(declare-const $t@2557 Int)
+(assert (= $t@2554 ($Snap.combine $t@2556 ($SortWrappers.IntTo$Snap $t@2557))))
+(declare-const $t@2558 Int)
+(declare-const $t@2559 $Ref)
+(assert (=
+  $t@2556
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2558)
+    ($SortWrappers.$RefTo$Snap $t@2559))))
+(declare-const $t@2560 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2558)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2560) $Snap.unit)))
+(declare-const $k@2561 $Perm)
+(assert ($Perm.isValidVar $k@2561))
+(assert ($Perm.isReadVar $k@2561 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2340 $k@2483) $k@2501) $k@2542))
+  (= $t@2560 $t@2500)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2542) $k@2561) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2542) $k@2561) $Perm.No)))
+(assert (> $t@2560 0))
+(declare-const $k@2562 $Perm)
+(assert ($Perm.isValidVar $k@2562))
+(assert ($Perm.isReadVar $k@2562 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2342 $k@2484) $k@2502) $k@2543))
+  (= $t@2559 $t@2499)))
+(push) ; 8
+(assert (not (not (= (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2543) $k@2562) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2543) $k@2562) $Perm.No)))
+(assert (not (= $t@2559 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 8
+(assert (not (= $t@2555 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= $t@2555 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 8
+(push) ; 8
+; [then-branch 383] $t@2555 != Null
+(assert (not (= $t@2555 $Ref.null)))
+(declare-const $k@2563 $Perm)
+(assert ($Perm.isValidVar $k@2563))
+(assert ($Perm.isReadVar $k@2563 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544))
+  (= $t@2551 $t@2491)))
+(declare-const $k@2564 $Perm)
+(assert ($Perm.isValidVar $k@2564))
+(assert ($Perm.isReadVar $k@2564 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545))
+  (= $t@2549 $t@2489)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2565 $Perm)
+(assert ($Perm.isValidVar $k@2565))
+(assert ($Perm.isReadVar $k@2565 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2565 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2565 $k@2338))
+(declare-const $k@2566 $Perm)
+(assert ($Perm.isValidVar $k@2566))
+(assert ($Perm.isReadVar $k@2566 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2566 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2566 (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2542) $k@2561)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2567 $Perm)
+(assert ($Perm.isValidVar $k@2567))
+(assert ($Perm.isReadVar $k@2567 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2567 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2567 (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2543) $k@2562)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (= $t@2555 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+(push) ; 9
+; [then-branch 384] $t@2555 != Null
+(declare-const $k@2568 $Perm)
+(assert ($Perm.isValidVar $k@2568))
+(assert ($Perm.isReadVar $k@2568 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2568 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2563) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2563) $Perm.No)))
+(assert (< $k@2568 (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2563)))
+(declare-const $k@2569 $Perm)
+(assert ($Perm.isValidVar $k@2569))
+(assert ($Perm.isReadVar $k@2569 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2569 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2564) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2564) $Perm.No)))
+(assert (< $k@2569 (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2564)))
+(pop) ; 9
+; [dead else-branch 384] $t@2555 == Null
+(pop) ; 8
+(push) ; 8
+; [else-branch 383] $t@2555 == Null
+(assert (= $t@2555 $Ref.null))
+(declare-const $k@2570 $Perm)
+(assert ($Perm.isValidVar $k@2570))
+(assert ($Perm.isReadVar $k@2570 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544))
+  (= $t@2551 $t@2491)))
+(declare-const $k@2571 $Perm)
+(assert ($Perm.isValidVar $k@2571))
+(assert ($Perm.isReadVar $k@2571 $Perm.Write))
+(assert (implies
+  (< $Perm.No (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545))
+  (= $t@2549 $t@2489)))
+; [exec]
+; i := __flatten_67
+(declare-const $k@2572 $Perm)
+(assert ($Perm.isValidVar $k@2572))
+(assert ($Perm.isReadVar $k@2572 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2572 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2572 $k@2338))
+(declare-const $k@2573 $Perm)
+(assert ($Perm.isValidVar $k@2573))
+(assert ($Perm.isReadVar $k@2573 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2573 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2573 (+ (- (+ (- $k@2340 $k@2483) $k@2501) $k@2542) $k@2561)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2574 $Perm)
+(assert ($Perm.isValidVar $k@2574))
+(assert ($Perm.isReadVar $k@2574 $Perm.Write))
+(push) ; 9
+(assert (not (or (= $k@2574 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 9
+(assert (< $k@2574 (+ (- (+ (- $k@2342 $k@2484) $k@2502) $k@2543) $k@2562)))
+; [eval] diz.LBQThread2b__queue.BlockingQueue__first != null
+(push) ; 9
+(assert (not (not (= $t@2555 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 9
+; [dead then-branch 385] $t@2555 != Null
+(push) ; 9
+; [else-branch 385] $t@2555 == Null
+(declare-const $k@2575 $Perm)
+(assert ($Perm.isValidVar $k@2575))
+(assert ($Perm.isReadVar $k@2575 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2575 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2570) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2570) $Perm.No)))
+(assert (< $k@2575 (+ (- (+ (- $k@2462 $k@2485) $k@2540) $k@2544) $k@2570)))
+(declare-const $k@2576 $Perm)
+(assert ($Perm.isValidVar $k@2576))
+(assert ($Perm.isReadVar $k@2576 $Perm.Write))
+(push) ; 10
+(assert (not (or (= $k@2576 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(push) ; 10
+(assert (not (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2571) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 10
+(assert (not (= (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2571) $Perm.No)))
+(assert (< $k@2576 (+ (- (+ (- $k@2464 $k@2486) $k@2541) $k@2545) $k@2571)))
+(pop) ; 9
+(pop) ; 8
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread3a__LBQThread1a ----------
+(declare-const queue@2577 $Ref)
+(declare-const sys__result@2578 $Ref)
+(declare-const diz@2579 $Ref)
+(declare-const __flatten_68@2580 $Ref)
+(declare-const __flatten_128@2581 $Ref)
+(push) ; 2
+(assert (not (= queue@2577 $Ref.null)))
+(declare-const $k@2582 $Perm)
+(assert ($Perm.isValidVar $k@2582))
+(assert ($Perm.isReadVar $k@2582 $Perm.Write))
+(declare-const $t@2583 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2582 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2582 $Perm.No)))
+(assert (> $t@2583 0))
+(declare-const $k@2584 $Perm)
+(assert ($Perm.isValidVar $k@2584))
+(assert ($Perm.isReadVar $k@2584 $Perm.Write))
+(declare-const $t@2585 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2584 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2584 $Perm.No)))
+(assert (not (= $t@2585 $Ref.null)))
+(declare-const $t@2586 Int)
+(declare-const $t@2587 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2587 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2587 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 386] $t@2587 != Null
+(assert (not (= $t@2587 $Ref.null)))
+(declare-const $t@2588 $Snap)
+(declare-const $k@2589 $Perm)
+(assert ($Perm.isValidVar $k@2589))
+(assert ($Perm.isReadVar $k@2589 $Perm.Write))
+(declare-const $t@2590 $Ref)
+(declare-const $k@2591 $Perm)
+(assert ($Perm.isValidVar $k@2591))
+(assert ($Perm.isReadVar $k@2591 $Perm.Write))
+(declare-const $t@2592 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2578 $Ref.null)))
+(declare-const $k@2593 $Perm)
+(assert ($Perm.isValidVar $k@2593))
+(assert ($Perm.isReadVar $k@2593 $Perm.Write))
+(declare-const $t@2594 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2593 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2593 $Perm.No)))
+(assert (not (= $t@2594 $Ref.null)))
+(declare-const $k@2595 $Perm)
+(assert ($Perm.isValidVar $k@2595))
+(assert ($Perm.isReadVar $k@2595 $Perm.Write))
+(declare-const $t@2596 Int)
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2595 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2595 $Perm.No)))
+(assert (> $t@2596 0))
+(declare-const $k@2597 $Perm)
+(assert ($Perm.isValidVar $k@2597))
+(assert ($Perm.isReadVar $k@2597 $Perm.Write))
+(declare-const $t@2598 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2597 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2597 $Perm.No)))
+(assert (not (= $t@2598 $Ref.null)))
+(declare-const $t@2599 Int)
+(declare-const $t@2600 $Ref)
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2600 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2600 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 387] $t@2600 != Null
+(assert (not (= $t@2600 $Ref.null)))
+(declare-const $t@2601 $Snap)
+(declare-const $k@2602 $Perm)
+(assert ($Perm.isValidVar $k@2602))
+(assert ($Perm.isReadVar $k@2602 $Perm.Write))
+(declare-const $t@2603 $Ref)
+(declare-const $k@2604 $Perm)
+(assert ($Perm.isValidVar $k@2604))
+(assert ($Perm.isReadVar $k@2604 $Perm.Write))
+(declare-const $t@2605 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 387] $t@2600 == Null
+(assert (= $t@2600 $Ref.null))
+(declare-const $k@2606 $Perm)
+(assert ($Perm.isValidVar $k@2606))
+(assert ($Perm.isReadVar $k@2606 $Perm.Write))
+(declare-const $t@2607 $Ref)
+(declare-const $k@2608 $Perm)
+(assert ($Perm.isValidVar $k@2608))
+(assert ($Perm.isReadVar $k@2608 $Perm.Write))
+(declare-const $t@2609 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread3a__queue)
+(declare-const diz@2610 $Ref)
+(assert (not (= diz@2610 $Ref.null)))
+(declare-const LBQThread3a__queue@2611 $Ref)
+(assert (and
+  (not (= queue@2577 diz@2610))
+  (not (= sys__result@2578 diz@2610))
+  (not (= __flatten_68@2580 diz@2610))
+  (not (= __flatten_128@2581 diz@2610))
+  (not (= $t@2585 diz@2610))
+  (not (= $t@2587 diz@2610))
+  (not (= LBQThread3a__queue@2611 diz@2610))
+  (not (= $t@2590 diz@2610))
+  (not (= $t@2592 diz@2610))))
+; [exec]
+; __flatten_68 := queue
+; [exec]
+; __flatten_128 := __flatten_68
+; [exec]
+; diz.LBQThread3a__queue := __flatten_128
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread3a__queue, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread3a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread3a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread3a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread3a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread3a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2612 $Perm)
+(assert ($Perm.isValidVar $k@2612))
+(assert ($Perm.isReadVar $k@2612 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2612 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2612 $Perm.Write))
+(declare-const $k@2613 $Perm)
+(assert ($Perm.isValidVar $k@2613))
+(assert ($Perm.isReadVar $k@2613 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2613 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2613 $k@2582))
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2614 $Perm)
+(assert ($Perm.isValidVar $k@2614))
+(assert ($Perm.isReadVar $k@2614 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2614 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2614 $k@2584))
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2587 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 388] $t@2587 != Null
+(declare-const $k@2615 $Perm)
+(assert ($Perm.isValidVar $k@2615))
+(assert ($Perm.isReadVar $k@2615 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2615 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2589 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2589 $Perm.No)))
+(assert (< $k@2615 $k@2589))
+(declare-const $k@2616 $Perm)
+(assert ($Perm.isValidVar $k@2616))
+(assert ($Perm.isReadVar $k@2616 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2616 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2591 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2591 $Perm.No)))
+(assert (< $k@2616 $k@2591))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 388] $t@2587 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 386] $t@2587 == Null
+(assert (= $t@2587 $Ref.null))
+(declare-const $k@2617 $Perm)
+(assert ($Perm.isValidVar $k@2617))
+(assert ($Perm.isReadVar $k@2617 $Perm.Write))
+(declare-const $t@2618 $Ref)
+(declare-const $k@2619 $Perm)
+(assert ($Perm.isValidVar $k@2619))
+(assert ($Perm.isReadVar $k@2619 $Perm.Write))
+(declare-const $t@2620 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2578 $Ref.null)))
+(declare-const $k@2621 $Perm)
+(assert ($Perm.isValidVar $k@2621))
+(assert ($Perm.isReadVar $k@2621 $Perm.Write))
+(declare-const $t@2622 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2621 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2621 $Perm.No)))
+(assert (not (= $t@2622 $Ref.null)))
+(declare-const $k@2623 $Perm)
+(assert ($Perm.isValidVar $k@2623))
+(assert ($Perm.isReadVar $k@2623 $Perm.Write))
+(declare-const $t@2624 Int)
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2623 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2623 $Perm.No)))
+(assert (> $t@2624 0))
+(declare-const $k@2625 $Perm)
+(assert ($Perm.isValidVar $k@2625))
+(assert ($Perm.isReadVar $k@2625 $Perm.Write))
+(declare-const $t@2626 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2625 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2625 $Perm.No)))
+(assert (not (= $t@2626 $Ref.null)))
+(declare-const $t@2627 Int)
+(declare-const $t@2628 $Ref)
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2628 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2628 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 389] $t@2628 != Null
+(assert (not (= $t@2628 $Ref.null)))
+(declare-const $t@2629 $Snap)
+(declare-const $k@2630 $Perm)
+(assert ($Perm.isValidVar $k@2630))
+(assert ($Perm.isReadVar $k@2630 $Perm.Write))
+(declare-const $t@2631 $Ref)
+(declare-const $k@2632 $Perm)
+(assert ($Perm.isValidVar $k@2632))
+(assert ($Perm.isReadVar $k@2632 $Perm.Write))
+(declare-const $t@2633 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 389] $t@2628 == Null
+(assert (= $t@2628 $Ref.null))
+(declare-const $k@2634 $Perm)
+(assert ($Perm.isValidVar $k@2634))
+(assert ($Perm.isReadVar $k@2634 $Perm.Write))
+(declare-const $t@2635 $Ref)
+(declare-const $k@2636 $Perm)
+(assert ($Perm.isValidVar $k@2636))
+(assert ($Perm.isReadVar $k@2636 $Perm.Write))
+(declare-const $t@2637 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread3a__queue)
+(declare-const diz@2638 $Ref)
+(assert (not (= diz@2638 $Ref.null)))
+(declare-const LBQThread3a__queue@2639 $Ref)
+(assert (and
+  (not (= queue@2577 diz@2638))
+  (not (= sys__result@2578 diz@2638))
+  (not (= __flatten_68@2580 diz@2638))
+  (not (= __flatten_128@2581 diz@2638))
+  (not (= $t@2585 diz@2638))
+  (not (= LBQThread3a__queue@2639 diz@2638))
+  (not (= $t@2587 diz@2638))
+  (not (= $t@2618 diz@2638))
+  (not (= $t@2620 diz@2638))))
+; [exec]
+; __flatten_68 := queue
+; [exec]
+; __flatten_128 := __flatten_68
+; [exec]
+; diz.LBQThread3a__queue := __flatten_128
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread3a__queue, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread3a__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread3a__queue.BlockingQueue__first, write) && ((sys__result.LBQThread3a__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread3a__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread3a__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread3a__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2640 $Perm)
+(assert ($Perm.isValidVar $k@2640))
+(assert ($Perm.isReadVar $k@2640 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2640 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2640 $Perm.Write))
+(declare-const $k@2641 $Perm)
+(assert ($Perm.isValidVar $k@2641))
+(assert ($Perm.isReadVar $k@2641 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2641 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2641 $k@2582))
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2642 $Perm)
+(assert ($Perm.isValidVar $k@2642))
+(assert ($Perm.isReadVar $k@2642 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2642 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2642 $k@2584))
+; [eval] sys__result.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2587 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 390] $t@2587 != Null
+(push) ; 5
+; [else-branch 390] $t@2587 == Null
+(declare-const $k@2643 $Perm)
+(assert ($Perm.isValidVar $k@2643))
+(assert ($Perm.isReadVar $k@2643 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2643 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2617 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2617 $Perm.No)))
+(assert (< $k@2643 $k@2617))
+(declare-const $k@2644 $Perm)
+(assert ($Perm.isValidVar $k@2644))
+(assert ($Perm.isReadVar $k@2644 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2644 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2619 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2619 $Perm.No)))
+(assert (< $k@2644 $k@2619))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread3a__run ----------
+(declare-const diz@2645 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@2645 $Ref.null)))
+(declare-const $k@2646 $Perm)
+(assert ($Perm.isValidVar $k@2646))
+(assert ($Perm.isReadVar $k@2646 $Perm.Write))
+(declare-const $t@2647 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2646 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2646 $Perm.No)))
+(assert (not (= $t@2647 $Ref.null)))
+(declare-const $k@2648 $Perm)
+(assert ($Perm.isValidVar $k@2648))
+(assert ($Perm.isReadVar $k@2648 $Perm.Write))
+(declare-const $t@2649 Int)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2648 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2648 $Perm.No)))
+(assert (> $t@2649 0))
+(declare-const $k@2650 $Perm)
+(assert ($Perm.isValidVar $k@2650))
+(assert ($Perm.isReadVar $k@2650 $Perm.Write))
+(declare-const $t@2651 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2650 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2650 $Perm.No)))
+(assert (not (= $t@2651 $Ref.null)))
+(declare-const $t@2652 Int)
+(declare-const $t@2653 $Ref)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2653 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2653 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 391] $t@2653 != Null
+(assert (not (= $t@2653 $Ref.null)))
+(declare-const $t@2654 $Snap)
+(declare-const $k@2655 $Perm)
+(assert ($Perm.isValidVar $k@2655))
+(assert ($Perm.isReadVar $k@2655 $Perm.Write))
+(declare-const $t@2656 $Ref)
+(declare-const $k@2657 $Perm)
+(assert ($Perm.isValidVar $k@2657))
+(assert ($Perm.isReadVar $k@2657 $Perm.Write))
+(declare-const $t@2658 $Ref)
+(push) ; 4
+(declare-const $k@2659 $Perm)
+(assert ($Perm.isValidVar $k@2659))
+(assert ($Perm.isReadVar $k@2659 $Perm.Write))
+(declare-const $t@2660 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2659 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2659 $Perm.No)))
+(assert (not (= $t@2660 $Ref.null)))
+(declare-const $k@2661 $Perm)
+(assert ($Perm.isValidVar $k@2661))
+(assert ($Perm.isReadVar $k@2661 $Perm.Write))
+(declare-const $t@2662 Int)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2661 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2661 $Perm.No)))
+(assert (> $t@2662 0))
+(declare-const $k@2663 $Perm)
+(assert ($Perm.isValidVar $k@2663))
+(assert ($Perm.isReadVar $k@2663 $Perm.Write))
+(declare-const $t@2664 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2663 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2663 $Perm.No)))
+(assert (not (= $t@2664 $Ref.null)))
+(declare-const $t@2665 Int)
+(declare-const $t@2666 $Ref)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2666 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2666 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 392] $t@2666 != Null
+(assert (not (= $t@2666 $Ref.null)))
+(declare-const $t@2667 $Snap)
+(declare-const $k@2668 $Perm)
+(assert ($Perm.isValidVar $k@2668))
+(assert ($Perm.isReadVar $k@2668 $Perm.Write))
+(declare-const $t@2669 $Ref)
+(declare-const $k@2670 $Perm)
+(assert ($Perm.isValidVar $k@2670))
+(assert ($Perm.isReadVar $k@2670 $Perm.Write))
+(declare-const $t@2671 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 392] $t@2666 == Null
+(assert (= $t@2666 $Ref.null))
+(declare-const $k@2672 $Perm)
+(assert ($Perm.isValidVar $k@2672))
+(assert ($Perm.isReadVar $k@2672 $Perm.Write))
+(declare-const $t@2673 $Ref)
+(declare-const $k@2674 $Perm)
+(assert ($Perm.isValidVar $k@2674))
+(assert ($Perm.isReadVar $k@2674 $Perm.Write))
+(declare-const $t@2675 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread3a__queue, 1)
+; [eval] diz != null
+(declare-const $k@2676 $Perm)
+(assert ($Perm.isValidVar $k@2676))
+(assert ($Perm.isReadVar $k@2676 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2676 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2676 $k@2648))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2677 $Perm)
+(assert ($Perm.isValidVar $k@2677))
+(assert ($Perm.isReadVar $k@2677 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2677 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2677 $k@2650))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2653 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 393] $t@2653 != Null
+(declare-const $k@2678 $Perm)
+(assert ($Perm.isValidVar $k@2678))
+(assert ($Perm.isReadVar $k@2678 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2678 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2655 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2655 $Perm.No)))
+(assert (< $k@2678 $k@2655))
+(declare-const $k@2679 $Perm)
+(assert ($Perm.isValidVar $k@2679))
+(assert ($Perm.isReadVar $k@2679 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2679 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2657 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2657 $Perm.No)))
+(assert (< $k@2679 $k@2657))
+(declare-const $t@2680 $Snap)
+(declare-const $t@2681 $Snap)
+(declare-const $t@2682 $Ref)
+(assert (= $t@2680 ($Snap.combine $t@2681 ($SortWrappers.$RefTo$Snap $t@2682))))
+(declare-const $t@2683 $Snap)
+(declare-const $t@2684 $Ref)
+(assert (= $t@2681 ($Snap.combine $t@2683 ($SortWrappers.$RefTo$Snap $t@2684))))
+(declare-const $t@2685 $Snap)
+(declare-const $t@2686 $Snap)
+(assert (= $t@2683 ($Snap.combine $t@2685 $t@2686)))
+(declare-const $t@2687 $Snap)
+(declare-const $t@2688 $Ref)
+(assert (= $t@2685 ($Snap.combine $t@2687 ($SortWrappers.$RefTo$Snap $t@2688))))
+(declare-const $t@2689 $Snap)
+(declare-const $t@2690 Int)
+(assert (= $t@2687 ($Snap.combine $t@2689 ($SortWrappers.IntTo$Snap $t@2690))))
+(declare-const $t@2691 Int)
+(declare-const $t@2692 $Ref)
+(assert (=
+  $t@2689
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2691)
+    ($SortWrappers.$RefTo$Snap $t@2692))))
+(declare-const $t@2693 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2691)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2693) $Snap.unit)))
+(declare-const $k@2694 $Perm)
+(assert ($Perm.isValidVar $k@2694))
+(assert ($Perm.isReadVar $k@2694 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2648 $k@2676)) (= $t@2693 $t@2649)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2648 $k@2676) $k@2694) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2648 $k@2676) $k@2694) $Perm.No)))
+(assert (> $t@2693 0))
+(declare-const $k@2695 $Perm)
+(assert ($Perm.isValidVar $k@2695))
+(assert ($Perm.isReadVar $k@2695 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2650 $k@2677)) (= $t@2692 $t@2651)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2650 $k@2677) $k@2695) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2650 $k@2677) $k@2695) $Perm.No)))
+(assert (not (= $t@2692 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2688 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2688 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 394] $t@2688 != Null
+(assert (not (= $t@2688 $Ref.null)))
+(declare-const $k@2696 $Perm)
+(assert ($Perm.isValidVar $k@2696))
+(assert ($Perm.isReadVar $k@2696 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2655 $k@2678)) (= $t@2684 $t@2656)))
+(declare-const $k@2697 $Perm)
+(assert ($Perm.isValidVar $k@2697))
+(assert ($Perm.isReadVar $k@2697 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2657 $k@2679)) (= $t@2682 $t@2658)))
+(declare-const $k@2698 $Perm)
+(assert ($Perm.isValidVar $k@2698))
+(assert ($Perm.isReadVar $k@2698 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2698 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2698 $k@2646))
+(declare-const $k@2699 $Perm)
+(assert ($Perm.isValidVar $k@2699))
+(assert ($Perm.isReadVar $k@2699 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2699 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2699 (+ (- $k@2648 $k@2676) $k@2694)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2700 $Perm)
+(assert ($Perm.isValidVar $k@2700))
+(assert ($Perm.isReadVar $k@2700 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2700 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2700 (+ (- $k@2650 $k@2677) $k@2695)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2688 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 395] $t@2688 != Null
+(declare-const $k@2701 $Perm)
+(assert ($Perm.isValidVar $k@2701))
+(assert ($Perm.isReadVar $k@2701 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2701 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2655 $k@2678) $k@2696) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2655 $k@2678) $k@2696) $Perm.No)))
+(assert (< $k@2701 (+ (- $k@2655 $k@2678) $k@2696)))
+(declare-const $k@2702 $Perm)
+(assert ($Perm.isValidVar $k@2702))
+(assert ($Perm.isReadVar $k@2702 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2702 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2657 $k@2679) $k@2697) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2657 $k@2679) $k@2697) $Perm.No)))
+(assert (< $k@2702 (+ (- $k@2657 $k@2679) $k@2697)))
+(pop) ; 7
+; [dead else-branch 395] $t@2688 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 394] $t@2688 == Null
+(assert (= $t@2688 $Ref.null))
+(declare-const $k@2703 $Perm)
+(assert ($Perm.isValidVar $k@2703))
+(assert ($Perm.isReadVar $k@2703 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2655 $k@2678)) (= $t@2684 $t@2656)))
+(declare-const $k@2704 $Perm)
+(assert ($Perm.isValidVar $k@2704))
+(assert ($Perm.isReadVar $k@2704 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2657 $k@2679)) (= $t@2682 $t@2658)))
+(declare-const $k@2705 $Perm)
+(assert ($Perm.isValidVar $k@2705))
+(assert ($Perm.isReadVar $k@2705 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2705 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2705 $k@2646))
+(declare-const $k@2706 $Perm)
+(assert ($Perm.isValidVar $k@2706))
+(assert ($Perm.isReadVar $k@2706 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2706 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2706 (+ (- $k@2648 $k@2676) $k@2694)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2707 $Perm)
+(assert ($Perm.isValidVar $k@2707))
+(assert ($Perm.isReadVar $k@2707 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2707 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2707 (+ (- $k@2650 $k@2677) $k@2695)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2688 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 396] $t@2688 != Null
+(push) ; 7
+; [else-branch 396] $t@2688 == Null
+(declare-const $k@2708 $Perm)
+(assert ($Perm.isValidVar $k@2708))
+(assert ($Perm.isReadVar $k@2708 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2708 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2655 $k@2678) $k@2703) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2655 $k@2678) $k@2703) $Perm.No)))
+(assert (< $k@2708 (+ (- $k@2655 $k@2678) $k@2703)))
+(declare-const $k@2709 $Perm)
+(assert ($Perm.isValidVar $k@2709))
+(assert ($Perm.isReadVar $k@2709 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2709 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2657 $k@2679) $k@2704) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2657 $k@2679) $k@2704) $Perm.No)))
+(assert (< $k@2709 (+ (- $k@2657 $k@2679) $k@2704)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 393] $t@2653 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 391] $t@2653 == Null
+(assert (= $t@2653 $Ref.null))
+(declare-const $k@2710 $Perm)
+(assert ($Perm.isValidVar $k@2710))
+(assert ($Perm.isReadVar $k@2710 $Perm.Write))
+(declare-const $t@2711 $Ref)
+(declare-const $k@2712 $Perm)
+(assert ($Perm.isValidVar $k@2712))
+(assert ($Perm.isReadVar $k@2712 $Perm.Write))
+(declare-const $t@2713 $Ref)
+(push) ; 4
+(declare-const $k@2714 $Perm)
+(assert ($Perm.isValidVar $k@2714))
+(assert ($Perm.isReadVar $k@2714 $Perm.Write))
+(declare-const $t@2715 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2714 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2714 $Perm.No)))
+(assert (not (= $t@2715 $Ref.null)))
+(declare-const $k@2716 $Perm)
+(assert ($Perm.isValidVar $k@2716))
+(assert ($Perm.isReadVar $k@2716 $Perm.Write))
+(declare-const $t@2717 Int)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2716 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2716 $Perm.No)))
+(assert (> $t@2717 0))
+(declare-const $k@2718 $Perm)
+(assert ($Perm.isValidVar $k@2718))
+(assert ($Perm.isReadVar $k@2718 $Perm.Write))
+(declare-const $t@2719 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2718 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2718 $Perm.No)))
+(assert (not (= $t@2719 $Ref.null)))
+(declare-const $t@2720 Int)
+(declare-const $t@2721 $Ref)
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2721 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2721 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 397] $t@2721 != Null
+(assert (not (= $t@2721 $Ref.null)))
+(declare-const $t@2722 $Snap)
+(declare-const $k@2723 $Perm)
+(assert ($Perm.isValidVar $k@2723))
+(assert ($Perm.isReadVar $k@2723 $Perm.Write))
+(declare-const $t@2724 $Ref)
+(declare-const $k@2725 $Perm)
+(assert ($Perm.isValidVar $k@2725))
+(assert ($Perm.isReadVar $k@2725 $Perm.Write))
+(declare-const $t@2726 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 397] $t@2721 == Null
+(assert (= $t@2721 $Ref.null))
+(declare-const $k@2727 $Perm)
+(assert ($Perm.isValidVar $k@2727))
+(assert ($Perm.isReadVar $k@2727 $Perm.Write))
+(declare-const $t@2728 $Ref)
+(declare-const $k@2729 $Perm)
+(assert ($Perm.isValidVar $k@2729))
+(assert ($Perm.isReadVar $k@2729 $Perm.Write))
+(declare-const $t@2730 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; BlockingQueue__put(diz.LBQThread3a__queue, 1)
+; [eval] diz != null
+(declare-const $k@2731 $Perm)
+(assert ($Perm.isValidVar $k@2731))
+(assert ($Perm.isReadVar $k@2731 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2731 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2731 $k@2648))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2732 $Perm)
+(assert ($Perm.isValidVar $k@2732))
+(assert ($Perm.isReadVar $k@2732 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2732 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2732 $k@2650))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2653 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 398] $t@2653 != Null
+(push) ; 5
+; [else-branch 398] $t@2653 == Null
+(declare-const $k@2733 $Perm)
+(assert ($Perm.isValidVar $k@2733))
+(assert ($Perm.isReadVar $k@2733 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2733 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2710 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2710 $Perm.No)))
+(assert (< $k@2733 $k@2710))
+(declare-const $k@2734 $Perm)
+(assert ($Perm.isValidVar $k@2734))
+(assert ($Perm.isReadVar $k@2734 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2734 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2712 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2712 $Perm.No)))
+(assert (< $k@2734 $k@2712))
+(declare-const $t@2735 $Snap)
+(declare-const $t@2736 $Snap)
+(declare-const $t@2737 $Ref)
+(assert (= $t@2735 ($Snap.combine $t@2736 ($SortWrappers.$RefTo$Snap $t@2737))))
+(declare-const $t@2738 $Snap)
+(declare-const $t@2739 $Ref)
+(assert (= $t@2736 ($Snap.combine $t@2738 ($SortWrappers.$RefTo$Snap $t@2739))))
+(declare-const $t@2740 $Snap)
+(declare-const $t@2741 $Snap)
+(assert (= $t@2738 ($Snap.combine $t@2740 $t@2741)))
+(declare-const $t@2742 $Snap)
+(declare-const $t@2743 $Ref)
+(assert (= $t@2740 ($Snap.combine $t@2742 ($SortWrappers.$RefTo$Snap $t@2743))))
+(declare-const $t@2744 $Snap)
+(declare-const $t@2745 Int)
+(assert (= $t@2742 ($Snap.combine $t@2744 ($SortWrappers.IntTo$Snap $t@2745))))
+(declare-const $t@2746 Int)
+(declare-const $t@2747 $Ref)
+(assert (=
+  $t@2744
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2746)
+    ($SortWrappers.$RefTo$Snap $t@2747))))
+(declare-const $t@2748 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2746)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2748) $Snap.unit)))
+(declare-const $k@2749 $Perm)
+(assert ($Perm.isValidVar $k@2749))
+(assert ($Perm.isReadVar $k@2749 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2648 $k@2731)) (= $t@2748 $t@2649)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2648 $k@2731) $k@2749) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2648 $k@2731) $k@2749) $Perm.No)))
+(assert (> $t@2748 0))
+(declare-const $k@2750 $Perm)
+(assert ($Perm.isValidVar $k@2750))
+(assert ($Perm.isReadVar $k@2750 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2650 $k@2732)) (= $t@2747 $t@2651)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2650 $k@2732) $k@2750) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2650 $k@2732) $k@2750) $Perm.No)))
+(assert (not (= $t@2747 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2743 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2743 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 399] $t@2743 != Null
+(assert (not (= $t@2743 $Ref.null)))
+(declare-const $k@2751 $Perm)
+(assert ($Perm.isValidVar $k@2751))
+(assert ($Perm.isReadVar $k@2751 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2710 $k@2733)) (= $t@2739 $t@2711)))
+(declare-const $k@2752 $Perm)
+(assert ($Perm.isValidVar $k@2752))
+(assert ($Perm.isReadVar $k@2752 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2712 $k@2734)) (= $t@2737 $t@2713)))
+(declare-const $k@2753 $Perm)
+(assert ($Perm.isValidVar $k@2753))
+(assert ($Perm.isReadVar $k@2753 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2753 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2753 $k@2646))
+(declare-const $k@2754 $Perm)
+(assert ($Perm.isValidVar $k@2754))
+(assert ($Perm.isReadVar $k@2754 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2754 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2754 (+ (- $k@2648 $k@2731) $k@2749)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2755 $Perm)
+(assert ($Perm.isValidVar $k@2755))
+(assert ($Perm.isReadVar $k@2755 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2755 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2755 (+ (- $k@2650 $k@2732) $k@2750)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2743 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 400] $t@2743 != Null
+(declare-const $k@2756 $Perm)
+(assert ($Perm.isValidVar $k@2756))
+(assert ($Perm.isReadVar $k@2756 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2756 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2710 $k@2733) $k@2751) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2710 $k@2733) $k@2751) $Perm.No)))
+(assert (< $k@2756 (+ (- $k@2710 $k@2733) $k@2751)))
+(declare-const $k@2757 $Perm)
+(assert ($Perm.isValidVar $k@2757))
+(assert ($Perm.isReadVar $k@2757 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2757 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2712 $k@2734) $k@2752) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2712 $k@2734) $k@2752) $Perm.No)))
+(assert (< $k@2757 (+ (- $k@2712 $k@2734) $k@2752)))
+(pop) ; 7
+; [dead else-branch 400] $t@2743 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 399] $t@2743 == Null
+(assert (= $t@2743 $Ref.null))
+(declare-const $k@2758 $Perm)
+(assert ($Perm.isValidVar $k@2758))
+(assert ($Perm.isReadVar $k@2758 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2710 $k@2733)) (= $t@2739 $t@2711)))
+(declare-const $k@2759 $Perm)
+(assert ($Perm.isValidVar $k@2759))
+(assert ($Perm.isReadVar $k@2759 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2712 $k@2734)) (= $t@2737 $t@2713)))
+(declare-const $k@2760 $Perm)
+(assert ($Perm.isValidVar $k@2760))
+(assert ($Perm.isReadVar $k@2760 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2760 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2760 $k@2646))
+(declare-const $k@2761 $Perm)
+(assert ($Perm.isValidVar $k@2761))
+(assert ($Perm.isReadVar $k@2761 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2761 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2761 (+ (- $k@2648 $k@2731) $k@2749)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__capacity > 0
+(declare-const $k@2762 $Perm)
+(assert ($Perm.isValidVar $k@2762))
+(assert ($Perm.isReadVar $k@2762 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2762 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2762 (+ (- $k@2650 $k@2732) $k@2750)))
+; [eval] diz.LBQThread3a__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2743 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 401] $t@2743 != Null
+(push) ; 7
+; [else-branch 401] $t@2743 == Null
+(declare-const $k@2763 $Perm)
+(assert ($Perm.isValidVar $k@2763))
+(assert ($Perm.isReadVar $k@2763 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2763 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2710 $k@2733) $k@2758) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2710 $k@2733) $k@2758) $Perm.No)))
+(assert (< $k@2763 (+ (- $k@2710 $k@2733) $k@2758)))
+(declare-const $k@2764 $Perm)
+(assert ($Perm.isValidVar $k@2764))
+(assert ($Perm.isReadVar $k@2764 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2764 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2712 $k@2734) $k@2759) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2712 $k@2734) $k@2759) $Perm.No)))
+(assert (< $k@2764 (+ (- $k@2712 $k@2734) $k@2759)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread3b__LBQThread1a ----------
+(declare-const queue@2765 $Ref)
+(declare-const sys__result@2766 $Ref)
+(declare-const diz@2767 $Ref)
+(declare-const __flatten_70@2768 $Ref)
+(declare-const __flatten_130@2769 $Ref)
+(push) ; 2
+(assert (not (= queue@2765 $Ref.null)))
+(declare-const $k@2770 $Perm)
+(assert ($Perm.isValidVar $k@2770))
+(assert ($Perm.isReadVar $k@2770 $Perm.Write))
+(declare-const $t@2771 Int)
+; [eval] queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2770 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2770 $Perm.No)))
+(assert (> $t@2771 0))
+(declare-const $k@2772 $Perm)
+(assert ($Perm.isValidVar $k@2772))
+(assert ($Perm.isReadVar $k@2772 $Perm.Write))
+(declare-const $t@2773 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2772 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2772 $Perm.No)))
+(assert (not (= $t@2773 $Ref.null)))
+(declare-const $t@2774 Int)
+(declare-const $t@2775 $Ref)
+; [eval] queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2775 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2775 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 402] $t@2775 != Null
+(assert (not (= $t@2775 $Ref.null)))
+(declare-const $t@2776 $Snap)
+(declare-const $k@2777 $Perm)
+(assert ($Perm.isValidVar $k@2777))
+(assert ($Perm.isReadVar $k@2777 $Perm.Write))
+(declare-const $t@2778 $Ref)
+(declare-const $k@2779 $Perm)
+(assert ($Perm.isValidVar $k@2779))
+(assert ($Perm.isReadVar $k@2779 $Perm.Write))
+(declare-const $t@2780 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2766 $Ref.null)))
+(declare-const $k@2781 $Perm)
+(assert ($Perm.isValidVar $k@2781))
+(assert ($Perm.isReadVar $k@2781 $Perm.Write))
+(declare-const $t@2782 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2781 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2781 $Perm.No)))
+(assert (not (= $t@2782 $Ref.null)))
+(declare-const $k@2783 $Perm)
+(assert ($Perm.isValidVar $k@2783))
+(assert ($Perm.isReadVar $k@2783 $Perm.Write))
+(declare-const $t@2784 Int)
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2783 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2783 $Perm.No)))
+(assert (> $t@2784 0))
+(declare-const $k@2785 $Perm)
+(assert ($Perm.isValidVar $k@2785))
+(assert ($Perm.isReadVar $k@2785 $Perm.Write))
+(declare-const $t@2786 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2785 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2785 $Perm.No)))
+(assert (not (= $t@2786 $Ref.null)))
+(declare-const $t@2787 Int)
+(declare-const $t@2788 $Ref)
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2788 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2788 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 403] $t@2788 != Null
+(assert (not (= $t@2788 $Ref.null)))
+(declare-const $t@2789 $Snap)
+(declare-const $k@2790 $Perm)
+(assert ($Perm.isValidVar $k@2790))
+(assert ($Perm.isReadVar $k@2790 $Perm.Write))
+(declare-const $t@2791 $Ref)
+(declare-const $k@2792 $Perm)
+(assert ($Perm.isValidVar $k@2792))
+(assert ($Perm.isReadVar $k@2792 $Perm.Write))
+(declare-const $t@2793 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 403] $t@2788 == Null
+(assert (= $t@2788 $Ref.null))
+(declare-const $k@2794 $Perm)
+(assert ($Perm.isValidVar $k@2794))
+(assert ($Perm.isReadVar $k@2794 $Perm.Write))
+(declare-const $t@2795 $Ref)
+(declare-const $k@2796 $Perm)
+(assert ($Perm.isValidVar $k@2796))
+(assert ($Perm.isReadVar $k@2796 $Perm.Write))
+(declare-const $t@2797 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread3b__queue)
+(declare-const diz@2798 $Ref)
+(assert (not (= diz@2798 $Ref.null)))
+(declare-const LBQThread3b__queue@2799 $Ref)
+(assert (and
+  (not (= queue@2765 diz@2798))
+  (not (= sys__result@2766 diz@2798))
+  (not (= __flatten_70@2768 diz@2798))
+  (not (= __flatten_130@2769 diz@2798))
+  (not (= $t@2773 diz@2798))
+  (not (= $t@2775 diz@2798))
+  (not (= LBQThread3b__queue@2799 diz@2798))
+  (not (= $t@2778 diz@2798))
+  (not (= $t@2780 diz@2798))))
+; [exec]
+; __flatten_70 := queue
+; [exec]
+; __flatten_130 := __flatten_70
+; [exec]
+; diz.LBQThread3b__queue := __flatten_130
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread3b__queue, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread3b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread3b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread3b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread3b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread3b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2800 $Perm)
+(assert ($Perm.isValidVar $k@2800))
+(assert ($Perm.isReadVar $k@2800 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2800 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2800 $Perm.Write))
+(declare-const $k@2801 $Perm)
+(assert ($Perm.isValidVar $k@2801))
+(assert ($Perm.isReadVar $k@2801 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2801 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2801 $k@2770))
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2802 $Perm)
+(assert ($Perm.isValidVar $k@2802))
+(assert ($Perm.isReadVar $k@2802 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2802 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2802 $k@2772))
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2775 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 404] $t@2775 != Null
+(declare-const $k@2803 $Perm)
+(assert ($Perm.isValidVar $k@2803))
+(assert ($Perm.isReadVar $k@2803 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2803 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2777 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2777 $Perm.No)))
+(assert (< $k@2803 $k@2777))
+(declare-const $k@2804 $Perm)
+(assert ($Perm.isValidVar $k@2804))
+(assert ($Perm.isReadVar $k@2804 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2804 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2779 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2779 $Perm.No)))
+(assert (< $k@2804 $k@2779))
+; [exec]
+; inhale false
+(pop) ; 5
+; [dead else-branch 404] $t@2775 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 402] $t@2775 == Null
+(assert (= $t@2775 $Ref.null))
+(declare-const $k@2805 $Perm)
+(assert ($Perm.isValidVar $k@2805))
+(assert ($Perm.isReadVar $k@2805 $Perm.Write))
+(declare-const $t@2806 $Ref)
+(declare-const $k@2807 $Perm)
+(assert ($Perm.isValidVar $k@2807))
+(assert ($Perm.isReadVar $k@2807 $Perm.Write))
+(declare-const $t@2808 $Ref)
+(push) ; 4
+; [eval] sys__result != null
+(assert (not (= sys__result@2766 $Ref.null)))
+(declare-const $k@2809 $Perm)
+(assert ($Perm.isValidVar $k@2809))
+(assert ($Perm.isReadVar $k@2809 $Perm.Write))
+(declare-const $t@2810 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2809 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2809 $Perm.No)))
+(assert (not (= $t@2810 $Ref.null)))
+(declare-const $k@2811 $Perm)
+(assert ($Perm.isValidVar $k@2811))
+(assert ($Perm.isReadVar $k@2811 $Perm.Write))
+(declare-const $t@2812 Int)
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2811 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2811 $Perm.No)))
+(assert (> $t@2812 0))
+(declare-const $k@2813 $Perm)
+(assert ($Perm.isValidVar $k@2813))
+(assert ($Perm.isReadVar $k@2813 $Perm.Write))
+(declare-const $t@2814 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2813 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2813 $Perm.No)))
+(assert (not (= $t@2814 $Ref.null)))
+(declare-const $t@2815 Int)
+(declare-const $t@2816 $Ref)
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2816 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2816 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 405] $t@2816 != Null
+(assert (not (= $t@2816 $Ref.null)))
+(declare-const $t@2817 $Snap)
+(declare-const $k@2818 $Perm)
+(assert ($Perm.isValidVar $k@2818))
+(assert ($Perm.isReadVar $k@2818 $Perm.Write))
+(declare-const $t@2819 $Ref)
+(declare-const $k@2820 $Perm)
+(assert ($Perm.isValidVar $k@2820))
+(assert ($Perm.isReadVar $k@2820 $Perm.Write))
+(declare-const $t@2821 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 405] $t@2816 == Null
+(assert (= $t@2816 $Ref.null))
+(declare-const $k@2822 $Perm)
+(assert ($Perm.isValidVar $k@2822))
+(assert ($Perm.isReadVar $k@2822 $Perm.Write))
+(declare-const $t@2823 $Ref)
+(declare-const $k@2824 $Perm)
+(assert ($Perm.isValidVar $k@2824))
+(assert ($Perm.isReadVar $k@2824 $Perm.Write))
+(declare-const $t@2825 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; diz := new(LBQThread3b__queue)
+(declare-const diz@2826 $Ref)
+(assert (not (= diz@2826 $Ref.null)))
+(declare-const LBQThread3b__queue@2827 $Ref)
+(assert (and
+  (not (= queue@2765 diz@2826))
+  (not (= sys__result@2766 diz@2826))
+  (not (= __flatten_70@2768 diz@2826))
+  (not (= __flatten_130@2769 diz@2826))
+  (not (= $t@2773 diz@2826))
+  (not (= LBQThread3b__queue@2827 diz@2826))
+  (not (= $t@2775 diz@2826))
+  (not (= $t@2806 diz@2826))
+  (not (= $t@2808 diz@2826))))
+; [exec]
+; __flatten_70 := queue
+; [exec]
+; __flatten_130 := __flatten_70
+; [exec]
+; diz.LBQThread3b__queue := __flatten_130
+; [exec]
+; sys__result := diz
+; [exec]
+; assert (sys__result != null) && acc(sys__result.LBQThread3b__queue, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__capacity, wildcard) && (sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0) && acc(sys__result.LBQThread3b__queue.BlockingQueue__count, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__count.AtomicInteger__ghostVal, write) && acc(sys__result.LBQThread3b__queue.BlockingQueue__first, write) && ((sys__result.LBQThread3b__queue.BlockingQueue__first != null) ==> acc(Node__state(sys__result.LBQThread3b__queue.BlockingQueue__first), write)) && acc(sys__result.LBQThread3b__queue.BlockingQueue__putLock, wildcard) && acc(sys__result.LBQThread3b__queue.BlockingQueue__takeLock, wildcard)
+; [eval] sys__result != null
+(declare-const $k@2828 $Perm)
+(assert ($Perm.isValidVar $k@2828))
+(assert ($Perm.isReadVar $k@2828 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2828 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2828 $Perm.Write))
+(declare-const $k@2829 $Perm)
+(assert ($Perm.isValidVar $k@2829))
+(assert ($Perm.isReadVar $k@2829 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2829 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2829 $k@2770))
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2830 $Perm)
+(assert ($Perm.isValidVar $k@2830))
+(assert ($Perm.isReadVar $k@2830 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2830 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2830 $k@2772))
+; [eval] sys__result.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2775 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 406] $t@2775 != Null
+(push) ; 5
+; [else-branch 406] $t@2775 == Null
+(declare-const $k@2831 $Perm)
+(assert ($Perm.isValidVar $k@2831))
+(assert ($Perm.isReadVar $k@2831 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2831 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2805 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2805 $Perm.No)))
+(assert (< $k@2831 $k@2805))
+(declare-const $k@2832 $Perm)
+(assert ($Perm.isValidVar $k@2832))
+(assert ($Perm.isReadVar $k@2832 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2832 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2807 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2807 $Perm.No)))
+(assert (< $k@2832 $k@2807))
+; [exec]
+; inhale false
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- LBQThread3b__run ----------
+(declare-const diz@2833 $Ref)
+(declare-const i@2834 Int)
+(declare-const __flatten_71@2835 Int)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@2833 $Ref.null)))
+(declare-const $k@2836 $Perm)
+(assert ($Perm.isValidVar $k@2836))
+(assert ($Perm.isReadVar $k@2836 $Perm.Write))
+(declare-const $t@2837 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2836 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2836 $Perm.No)))
+(assert (not (= $t@2837 $Ref.null)))
+(declare-const $k@2838 $Perm)
+(assert ($Perm.isValidVar $k@2838))
+(assert ($Perm.isReadVar $k@2838 $Perm.Write))
+(declare-const $t@2839 Int)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(push) ; 3
+(assert (not (not (= $k@2838 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2838 $Perm.No)))
+(assert (> $t@2839 0))
+(declare-const $k@2840 $Perm)
+(assert ($Perm.isValidVar $k@2840))
+(assert ($Perm.isReadVar $k@2840 $Perm.Write))
+(declare-const $t@2841 $Ref)
+(push) ; 3
+(assert (not (not (= $k@2840 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 3
+(assert (not (= $k@2840 $Perm.No)))
+(assert (not (= $t@2841 $Ref.null)))
+(declare-const $t@2842 Int)
+(declare-const $t@2843 $Ref)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 3
+(assert (not (= $t@2843 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+(assert (not (not (= $t@2843 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 3
+(push) ; 3
+; [then-branch 407] $t@2843 != Null
+(assert (not (= $t@2843 $Ref.null)))
+(declare-const $t@2844 $Snap)
+(declare-const $k@2845 $Perm)
+(assert ($Perm.isValidVar $k@2845))
+(assert ($Perm.isReadVar $k@2845 $Perm.Write))
+(declare-const $t@2846 $Ref)
+(declare-const $k@2847 $Perm)
+(assert ($Perm.isValidVar $k@2847))
+(assert ($Perm.isReadVar $k@2847 $Perm.Write))
+(declare-const $t@2848 $Ref)
+(push) ; 4
+(declare-const $k@2849 $Perm)
+(assert ($Perm.isValidVar $k@2849))
+(assert ($Perm.isReadVar $k@2849 $Perm.Write))
+(declare-const $t@2850 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2849 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2849 $Perm.No)))
+(assert (not (= $t@2850 $Ref.null)))
+(declare-const $k@2851 $Perm)
+(assert ($Perm.isValidVar $k@2851))
+(assert ($Perm.isReadVar $k@2851 $Perm.Write))
+(declare-const $t@2852 Int)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2851 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2851 $Perm.No)))
+(assert (> $t@2852 0))
+(declare-const $k@2853 $Perm)
+(assert ($Perm.isValidVar $k@2853))
+(assert ($Perm.isReadVar $k@2853 $Perm.Write))
+(declare-const $t@2854 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2853 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2853 $Perm.No)))
+(assert (not (= $t@2854 $Ref.null)))
+(declare-const $t@2855 Int)
+(declare-const $t@2856 $Ref)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2856 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2856 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 408] $t@2856 != Null
+(assert (not (= $t@2856 $Ref.null)))
+(declare-const $t@2857 $Snap)
+(declare-const $k@2858 $Perm)
+(assert ($Perm.isValidVar $k@2858))
+(assert ($Perm.isReadVar $k@2858 $Perm.Write))
+(declare-const $t@2859 $Ref)
+(declare-const $k@2860 $Perm)
+(assert ($Perm.isValidVar $k@2860))
+(assert ($Perm.isReadVar $k@2860 $Perm.Write))
+(declare-const $t@2861 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 408] $t@2856 == Null
+(assert (= $t@2856 $Ref.null))
+(declare-const $k@2862 $Perm)
+(assert ($Perm.isValidVar $k@2862))
+(assert ($Perm.isReadVar $k@2862 $Perm.Write))
+(declare-const $t@2863 $Ref)
+(declare-const $k@2864 $Perm)
+(assert ($Perm.isValidVar $k@2864))
+(assert ($Perm.isReadVar $k@2864 $Perm.Write))
+(declare-const $t@2865 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_71 := BlockingQueue__take(diz.LBQThread3b__queue)
+; [eval] diz != null
+(declare-const $k@2866 $Perm)
+(assert ($Perm.isValidVar $k@2866))
+(assert ($Perm.isReadVar $k@2866 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2866 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2866 $k@2838))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2867 $Perm)
+(assert ($Perm.isValidVar $k@2867))
+(assert ($Perm.isReadVar $k@2867 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2867 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2867 $k@2840))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2843 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 409] $t@2843 != Null
+(declare-const $k@2868 $Perm)
+(assert ($Perm.isValidVar $k@2868))
+(assert ($Perm.isReadVar $k@2868 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2868 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2845 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2845 $Perm.No)))
+(assert (< $k@2868 $k@2845))
+(declare-const $k@2869 $Perm)
+(assert ($Perm.isValidVar $k@2869))
+(assert ($Perm.isReadVar $k@2869 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2869 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2847 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2847 $Perm.No)))
+(assert (< $k@2869 $k@2847))
+(declare-const sys__result@2870 Int)
+(declare-const $t@2871 $Snap)
+(declare-const $t@2872 $Snap)
+(declare-const $t@2873 $Ref)
+(assert (= $t@2871 ($Snap.combine $t@2872 ($SortWrappers.$RefTo$Snap $t@2873))))
+(declare-const $t@2874 $Snap)
+(declare-const $t@2875 $Ref)
+(assert (= $t@2872 ($Snap.combine $t@2874 ($SortWrappers.$RefTo$Snap $t@2875))))
+(declare-const $t@2876 $Snap)
+(declare-const $t@2877 $Snap)
+(assert (= $t@2874 ($Snap.combine $t@2876 $t@2877)))
+(declare-const $t@2878 $Snap)
+(declare-const $t@2879 $Ref)
+(assert (= $t@2876 ($Snap.combine $t@2878 ($SortWrappers.$RefTo$Snap $t@2879))))
+(declare-const $t@2880 $Snap)
+(declare-const $t@2881 Int)
+(assert (= $t@2878 ($Snap.combine $t@2880 ($SortWrappers.IntTo$Snap $t@2881))))
+(declare-const $t@2882 Int)
+(declare-const $t@2883 $Ref)
+(assert (=
+  $t@2880
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2882)
+    ($SortWrappers.$RefTo$Snap $t@2883))))
+(declare-const $t@2884 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2882)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2884) $Snap.unit)))
+(declare-const $k@2885 $Perm)
+(assert ($Perm.isValidVar $k@2885))
+(assert ($Perm.isReadVar $k@2885 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2838 $k@2866)) (= $t@2884 $t@2839)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2838 $k@2866) $k@2885) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2838 $k@2866) $k@2885) $Perm.No)))
+(assert (> $t@2884 0))
+(declare-const $k@2886 $Perm)
+(assert ($Perm.isValidVar $k@2886))
+(assert ($Perm.isReadVar $k@2886 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2840 $k@2867)) (= $t@2883 $t@2841)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2840 $k@2867) $k@2886) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2840 $k@2867) $k@2886) $Perm.No)))
+(assert (not (= $t@2883 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2879 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2879 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 410] $t@2879 != Null
+(assert (not (= $t@2879 $Ref.null)))
+(declare-const $k@2887 $Perm)
+(assert ($Perm.isValidVar $k@2887))
+(assert ($Perm.isReadVar $k@2887 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2845 $k@2868)) (= $t@2875 $t@2846)))
+(declare-const $k@2888 $Perm)
+(assert ($Perm.isValidVar $k@2888))
+(assert ($Perm.isReadVar $k@2888 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2847 $k@2869)) (= $t@2873 $t@2848)))
+; [exec]
+; i := __flatten_71
+(declare-const $k@2889 $Perm)
+(assert ($Perm.isValidVar $k@2889))
+(assert ($Perm.isReadVar $k@2889 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2889 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2889 $k@2836))
+(declare-const $k@2890 $Perm)
+(assert ($Perm.isValidVar $k@2890))
+(assert ($Perm.isReadVar $k@2890 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2890 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2890 (+ (- $k@2838 $k@2866) $k@2885)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2891 $Perm)
+(assert ($Perm.isValidVar $k@2891))
+(assert ($Perm.isReadVar $k@2891 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2891 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2891 (+ (- $k@2840 $k@2867) $k@2886)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2879 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 411] $t@2879 != Null
+(declare-const $k@2892 $Perm)
+(assert ($Perm.isValidVar $k@2892))
+(assert ($Perm.isReadVar $k@2892 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2892 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2845 $k@2868) $k@2887) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2845 $k@2868) $k@2887) $Perm.No)))
+(assert (< $k@2892 (+ (- $k@2845 $k@2868) $k@2887)))
+(declare-const $k@2893 $Perm)
+(assert ($Perm.isValidVar $k@2893))
+(assert ($Perm.isReadVar $k@2893 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2893 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2847 $k@2869) $k@2888) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2847 $k@2869) $k@2888) $Perm.No)))
+(assert (< $k@2893 (+ (- $k@2847 $k@2869) $k@2888)))
+(pop) ; 7
+; [dead else-branch 411] $t@2879 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 410] $t@2879 == Null
+(assert (= $t@2879 $Ref.null))
+(declare-const $k@2894 $Perm)
+(assert ($Perm.isValidVar $k@2894))
+(assert ($Perm.isReadVar $k@2894 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2845 $k@2868)) (= $t@2875 $t@2846)))
+(declare-const $k@2895 $Perm)
+(assert ($Perm.isValidVar $k@2895))
+(assert ($Perm.isReadVar $k@2895 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2847 $k@2869)) (= $t@2873 $t@2848)))
+; [exec]
+; i := __flatten_71
+(declare-const $k@2896 $Perm)
+(assert ($Perm.isValidVar $k@2896))
+(assert ($Perm.isReadVar $k@2896 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2896 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2896 $k@2836))
+(declare-const $k@2897 $Perm)
+(assert ($Perm.isValidVar $k@2897))
+(assert ($Perm.isReadVar $k@2897 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2897 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2897 (+ (- $k@2838 $k@2866) $k@2885)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2898 $Perm)
+(assert ($Perm.isValidVar $k@2898))
+(assert ($Perm.isReadVar $k@2898 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2898 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2898 (+ (- $k@2840 $k@2867) $k@2886)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2879 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 412] $t@2879 != Null
+(push) ; 7
+; [else-branch 412] $t@2879 == Null
+(declare-const $k@2899 $Perm)
+(assert ($Perm.isValidVar $k@2899))
+(assert ($Perm.isReadVar $k@2899 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2899 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2845 $k@2868) $k@2894) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2845 $k@2868) $k@2894) $Perm.No)))
+(assert (< $k@2899 (+ (- $k@2845 $k@2868) $k@2894)))
+(declare-const $k@2900 $Perm)
+(assert ($Perm.isValidVar $k@2900))
+(assert ($Perm.isReadVar $k@2900 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2900 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2847 $k@2869) $k@2895) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2847 $k@2869) $k@2895) $Perm.No)))
+(assert (< $k@2900 (+ (- $k@2847 $k@2869) $k@2895)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+; [dead else-branch 409] $t@2843 == Null
+(pop) ; 4
+(pop) ; 3
+(push) ; 3
+; [else-branch 407] $t@2843 == Null
+(assert (= $t@2843 $Ref.null))
+(declare-const $k@2901 $Perm)
+(assert ($Perm.isValidVar $k@2901))
+(assert ($Perm.isReadVar $k@2901 $Perm.Write))
+(declare-const $t@2902 $Ref)
+(declare-const $k@2903 $Perm)
+(assert ($Perm.isValidVar $k@2903))
+(assert ($Perm.isReadVar $k@2903 $Perm.Write))
+(declare-const $t@2904 $Ref)
+(push) ; 4
+(declare-const $k@2905 $Perm)
+(assert ($Perm.isValidVar $k@2905))
+(assert ($Perm.isReadVar $k@2905 $Perm.Write))
+(declare-const $t@2906 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2905 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2905 $Perm.No)))
+(assert (not (= $t@2906 $Ref.null)))
+(declare-const $k@2907 $Perm)
+(assert ($Perm.isValidVar $k@2907))
+(assert ($Perm.isReadVar $k@2907 $Perm.Write))
+(declare-const $t@2908 Int)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(push) ; 5
+(assert (not (not (= $k@2907 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2907 $Perm.No)))
+(assert (> $t@2908 0))
+(declare-const $k@2909 $Perm)
+(assert ($Perm.isValidVar $k@2909))
+(assert ($Perm.isReadVar $k@2909 $Perm.Write))
+(declare-const $t@2910 $Ref)
+(push) ; 5
+(assert (not (not (= $k@2909 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (not (= $k@2909 $Perm.No)))
+(assert (not (= $t@2910 $Ref.null)))
+(declare-const $t@2911 Int)
+(declare-const $t@2912 $Ref)
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 5
+(assert (not (= $t@2912 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+(assert (not (not (= $t@2912 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+(push) ; 5
+; [then-branch 413] $t@2912 != Null
+(assert (not (= $t@2912 $Ref.null)))
+(declare-const $t@2913 $Snap)
+(declare-const $k@2914 $Perm)
+(assert ($Perm.isValidVar $k@2914))
+(assert ($Perm.isReadVar $k@2914 $Perm.Write))
+(declare-const $t@2915 $Ref)
+(declare-const $k@2916 $Perm)
+(assert ($Perm.isValidVar $k@2916))
+(assert ($Perm.isReadVar $k@2916 $Perm.Write))
+(declare-const $t@2917 $Ref)
+(pop) ; 5
+(push) ; 5
+; [else-branch 413] $t@2912 == Null
+(assert (= $t@2912 $Ref.null))
+(declare-const $k@2918 $Perm)
+(assert ($Perm.isValidVar $k@2918))
+(assert ($Perm.isReadVar $k@2918 $Perm.Write))
+(declare-const $t@2919 $Ref)
+(declare-const $k@2920 $Perm)
+(assert ($Perm.isValidVar $k@2920))
+(assert ($Perm.isReadVar $k@2920 $Perm.Write))
+(declare-const $t@2921 $Ref)
+(pop) ; 5
+(pop) ; 4
+(push) ; 4
+; [exec]
+; __flatten_71 := BlockingQueue__take(diz.LBQThread3b__queue)
+; [eval] diz != null
+(declare-const $k@2922 $Perm)
+(assert ($Perm.isValidVar $k@2922))
+(assert ($Perm.isReadVar $k@2922 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2922 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2922 $k@2838))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2923 $Perm)
+(assert ($Perm.isValidVar $k@2923))
+(assert ($Perm.isReadVar $k@2923 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2923 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2923 $k@2840))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2843 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 414] $t@2843 != Null
+(push) ; 5
+; [else-branch 414] $t@2843 == Null
+(declare-const $k@2924 $Perm)
+(assert ($Perm.isValidVar $k@2924))
+(assert ($Perm.isReadVar $k@2924 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2924 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2901 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2901 $Perm.No)))
+(assert (< $k@2924 $k@2901))
+(declare-const $k@2925 $Perm)
+(assert ($Perm.isValidVar $k@2925))
+(assert ($Perm.isReadVar $k@2925 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2925 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2903 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2903 $Perm.No)))
+(assert (< $k@2925 $k@2903))
+(declare-const sys__result@2926 Int)
+(declare-const $t@2927 $Snap)
+(declare-const $t@2928 $Snap)
+(declare-const $t@2929 $Ref)
+(assert (= $t@2927 ($Snap.combine $t@2928 ($SortWrappers.$RefTo$Snap $t@2929))))
+(declare-const $t@2930 $Snap)
+(declare-const $t@2931 $Ref)
+(assert (= $t@2928 ($Snap.combine $t@2930 ($SortWrappers.$RefTo$Snap $t@2931))))
+(declare-const $t@2932 $Snap)
+(declare-const $t@2933 $Snap)
+(assert (= $t@2930 ($Snap.combine $t@2932 $t@2933)))
+(declare-const $t@2934 $Snap)
+(declare-const $t@2935 $Ref)
+(assert (= $t@2932 ($Snap.combine $t@2934 ($SortWrappers.$RefTo$Snap $t@2935))))
+(declare-const $t@2936 $Snap)
+(declare-const $t@2937 Int)
+(assert (= $t@2934 ($Snap.combine $t@2936 ($SortWrappers.IntTo$Snap $t@2937))))
+(declare-const $t@2938 Int)
+(declare-const $t@2939 $Ref)
+(assert (=
+  $t@2936
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2938)
+    ($SortWrappers.$RefTo$Snap $t@2939))))
+(declare-const $t@2940 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2938)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2940) $Snap.unit)))
+(declare-const $k@2941 $Perm)
+(assert ($Perm.isValidVar $k@2941))
+(assert ($Perm.isReadVar $k@2941 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2838 $k@2922)) (= $t@2940 $t@2839)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2838 $k@2922) $k@2941) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2838 $k@2922) $k@2941) $Perm.No)))
+(assert (> $t@2940 0))
+(declare-const $k@2942 $Perm)
+(assert ($Perm.isValidVar $k@2942))
+(assert ($Perm.isReadVar $k@2942 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2840 $k@2923)) (= $t@2939 $t@2841)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2840 $k@2923) $k@2942) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2840 $k@2923) $k@2942) $Perm.No)))
+(assert (not (= $t@2939 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@2935 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@2935 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 415] $t@2935 != Null
+(assert (not (= $t@2935 $Ref.null)))
+(declare-const $k@2943 $Perm)
+(assert ($Perm.isValidVar $k@2943))
+(assert ($Perm.isReadVar $k@2943 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2901 $k@2924)) (= $t@2931 $t@2902)))
+(declare-const $k@2944 $Perm)
+(assert ($Perm.isValidVar $k@2944))
+(assert ($Perm.isReadVar $k@2944 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2903 $k@2925)) (= $t@2929 $t@2904)))
+; [exec]
+; i := __flatten_71
+(declare-const $k@2945 $Perm)
+(assert ($Perm.isValidVar $k@2945))
+(assert ($Perm.isReadVar $k@2945 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2945 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2945 $k@2836))
+(declare-const $k@2946 $Perm)
+(assert ($Perm.isValidVar $k@2946))
+(assert ($Perm.isReadVar $k@2946 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2946 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2946 (+ (- $k@2838 $k@2922) $k@2941)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2947 $Perm)
+(assert ($Perm.isValidVar $k@2947))
+(assert ($Perm.isReadVar $k@2947 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2947 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2947 (+ (- $k@2840 $k@2923) $k@2942)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (= $t@2935 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+; [then-branch 416] $t@2935 != Null
+(declare-const $k@2948 $Perm)
+(assert ($Perm.isValidVar $k@2948))
+(assert ($Perm.isReadVar $k@2948 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2948 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2901 $k@2924) $k@2943) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2901 $k@2924) $k@2943) $Perm.No)))
+(assert (< $k@2948 (+ (- $k@2901 $k@2924) $k@2943)))
+(declare-const $k@2949 $Perm)
+(assert ($Perm.isValidVar $k@2949))
+(assert ($Perm.isReadVar $k@2949 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2949 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2903 $k@2925) $k@2944) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2903 $k@2925) $k@2944) $Perm.No)))
+(assert (< $k@2949 (+ (- $k@2903 $k@2925) $k@2944)))
+(pop) ; 7
+; [dead else-branch 416] $t@2935 == Null
+(pop) ; 6
+(push) ; 6
+; [else-branch 415] $t@2935 == Null
+(assert (= $t@2935 $Ref.null))
+(declare-const $k@2950 $Perm)
+(assert ($Perm.isValidVar $k@2950))
+(assert ($Perm.isReadVar $k@2950 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2901 $k@2924)) (= $t@2931 $t@2902)))
+(declare-const $k@2951 $Perm)
+(assert ($Perm.isValidVar $k@2951))
+(assert ($Perm.isReadVar $k@2951 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2903 $k@2925)) (= $t@2929 $t@2904)))
+; [exec]
+; i := __flatten_71
+(declare-const $k@2952 $Perm)
+(assert ($Perm.isValidVar $k@2952))
+(assert ($Perm.isReadVar $k@2952 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2952 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2952 $k@2836))
+(declare-const $k@2953 $Perm)
+(assert ($Perm.isValidVar $k@2953))
+(assert ($Perm.isReadVar $k@2953 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2953 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2953 (+ (- $k@2838 $k@2922) $k@2941)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__capacity > 0
+(declare-const $k@2954 $Perm)
+(assert ($Perm.isValidVar $k@2954))
+(assert ($Perm.isReadVar $k@2954 $Perm.Write))
+(push) ; 7
+(assert (not (or (= $k@2954 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 7
+(assert (< $k@2954 (+ (- $k@2840 $k@2923) $k@2942)))
+; [eval] diz.LBQThread3b__queue.BlockingQueue__first != null
+(push) ; 7
+(assert (not (not (= $t@2935 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+; [dead then-branch 417] $t@2935 != Null
+(push) ; 7
+; [else-branch 417] $t@2935 == Null
+(declare-const $k@2955 $Perm)
+(assert ($Perm.isValidVar $k@2955))
+(assert ($Perm.isReadVar $k@2955 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2955 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2901 $k@2924) $k@2950) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2901 $k@2924) $k@2950) $Perm.No)))
+(assert (< $k@2955 (+ (- $k@2901 $k@2924) $k@2950)))
+(declare-const $k@2956 $Perm)
+(assert ($Perm.isValidVar $k@2956))
+(assert ($Perm.isReadVar $k@2956 $Perm.Write))
+(push) ; 8
+(assert (not (or (= $k@2956 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(push) ; 8
+(assert (not (not (= (+ (- $k@2903 $k@2925) $k@2951) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 8
+(assert (not (= (+ (- $k@2903 $k@2925) $k@2951) $Perm.No)))
+(assert (< $k@2956 (+ (- $k@2903 $k@2925) $k@2951)))
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- Test__testEmpty ----------
+(declare-const diz@2957 $Ref)
+(declare-const queue@2958 $Ref)
+(declare-const __flatten_72@2959 $Ref)
+(declare-const i@2960 $Ref)
+(declare-const __flatten_73@2961 $Ref)
+(declare-const j@2962 $Ref)
+(declare-const __flatten_74@2963 $Ref)
+(push) ; 2
+; [eval] diz != null
+(assert (not (= diz@2957 $Ref.null)))
+(push) ; 3
+(pop) ; 3
+(push) ; 3
+; [exec]
+; __flatten_72 := BlockingQueue__BlockingQueue(10)
+; [eval] capacity > 0
+(declare-const sys__result@2964 $Ref)
+(declare-const $t@2965 $Snap)
+(declare-const $t@2966 $Snap)
+(assert (= $t@2965 ($Snap.combine $t@2966 $Snap.unit)))
+(declare-const $t@2967 $Snap)
+(assert (= $t@2966 ($Snap.combine $t@2967 $Snap.unit)))
+(declare-const $t@2968 $Snap)
+(assert (= $t@2967 ($Snap.combine $t@2968 $Snap.unit)))
+(declare-const $t@2969 $Snap)
+(declare-const $t@2970 $Ref)
+(assert (= $t@2968 ($Snap.combine $t@2969 ($SortWrappers.$RefTo$Snap $t@2970))))
+(declare-const $t@2971 $Snap)
+(declare-const $t@2972 $Ref)
+(assert (= $t@2969 ($Snap.combine $t@2971 ($SortWrappers.$RefTo$Snap $t@2972))))
+(declare-const $t@2973 $Snap)
+(declare-const $t@2974 $Snap)
+(assert (= $t@2971 ($Snap.combine $t@2973 $t@2974)))
+(declare-const $t@2975 $Snap)
+(declare-const $t@2976 $Ref)
+(assert (= $t@2973 ($Snap.combine $t@2975 ($SortWrappers.$RefTo$Snap $t@2976))))
+(declare-const $t@2977 $Snap)
+(declare-const $t@2978 Int)
+(assert (= $t@2975 ($Snap.combine $t@2977 ($SortWrappers.IntTo$Snap $t@2978))))
+(declare-const $t@2979 Int)
+(declare-const $t@2980 $Ref)
+(assert (=
+  $t@2977
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@2979)
+    ($SortWrappers.$RefTo$Snap $t@2980))))
+(declare-const $t@2981 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2979)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@2981) $Snap.unit)))
+(declare-const $t@2982 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@2981)
+  ($Snap.combine $Snap.unit ($SortWrappers.IntTo$Snap $t@2982))))
+; [eval] sys__result != null
+(assert (not (= sys__result@2964 $Ref.null)))
+(declare-const $k@2983 $Perm)
+(assert ($Perm.isValidVar $k@2983))
+(assert ($Perm.isReadVar $k@2983 $Perm.Write))
+; [eval] sys__result.BlockingQueue__capacity > 0
+(push) ; 4
+(assert (not (not (= $k@2983 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 4
+(assert (not (= $k@2983 $Perm.No)))
+(assert (> $t@2982 0))
+(declare-const $k@2984 $Perm)
+(assert ($Perm.isValidVar $k@2984))
+(assert ($Perm.isReadVar $k@2984 $Perm.Write))
+(push) ; 4
+(assert (not (not (= $k@2984 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 4
+(assert (not (= $k@2984 $Perm.No)))
+(assert (not (= $t@2980 $Ref.null)))
+; [eval] sys__result.BlockingQueue__first != null
+(push) ; 4
+(assert (not (= $t@2976 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 4
+(push) ; 4
+(assert (not (not (= $t@2976 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 4
+(push) ; 4
+; [then-branch 418] $t@2976 != Null
+(assert (not (= $t@2976 $Ref.null)))
+(declare-const $k@2985 $Perm)
+(assert ($Perm.isValidVar $k@2985))
+(assert ($Perm.isReadVar $k@2985 $Perm.Write))
+(declare-const $k@2986 $Perm)
+(assert ($Perm.isValidVar $k@2986))
+(assert ($Perm.isReadVar $k@2986 $Perm.Write))
+; [eval] sys__result.BlockingQueue__capacity == capacity
+(assert (= $t@2982 10))
+; [eval] sys__result.BlockingQueue__first == null
+(assert (= $t@2976 $Ref.null))
+; [eval] sys__result.BlockingQueue__count.AtomicInteger__ghostVal == 0
+(assert (= $t@2978 0))
+; [exec]
+; queue := __flatten_72
+; [exec]
+; __flatten_73 := BlockingQueue__peek(queue)
+; [eval] diz != null
+(declare-const $k@2987 $Perm)
+(assert ($Perm.isValidVar $k@2987))
+(assert ($Perm.isReadVar $k@2987 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2987 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2987 $k@2983))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2988 $Perm)
+(assert ($Perm.isValidVar $k@2988))
+(assert ($Perm.isReadVar $k@2988 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2988 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2988 $k@2984))
+; [eval] diz.BlockingQueue__first != null
+; [dead then-branch 419] $t@2976 != Null
+; [dead else-branch 419] $t@2976 == Null
+(pop) ; 4
+(push) ; 4
+; [else-branch 418] $t@2976 == Null
+(assert (= $t@2976 $Ref.null))
+(declare-const $k@2989 $Perm)
+(assert ($Perm.isValidVar $k@2989))
+(assert ($Perm.isReadVar $k@2989 $Perm.Write))
+(declare-const $k@2990 $Perm)
+(assert ($Perm.isValidVar $k@2990))
+(assert ($Perm.isReadVar $k@2990 $Perm.Write))
+; [eval] sys__result.BlockingQueue__capacity == capacity
+(assert (= $t@2982 10))
+; [eval] sys__result.BlockingQueue__first == null
+; [eval] sys__result.BlockingQueue__count.AtomicInteger__ghostVal == 0
+(assert (= $t@2978 0))
+; [exec]
+; queue := __flatten_72
+; [exec]
+; __flatten_73 := BlockingQueue__peek(queue)
+; [eval] diz != null
+(declare-const $k@2991 $Perm)
+(assert ($Perm.isValidVar $k@2991))
+(assert ($Perm.isReadVar $k@2991 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2991 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2991 $k@2983))
+; [eval] diz.BlockingQueue__capacity > 0
+(declare-const $k@2992 $Perm)
+(assert ($Perm.isValidVar $k@2992))
+(assert ($Perm.isReadVar $k@2992 $Perm.Write))
+(push) ; 5
+(assert (not (or (= $k@2992 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 5
+(assert (< $k@2992 $k@2984))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 5
+(assert (not (not (= $t@2976 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 5
+; [dead then-branch 420] $t@2976 != Null
+(push) ; 5
+; [else-branch 420] $t@2976 == Null
+(declare-const $k@2993 $Perm)
+(assert ($Perm.isValidVar $k@2993))
+(assert ($Perm.isReadVar $k@2993 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2993 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2989 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2989 $Perm.No)))
+(assert (< $k@2993 $k@2989))
+(declare-const $k@2994 $Perm)
+(assert ($Perm.isValidVar $k@2994))
+(assert ($Perm.isReadVar $k@2994 $Perm.Write))
+(push) ; 6
+(assert (not (or (= $k@2994 $Perm.No) true)))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $k@2990 $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= $k@2990 $Perm.No)))
+(assert (< $k@2994 $k@2990))
+(declare-const sys__result@2995 $Ref)
+(declare-const $t@2996 $Snap)
+(declare-const $t@2997 $Snap)
+(declare-const $t@2998 $Ref)
+(assert (= $t@2996 ($Snap.combine $t@2997 ($SortWrappers.$RefTo$Snap $t@2998))))
+(declare-const $t@2999 $Snap)
+(declare-const $t@3000 $Ref)
+(assert (= $t@2997 ($Snap.combine $t@2999 ($SortWrappers.$RefTo$Snap $t@3000))))
+(declare-const $t@3001 $Snap)
+(declare-const $t@3002 $Snap)
+(assert (= $t@2999 ($Snap.combine $t@3001 $t@3002)))
+(declare-const $t@3003 $Snap)
+(declare-const $t@3004 $Ref)
+(assert (= $t@3001 ($Snap.combine $t@3003 ($SortWrappers.$RefTo$Snap $t@3004))))
+(declare-const $t@3005 $Snap)
+(declare-const $t@3006 Int)
+(assert (= $t@3003 ($Snap.combine $t@3005 ($SortWrappers.IntTo$Snap $t@3006))))
+(declare-const $t@3007 Int)
+(declare-const $t@3008 $Ref)
+(assert (=
+  $t@3005
+  ($Snap.combine
+    ($SortWrappers.IntTo$Snap $t@3007)
+    ($SortWrappers.$RefTo$Snap $t@3008))))
+(declare-const $t@3009 Int)
+(assert (=
+  ($SortWrappers.IntTo$Snap $t@3007)
+  ($Snap.combine ($SortWrappers.IntTo$Snap $t@3009) $Snap.unit)))
+(declare-const $k@3010 $Perm)
+(assert ($Perm.isValidVar $k@3010))
+(assert ($Perm.isReadVar $k@3010 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2983 $k@2991)) (= $t@3009 $t@2982)))
+; [eval] diz.BlockingQueue__capacity > 0
+(push) ; 6
+(assert (not (not (= (+ (- $k@2983 $k@2991) $k@3010) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2983 $k@2991) $k@3010) $Perm.No)))
+(assert (> $t@3009 0))
+(declare-const $k@3011 $Perm)
+(assert ($Perm.isValidVar $k@3011))
+(assert ($Perm.isReadVar $k@3011 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2984 $k@2992)) (= $t@3008 $t@2980)))
+(push) ; 6
+(assert (not (not (= (+ (- $k@2984 $k@2992) $k@3011) $Perm.No))))
+(check-sat)
+; unsat
+; 0.00s
+(pop) ; 6
+(assert (not (= (+ (- $k@2984 $k@2992) $k@3011) $Perm.No)))
+(assert (not (= $t@3008 $Ref.null)))
+; [eval] diz.BlockingQueue__first != null
+(push) ; 6
+(assert (not (= $t@3004 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+(assert (not (not (= $t@3004 $Ref.null))))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 6
+(push) ; 6
+; [then-branch 421] $t@3004 != Null
+(assert (not (= $t@3004 $Ref.null)))
+(declare-const $k@3012 $Perm)
+(assert ($Perm.isValidVar $k@3012))
+(assert ($Perm.isReadVar $k@3012 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2989 $k@2993)) (= $t@3000 $t@2972)))
+(declare-const $k@3013 $Perm)
+(assert ($Perm.isValidVar $k@3013))
+(assert ($Perm.isReadVar $k@3013 $Perm.Write))
+(assert (implies (< $Perm.No (- $k@2990 $k@2994)) (= $t@2998 $t@2970)))
+; [exec]
+; i := __flatten_73
+; [exec]
+; assert i == null
+; [eval] i == null
+(push) ; 7
+(assert (not (= sys__result@2995 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(push) ; 7
+(pop) ; 7
+(assert (or
+  (= $Perm.Write (+ (- $k@2983 $k@2991) $k@3010))
+  (< (+ (- $k@2983 $k@2991) $k@3010) $Perm.Write)))
+(assert (or
+  (= $Perm.Write (+ (- $k@2984 $k@2992) $k@3011))
+  (< (+ (- $k@2984 $k@2992) $k@3011) $Perm.Write)))
+(assert (or
+  (= $Perm.Write (+ (- $k@2989 $k@2993) $k@3012))
+  (< (+ (- $k@2989 $k@2993) $k@3012) $Perm.Write)))
+(assert (or
+  (= $Perm.Write (+ (- $k@2990 $k@2994) $k@3013))
+  (< (+ (- $k@2990 $k@2994) $k@3013) $Perm.Write)))
+; [eval] i == null
+(push) ; 7
+(assert (not (= sys__result@2995 $Ref.null)))
+(check-sat)
+; unknown
+; 0.00s
+(pop) ; 7
+(pop) ; 6
+(pop) ; 5
+(pop) ; 4
+(pop) ; 3
+(pop) ; 2
+; ---------- Test__Test ----------
+(declare-const sys__result@3014 $Ref)
+(declare-const diz@3015 $Ref)
+(push) ; 2
+(push) ; 3
+; [eval] sys__result != null
+(assert (not (= sys__result@3014 $Ref.null)))
+(pop) ; 3
+(push) ; 3
+; [exec]
+; diz := new()
+(declare-const diz@3016 $Ref)
+(assert (not (= diz@3016 $Ref.null)))
+(assert (not (= sys__result@3014 diz@3016)))
+; [exec]
+; sys__result := diz
+; [exec]
+; assert sys__result != null
+; [eval] sys__result != null
 ; [exec]
 ; inhale false
 (pop) ; 3

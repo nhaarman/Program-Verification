@@ -1,39 +1,57 @@
 class LBQThread1a {
 
-    LinkedBlockingQueue queue;
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
-        queue.offer(1);
-        queue.peek();
+        boolean b = queue.offer(1);
+        Integer i = queue.peek();
     }
 }
 
 class LBQThread1b {
 
-    LinkedBlockingQueue queue;
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
-        queue.offer(2);
-        queue.peek();
+        boolean b = queue.offer(2);
+        Integer i = queue.peek();
     }
 }
 
 class LBQThread2a {
 
-    LinkedBlockingQueue queue;
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
         queue.put(1);
     }
@@ -41,26 +59,37 @@ class LBQThread2a {
 
 class LBQThread2b {
 
-    LinkedBlockingQueue queue;
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
         queue.put(2);
-        queue.poll();
+        Integer i = queue.poll();
     }
 }
 
 class LBQThread3a {
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    LinkedBlockingQueue queue;
-
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
         queue.put(1);
     }
@@ -68,21 +97,27 @@ class LBQThread3a {
 
 class LBQThread3b {
 
-    LinkedBlockingQueue queue;
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
 
-    public LBQThread(LinkedBlockingQueue queue) {
+    requires queue.state();
+    ensures state();
+    LBQThread1a(BlockingQueue queue) {
         this.queue = queue;
+        fold state();
     }
 
+    requires state();
+    ensures state();
     void run() {
-        queue.take();
+        int i = queue.take();
     }
 }
 
 class Test {
 
     void testEmpty() {
-        LinkedBlockingQueue queue = new Queue(10);
+        BlockingQueue queue = new BlockingQueue(10);
         
         Integer i = queue.peek();
         assert i == null;
@@ -90,9 +125,9 @@ class Test {
         Integer j = queue.poll();
         assert j == null;
   }
-
+/*
   void testFillAndEmpty() {
-    LinkedBlockingQueue queue = new Queue(10);
+    BlockingQueue queue = new BlockingQueue(10);
     boolean b;
 
     b = queue.offer(3);
@@ -118,7 +153,7 @@ class Test {
   }
 
   void testFillAndPeek() {
-    LinkedBlockingQueue queue = new Queue(10);
+    BlockingQueue queue = new BlockingQueue(10);
     boolean b;
 
     b = queue.offer(3);
@@ -135,7 +170,7 @@ class Test {
   }
 
   void testFullAndFill() {
-    LinkedBlockingQueue queue = new Queue(3);
+    BlockingQueue queue = new BlockingQueue(3);
     boolean b;
 
     queue.put(1);
@@ -147,33 +182,41 @@ class Test {
   }
 
   void test1() 
-    LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+  {
+    BlockingQueue queue = new BlockingQueue(2);
 
     LBQThread1a t1 = new LBQThread1a(queue);
     LBQThread1b t2 = new LBQThread1b(queue);
 
-    t1.fork(); t2.fork();
-    t1.join(); t2.join();
+    fork t1;
+    fork t2;
+    join t1;
+    join t2;
 
   }
 
   void test2() {
-     LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+     BlockingQueue queue = new BlockingQueue(2);
 
     LBQThread2a t1 = new LBQThread2a(queue);
     LBQThread2b t2 = new LBQThread2b(queue);
 
-    t1.fork(); t2.fork();
-    t1.join(); t2.join();
+    fork t1;
+    fork t2;
+    join t1;
+    join t2;
   }
 
   void test3() {
-    LinkedBlockingQueue queue = new LinkedBlockingQueue(2);
+    BlockingQueue queue = new BlockingQueue(2);
 
-    LBQThread2a t1 = new LBQThread3a(queue);
-    LBQThread2b t2 = new LBQThread3b(queue);
+    LBQThread3a t1 = new LBQThread3a(queue);
+    LBQThread3b t2 = new LBQThread3b(queue);
 
-    t1.fork(); t2.fork();
-    t1.join(); t2.join();
+    fork t1;
+    fork t2;
+    join t1;
+    join t2;
   }
+*/
 }
