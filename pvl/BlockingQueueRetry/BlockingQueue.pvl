@@ -1,50 +1,113 @@
-class Lock {
-  resource lock_invariant() = true;
-  Lock(){}
+class HeadLock {
+
+  BlockingQueue queue;
+
+  resource lock_invariant() = Value(queue) ** Perm(queue.head, 1) ** queue.head != null;
+
+  requires Perm(queue.head, 1);
+  requires queue.head != null;
+  ensures Value(this.queue) ** this.queue == queue;
+  HeadLock(BlockingQueue queue) {
+    this.queue = queue;
+  }
+}
+
+class LastLock {
+
+  BlockingQueue queue;
+
+  resource lock_invariant() = Value(queue) ** Perm(queue.last, 1) ** queue.last != null;
+
+  requires Perm(queue.last, 1);
+  requires queue.last != null;
+  ensures Value(this.queue) ** this.queue == queue;
+  LastLock(BlockingQueue queue) {
+    this.queue = queue;
+  }
+
 }
 
 class BlockingQueue {
 
   int capacity;
   AtomicInteger count;
-  Node first;
+  
+  Node head;
+  Node last;
 
-  Lock putLock;
-  Lock takeLock;
+  HeadLock headLock;
+  LastLock lastLock;
 
   resource state() = 
     Value(capacity) ** capacity > 0
     ** Value(count) ** count != null
-    ** Perm(first, 1) ** first->state()
-    ** Value(putLock) ** Value(takeLock)
-  ;
-
-  requires state();
-  seq<int> contents() = first == null ? seq<int>{} : first.contents();
+    ** Value(headLock) ** headLock != null ** Value(headLock.queue) ** headLock.queue == this
+    ** Value(lastLock) ** lastLock != null ** Value(lastLock.queue) ** lastLock.queue == this;
 
   requires capacity > 0;
-  ensures state() 
-    ** this.capacity == capacity 
-    ** first == null;
+  ensures state(); 
+  ensures this.capacity == capacity; 
   BlockingQueue(int capacity) {
-    this.putLock = new Lock();
-    this.takeLock = new Lock();
     this.capacity = capacity;
-    first = null;
     count = new AtomicInteger(0);
+    head = new Node(null);
+    
+    last = head;
+    headLock = new HeadLock(this);
+    lastLock = new LastLock(this);
     fold state();
-  }
+  }  
   
+  requires state();
+  ensures state();
+  int take() {
+    
+    lock headLock;
+    int currentCount = count.get();
+    loop_invariant Value(headLock) ** headLock != null ** held(headLock);
+    loop_invariant Value(count) ** count != null;
+    loop_invariant Value(headLock.queue) ** (headLock.queue == this) ** Perm(headLock.queue.head, 1) ** headLock.queue.head == head;
+    loop_invariant head != null;
+    while(currentCount == 0) {
+      assert Value(headLock);
+      assert headLock != null;
+      assert held(headLock);
+      wait headLock;
+      currentCount = count.get();
+    }
+
+    assume head != null;
+//    assume head != last; TODO necessary?
+    
+    int x = unlinkFirst();
+    int c = count.getAndDecrement();
+    if (c > 1) {
+      notify headLock;
+    }
+    unlock headLock;
+
+    if (c == capacity) {
+      lock lastLock;
+      notify lastLock;
+      unlock lastLock;
+    }
+    
+    return x;
+  }
+
+ 
   requires state();
   ensures  state();
   void put(int val) {
-    lock putLock;
+    lock lastLock;
 
     int currentCount = count.get();
-    loop_invariant Value(putLock) ** held(putLock);
+    loop_invariant Value(lastLock) ** lastLock != null ** held(lastLock);
     loop_invariant Value(capacity) ** Value(count) ** count != null;
+    loop_invariant Value(lastLock.queue) ** lastLock.queue == this ** Perm(lastLock.queue.last, 1) ** lastLock.queue.last == last;
+    loop_invariant last != null;
     while(currentCount == capacity) {
-      wait putLock;
+      wait lastLock;
       currentCount = count.get();
     }   
 
@@ -52,72 +115,41 @@ class BlockingQueue {
 
     int c = count.getAndIncrement();
     if (c + 1 < capacity) {
-      notify putLock;
+      notify lastLock;
     }
-    unlock putLock;
+    unlock lastLock;
 
     if (c == 0) {
-      lock takeLock;
-      notify takeLock;
-      unlock takeLock;
+      lock headLock;
+      notify headLock;
+      unlock headLock;
     }
   }
 
   requires state();
   ensures state();
-  int take() {
-    lock takeLock;
-    
-    int currentCount = count.get();
-    loop_invariant Value(takeLock) ** held(takeLock);
-    loop_invariant Value(count) ** count != null;
-    while(currentCount == 0) {
-      wait takeLock;
-      currentCount = count.get();
-    }
-
-    assume first != null;
-    int x = unlinkFirst();
-    int c = count.getAndDecrement();
-    if (c > 1) {
-      notify takeLock;
-    }
-    unlock takeLock;
-
-    if (c == capacity) {
-      lock putLock;
-      notify putLock;
-      unlock putLock;
-    }
-    
-    return x;
-  }
-
-  requires state();
-  ensures state();
-  boolean offer(int val)
-  {
+  boolean offer(int val)  {
     int currentCount = count.get();
     if (currentCount == capacity) {
       return false;
     }
 
-    lock putLock;
+    lock lastLock;
     int c = -1;
     currentCount = count.get();
     if (currentCount < capacity) {	
       linkLast(val);
       c = count.getAndIncrement();
       if (c+1 < capacity) {
-        notify putLock;
+        notify lastLock;
       }
     }
-    unlock putLock;
+    unlock lastLock;
 
     if (c == 0) {
-      lock takeLock;
-      notify takeLock;
-      unlock takeLock;
+      lock headLock;
+      notify headLock;
+      unlock headLock;
     }
     
     return c >= 0;
@@ -134,22 +166,22 @@ class BlockingQueue {
     }
     
     int c = -1;
-    lock takeLock;
+    lock headLock;
     currentCount = count.get();
     if (currentCount > 0) {
-      assume first != null;
+      assume head != null;
       x = new Integer(unlinkFirst());
       c = count.getAndDecrement();
       if (c > 1) {
-        notify takeLock;
+        notify headLock;
       }
     }
-    unlock takeLock;
+    unlock headLock;
     
     if (c == capacity) {
-      lock putLock;
-      notify putLock;
-      unlock putLock;
+      lock lastLock;
+      notify lastLock;
+      unlock lastLock;
     }
     
     return x;
@@ -162,42 +194,57 @@ class BlockingQueue {
     
     int currentCount = count.get();
     if (currentCount == 0) {
-      assume first == null;
       return x;
     }
     
-    lock takeLock;
+    lock headLock;
     
-    if (first != null) {
-      unfold first.state();
-      x = new Integer(first.val);
-      fold first.state();
+    if (head != null) {
+      lock head;
+      x = head.val;
+      unlock head;
     }
-    unlock takeLock;
+    unlock headLock;
     
     return x;
   }
 
-  requires state();
-  ensures  state() ** first != null;
-  ensures  \old(|contents()|) == 0 ==> contents() == seq<int>{val};
-  ensures  \old(|contents()|) != 0 ==> contents() == \old(contents()) + seq<int>{val};
+
+  requires state() ** Perm(last, 1);
+  ensures  state() ** Perm(last, 1) ** last != null;
   void linkLast(int val) {
-    if (first == null) {
-      first = new Node(val, null);
-    } else {
-      first.append(new Node(val, null));
-    }
+    lock last;
+    
+    Node oldLast = last;
+    
+    last.next = new Node(new Integer(val));
+    last = last.next;
+    
+    unlock oldLast;
   }
 
-  requires state() ** first != null;
-  ensures  state();
-  ensures  \result == \old(head(contents()));
-  ensures  contents() == \old(tail(contents()));
+  requires state() ** Perm(head, 1);
+  //requires count.get() >= 1; // TODO for the assumes
+  ensures  state() ** Perm(head, 1) ** head != null;
   int unlinkFirst() {
-    unfold first.state();
-    int value = first.val; 
-    first = first.next;
-    return value;
+    lock head;
+    
+    Node oldHead = head;
+    
+    Node first = head.next;
+    assume first != null; // Because there is at least one item
+    head = first;
+    
+    lock first;
+    
+    Integer value = first.val;
+    assume value != null; // Because there is at least one item
+    
+    first.val = null;
+    
+    unlock first;
+    unlock oldHead;
+    
+    return value.val;
   }
 }

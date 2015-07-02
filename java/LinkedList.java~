@@ -1,8 +1,5 @@
-package com.nhaarman.playground;
-
 public class LinkedList<E> implements Queue<E> {
 
-  private int size = 0;
   /**
    * Pointer to first node. Invariant: (first == null && last == null) || (first.prev == null && first.item != null)
    */
@@ -30,7 +27,6 @@ public class LinkedList<E> implements Queue<E> {
     } else {
       l.next = newNode;
     }
-    size++;
   }
 
   /**

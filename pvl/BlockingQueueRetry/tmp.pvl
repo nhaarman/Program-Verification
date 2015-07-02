@@ -1,0 +1,49 @@
+class Lock {
+
+  int x;
+
+  resource lock_invariant() = Perm(x, 1) ** x > 0;
+  
+  Lock(){
+    x = 1;
+  }
+}
+
+class A {
+ 
+  Lock l;
+  
+  A() {
+    this.l = new Lock();
+  }
+
+  requires Value(l) ** l != null;
+  ensures  Value(l) ** l != null;
+  void a() {
+    lock l;
+    assert Value(l);
+    assert Perm(l.x, 1);
+    assert l.x > 0;
+    c();
+    b();
+    unlock l;
+  }
+
+  requires Value(l) ** l != null ** held(l);
+  ensures Value(l) ** l != null ** held(l);
+  void b() {
+    unfold l.lock_invariant();
+    assert Value(l);
+    assert Perm(l.x, 1);
+    assert l.x > 0;
+  }
+
+ 
+  requires Value(l) ** l != null ** Perm(l.x, 1) ** l.x > 0;
+  ensures  Value(l) ** l != null ** Perm(l.x, 1) ** l.x > 0;
+  void c() {
+    assert Value(l);
+    assert Perm(l.x, 1);
+    assert l.x > 0;
+  }
+}

@@ -119,7 +119,10 @@ public class LinkedBlockingQueue<E> implements BlockingQueue<E> {
         notFull.signal(); // propagate to a non-interrupted thread
         throw ie;
       }
-      insert(e);
+
+      last.next = new Node<E>(x);
+      last = last.next;
+
       c = count.getAndIncrement();
       if (c + 1 < capacity) {
         notFull.signal();
@@ -130,39 +133,6 @@ public class LinkedBlockingQueue<E> implements BlockingQueue<E> {
     if (c == 0) {
       signalNotEmpty();
     }
-  }
-
-  /**
-   * Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity, returning <tt>true</tt> upon success and
-   * <tt>false</tt> if this queue is full. When using a capacity-restricted queue, this method is generally preferable to method {@link BlockingQueue#add add}, which can fail to
-   * insert an element only by throwing an exception.
-   *
-   * @throws NullPointerException if the specified element is null
-   */
-  public boolean offer(E e) {
-    if (e == null) throw new NullPointerException();
-    final AtomicInteger count = this.count;
-    if (count.get() == capacity) {
-      return false;
-    }
-    int c = -1;
-    final ReentrantLock putLock = this.putLock;
-    putLock.lock();
-    try {
-      if (count.get() < capacity) {
-        insert(e);
-        c = count.getAndIncrement();
-        if (c + 1 < capacity) {
-          notFull.signal();
-        }
-      }
-    } finally {
-      putLock.unlock();
-    }
-    if (c == 0) {
-      signalNotEmpty();
-    }
-    return c >= 0;
   }
 
   public E take() throws InterruptedException {
@@ -195,49 +165,6 @@ public class LinkedBlockingQueue<E> implements BlockingQueue<E> {
     return x;
   }
 
-  public E poll() {
-    final AtomicInteger count = this.count;
-    if (count.get() == 0) {
-      return null;
-    }
-    E x = null;
-    int c = -1;
-    final ReentrantLock takeLock = this.takeLock;
-    takeLock.lock();
-    try {
-      if (count.get() > 0) {
-        x = extract();
-        c = count.getAndDecrement();
-        if (c > 1) {
-          notEmpty.signal();
-        }
-      }
-    } finally {
-      takeLock.unlock();
-    }
-    if (c == capacity) {
-      signalNotFull();
-    }
-    return x;
-  }
-
-  public E peek() {
-    if (count.get() == 0) {
-      return null;
-    }
-    final ReentrantLock takeLock = this.takeLock;
-    takeLock.lock();
-    try {
-      Node<E> first = head.next;
-      if (first == null) {
-        return null;
-      } else {
-        return first.item;
-      }
-    } finally {
-      takeLock.unlock();
-    }
-  }
 
   static class Node<E> {
     /** The item, volatile to ensure barrier separating write and read */
