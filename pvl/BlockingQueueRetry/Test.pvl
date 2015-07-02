@@ -1,12 +1,11 @@
-/*
-class LBQThread1a {
+class OfferPeekWorker {
 
     resource state() = Value(queue) ** queue.state();
     BlockingQueue queue;
 
     requires queue.state();
     ensures state();
-    LBQThread1a(BlockingQueue queue) {
+    OfferPeekWorker(BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -19,34 +18,14 @@ class LBQThread1a {
     }
 }
 
-class LBQThread1b {
+class PutWorker {
 
     resource state() = Value(queue) ** queue.state();
     BlockingQueue queue;
 
     requires queue.state();
     ensures state();
-    LBQThread1b(BlockingQueue queue) {
-        this.queue = queue;
-        fold state();
-    }
-
-    requires state();
-    ensures state();
-    void run() {
-        boolean b = queue.offer(2);
-        Integer i = queue.peek();
-    }
-}
-*/
-class LBQThread2a {
-
-    resource state() = Value(queue) ** queue.state();
-    BlockingQueue queue;
-
-    requires queue.state();
-    ensures state();
-    LBQThread2a(BlockingQueue queue) {
+    PutWorker(BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -57,15 +36,15 @@ class LBQThread2a {
         queue.put(1);
     }
 }
-/*
-class LBQThread2b {
+
+class PutPollWorker {
 
     resource state() = Value(queue) ** queue.state();
     BlockingQueue queue;
 
     requires queue.state();
     ensures state();
-    LBQThread2b
+    PutPollWorker
     (BlockingQueue queue) {
         this.queue = queue;
         fold state();
@@ -79,32 +58,14 @@ class LBQThread2b {
     }
 }
 
-class LBQThread3a {
-    resource state() = Value(queue) ** queue.state();
-    BlockingQueue queue;
-
-    requires queue.state();
-    ensures state();
-    LBQThread1a(BlockingQueue queue) {
-        this.queue = queue;
-        fold state();
-    }
-
-    requires state();
-    ensures state();
-    void run() {
-        queue.put(1);
-    }
-}
-*/
-class LBQThread3b {
+class TakeWorker {
 
     resource state() = Value(queue) ** queue.state();
     BlockingQueue queue;
 
     requires queue.state();
     ensures state();
-    LBQThread3b(BlockingQueue queue) {
+    TakeWorker(BlockingQueue queue) {
         this.queue = queue;
         fold state();
     }
@@ -116,20 +77,37 @@ class LBQThread3b {
     }
 }
 
+class OfferWorker {
+
+    resource state() = Value(queue) ** queue.state();
+    BlockingQueue queue;
+
+    requires queue.state();
+    ensures state();
+    OfferWorker(BlockingQueue queue) {
+        this.queue = queue;
+        fold state();
+    }
+
+    requires state();
+    ensures state();
+    void run() {
+      boolean b = queue.offer(7);
+    }
+
+}
+
 
 class Test {
 
   void testEmpty() {
-  /*
     BlockingQueue queue = new BlockingQueue(10);
   
     Integer i = queue.peek();
     Integer j = queue.poll();
-    */
   }
 
   void testFillAndEmpty() {
-  /*
     BlockingQueue queue = new BlockingQueue(10);
     boolean b;
 
@@ -140,35 +118,34 @@ class Test {
     Integer n = queue.poll();
     Integer o = queue.poll();
     Integer p = queue.poll();
-    */
   }
 
   void testFillAndPeek() {
-//    BlockingQueue queue = new BlockingQueue(10);
-//    boolean b;
+    BlockingQueue queue = new BlockingQueue(10);
+    boolean b;
 
-//    b = queue.offer(3);
-//    b = queue.offer(5);
+    b = queue.offer(3);
+    b = queue.offer(5);
 
-//    Integer i = queue.peek();
-//    Integer j = queue.peek();
+    Integer i = queue.peek();
+    Integer j = queue.peek();
   }
 
   void testFullAndFill() {
-//    BlockingQueue queue = new BlockingQueue(3);
-//    boolean b;
+    BlockingQueue queue = new BlockingQueue(3);
+    boolean b;
 
-//    queue.put(1);
-//    queue.put(2);
-//    queue.put(3);
-//    b = queue.offer(4);
+    queue.put(1);
+    queue.put(2);
+    queue.put(3);
+    b = queue.offer(4);
   }
 
   void test1() {
     BlockingQueue queue = new BlockingQueue(2);
 
-    LBQThread2a t1 = new LBQThread2a(queue);
-    LBQThread3b t2 = new LBQThread3b(queue);
+    OfferPeekWorker t1 = new OfferPeekWorker(queue);
+    OfferPeekWorker t2 = new OfferPeekWorker(queue);
 
     fork t1;
     fork t2;
@@ -176,29 +153,50 @@ class Test {
     join t2;
   }
 
-//  void test2() {
-//     BlockingQueue queue = new BlockingQueue(2);
+  void test2() {
+    BlockingQueue queue = new BlockingQueue(2);
 
-//    LBQThread2a t1 = new LBQThread2a(queue);
-//    LBQThread2b t2 = new LBQThread2b(queue);
+    PutWorker t1 = new PutWorker(queue);
+    PutPollWorker t2 = new PutPollWorker(queue);
 
-//    fork t1;
-//    fork t2;
-//    join t1;
-//    join t2;
-//  }
+    fork t1;
+    fork t2;
+    join t1;
+    join t2;
+  }
 
-//  void test3() {
-//    BlockingQueue queue = new BlockingQueue(2);
+  void test3() {
+    BlockingQueue queue = new BlockingQueue(2);
 
-//    LBQThread3a t1 = new LBQThread3a(queue);
-//    LBQThread3b t2 = new LBQThread3b(queue);
+    PutWorker t1 = new PutWorker(queue);
+    TakeWorker t2 = new TakeWorker(queue);
 
-//    fork t1;
-//    fork t2;
-//    join t1;
-//    join t2;
-//  }
-
+    fork t1;
+    fork t2;
+    join t1;
+    join t2;
+  }
+  
+  void test4() {
+    BlockingQueue queue = new BlockingQueue(10);
+    
+    PutWorker t1 = new PutWorker(queue);
+    TakeWorker t2 = new TakeWorker(queue);
+    PutWorker t3 = new PutWorker(queue);
+    PutWorker t4 = new PutWorker(queue);
+    TakeWorker t5 = new TakeWorker(queue);
+    
+    fork t1;
+    fork t2;
+    fork t3;
+    fork t4;
+    fork t5;
+    
+    join t1;
+    join t2;
+    join t3;
+    join t4;
+    join t5;
+  }
 }
 
