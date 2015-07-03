@@ -76,7 +76,7 @@ class BlockingQueue {
       currentCount = count.get();
     }
 
-    assume head != null;
+   // assume head != null;
 //    assume head != last; TODO necessary?
     
     int x = unlinkFirst();
