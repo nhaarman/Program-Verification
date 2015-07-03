@@ -1,27 +1,43 @@
 %!TEX root=PVH2QueueGroup.tex
 \section{Concurrent Queue implementation}
-For the concurrent Queue, the assignment specified to use the LinkedBlockingQueue. Again, we took the Java implementation and created a PVL implementation of the required methods.
+For the concurrent Queue, the assignment specified to use the {\tt LinkedBlockingQueue}. Again, we took the Java implementation and created a PVL implementation of the required methods.
 
-A big difference between the implementation of LinkedBlockedQueue and LinkedList, which we used for the sequential queue, is that the constructor of the LinkedBlockingQueue constructs a {\tt null} Node, so that the queue is never actually empty, while the LinkedList simply starts with an empty list. At our first try, we did not understand why this approach was taken, so we decided to implement this part similarly to the LinkedList, by constructing the Queue without any nodes. However, during the process of verifying the LinkedBlockingQueue, we realized that this resulted in a problem for a concurrent queue if one thread attempts to put a value in the queue, while an another thread tries to read a value from that queue at the same time, when there is exactly one element in the queue.
+A big difference between the implementation of {\tt LinkedBlockedQueue} and {\tt LinkedList}, which we used for the sequential queue, is that the constructor of the {\tt LinkedBlockedQueue} constructs a '{\tt null} {\tt Node}', so that the queue is never actually empty, while the {\tt LinkedList} simply starts with an empty list. At our first try, we did not understand why this approach was taken, so we decided to implement this part similarly to the {\tt LinkedList}, by constructing the Queue without any nodes. However, during the process of verifying the {\tt LinkedBlockedQueue}, we realized that this resulted in a problem for a concurrent queue if one thread attempts to put a value in the queue, while an another thread tries to read a value from that queue at the same time, when there is exactly one element in the queue.
 
 The main problem we encountered while verifying the concurrent implementation was the following:
-How can you build in two locks in a queue that refer to two different parts of the queue? This problem is created because of the restriction that the queue can contain only one lock\_invariant. At first, we tried to solve this problem by using kind of symbolic\_locks. This way, nothing was actually locked, but because the implementation would be consistent in the usage and basically have barrier against violating what we would actually wanting to lock, it was a good start and in our opinion valid for the moment. Using this approach, one of the locks prevents that elements are taken when the queue is empty, while the other locks prevents that elements are added when the queue has reached its maximum capacity.
+How can you build in two locks in a queue that refer to two different parts of the queue? This problem is created because of the restriction that the queue can contain only one lock\_invariant. At first, we tried to solve this problem by using kind of symbolic locks. This way, nothing was actually locked, but because the implementation would be consistent in the usage and basically have barrier against violating what we would actually wanting to lock, it was a good start and in our opinion valid for the moment. Using this approach, the {\tt takeLock} prohibited parallel consuming of items, and {\tt putLock} ensured no two threads could append at the same time.
 
-In this way, we were able to write all the method implementations. However, for inserting and removing objects, we used the same method as we used in the sequential implementation, which required to have full permission over the queue and it's node. So that implementation is like one stick or chain that is only allowed to be held by one hand. This is a problem for concurrent programs, where you have to be able to hold the same side of the stick/chain and be able to hold it with multiple hands. So, this implementation did not allow for concurrent access to the queue.
+In this way, we were able to write all the method implementations. However, for inserting and removing objects, we used the same method as we used in the sequential implementation, which required to have full permission over the queue and its node. So that implementation is like one stick or chain that is only allowed to be held by one hand. This is a problem for concurrent programs, where you have to be able to hold the same side of the stick/chain and be able to hold it with multiple hands. So, this implementation did not allow for concurrent access to the queue.
 
-Luckily for us, the lock$\_$invariant is something magical that spawns invisible hand and holds up parts of the chain. So, instead of creating the chain by saying that you also want to ensure the next state, you can now only know the next, and the lock$\_$invariant of that node will know its own state. The lock$\_$invariant will preserve the state, so you don't have to save that state by having to remember the next node's state. This enabled us to introduce the head and last node again. The queue became a thing where we only want to ensure that it has a value. We don't need write permission of the queue itself to change elements. We changed the symbolic locks to elements that do actually know the queue instance. One of the locks will lock the first element of the queue, which prevents other threads from removing elements from the queue. The other lock will lock the last element of the queue, which prevents other threads from adding elements to the queue.
+Instead, we dropped the recursive {\tt state} predicate of {\tt Node}, and exchanged it with a lock\_invariant which releases full write permissions on its fields when lock upon, as seen in Listing \autoref{lst:Node_conc}. The lock$\_$invariant will preserve the state, so you don't have to save that state by having to remember the next node's state. This enabled us to introduce the head and last node again. The queue became a thing where we only want to ensure that it has a value. We don't need write permission of the queue itself to change elements. We changed the symbolic locks to elements that do actually know the queue instance. One of the locks will lock the first element of the queue, which prevents other threads from removing elements from the queue. The other lock will lock the last element of the queue, which prevents other threads from adding elements to the queue.
+
+\begin{figure}
+\begin{lstlisting}[caption=Node implementation using a {\tt lock\_invariant}, captionpos=b]
+class Node {
+  Node next;
+  Integer val;
+  
+  resource lock_invariant() = Perm(val, 1) ** val->state() 
+    ** Perm(next, 1);
+  
+  requires val != null ==> Value(val.val);
+  Node(Integer val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+\end{lstlisting}
+\label{lst:Node_conc}
+\end{figure}
+
+
 
 \section{Other problems encountered:}
 \begin{itemize}
-	\item Cannot test with java, because java doesn't recognize seq<..> as data type.
+	\item We could not test our implementation with the Java compiler, since the {\tt seq<int>} conversion didn't work correctly.
 	\item Need a {\tt lockAndUnlock()} action for some methods, to create a kind of atomic {\tt get()}. In our atomic integer we where not allowed to use our {\tt get()} in verifying our code, because a normal method might change code.
-	\item Have to catch return values. Making this a habit makes people doubt your developer skills.
 	\item Error messages for not catching return values and using reserved variables can be confusing and hard to discover if you write a lot of code in a flow.
 	\item Assigning null to a return or variable was troubling.
 \end{itemize}
 
 It is possible that along the way some of the problems mentioned above where solved.
-
-\section{Things we still could do to verify concurrent code?}
-
-We could create local data storage objects and store snapshots of situations in this local data storage. Based on what is inside those snapshots you could argue what was happening inside the concurrent code and based on those things what the end result could be. However because the border between what is used to verify code in PVL and the actual code is already fragile, we didn't want to push the developer by giving an extra object to a method what only would be used to verify the code instead of helping to get the actual result. Maybe it would be nice to create a subtle border between what is used to verify code and the actual functionality of the code. Instead of a history, you could give a local box that would help reason about what happened inside the code. History would probably be easier to use and less complex to evaluate what would be the end result.
