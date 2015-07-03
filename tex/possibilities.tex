@@ -1,0 +1,7 @@
+%!TEX root=PVH2QueueGroup.tex
+\section{Possibilties for adding functional properties}
+In the current specification, it is not possible to ensure the state of the queue after any method, because no assumptions can be made about other threads that might have changed the queue after the lock has been released. For example, after the {\tt take()} method is called, it can not be ensured that the contents of the queue are equal to the contents of the queue, before the method was called, without the first element.
+
+However, it is possible to use so-called {\it history} to be able to ensure more properties of the methods. By doing this, the history keeps track of all elements that have been added to or removed from the queue. For example, if we would add this specification to the {\tt put()} and {\tt take()} methods, we will know that a value has been respectively added to or removed from the queue. Then, if multiple threads are simultaneously calling the {\tt put} method, we can use the history to ensure that both elements have been added to the queue, however, we cannot ensure the order in which this was done. We can draw the same conclusion when multiple threads call the {\tt take()} method, but instead of ensuring that elements were added, we can ensure that these exact elements were taken from the queue.
+
+So, by added information about the history of the queue, we can draw more conclusions about the contents of a concurrent queue after an element has been added to or removed from that queue.
