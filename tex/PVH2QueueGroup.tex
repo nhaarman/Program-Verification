@@ -1,23 +1,32 @@
-\documentclass[10pt]{article}
-\setcounter{secnumdepth}{2}
-\usepackage{enumitem}
-\usepackage{float}
-\usepackage{adjustbox}
-\usepackage{array}
-\usepackage{colortbl}
-\usepackage{stmaryrd}
+\documentclass{scrartcl}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
 
 
+\usepackage{color}
+\usepackage{listings}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{mathescape,
+	basicstyle=\ttfamily,
+}
 
-\setlength{\parskip}{10pt plus 1pt minus 1pt}
-\setlength{\parindent}{0pt}
+%opening
+\title{Program Verification}
+\subtitle{Assignment 2}
+\author{Niek Haarman, Tanja de Jong, Tinus Pool}
 
-\title{\Huge Homework 2: Queue\\\LARGE Program verification}
-\author{Tanja de jong, Niek Haarman, Tinus Pool}
+\makeindex
 
 \begin{document}
-\maketitle
-	\newpage
-	\input{exercise1}
+	
+	\maketitle
+
+For this assignment we specified and verified a sequential and concurrent \texttt{Queue} implementation. Below is a report about our findings.
+	
+	\input{sequential}
 \end{document}
